@@ -1,0 +1,54 @@
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import PageLayout from "@/components/PageLayout";
+import { LOCATIONS } from "@/lib/data";
+
+export function generateStaticParams() {
+  return LOCATIONS.map((loc) => ({ slug: loc.slug }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const loc = LOCATIONS.find((l) => l.slug === slug);
+  if (!loc) return {};
+  return {
+    title: `${loc.name}, ${loc.suburb} — Dr Nate Myhill`,
+    description: `Dr Nate Myhill consults at ${loc.name} in ${loc.suburb}, ${loc.state}. ${loc.type}. ${loc.services.join(", ")}.`,
+  };
+}
+
+export default async function LocationPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const loc = LOCATIONS.find((l) => l.slug === slug);
+  if (!loc) notFound();
+
+  return (
+    <PageLayout crumbs={[{ label: "Home", href: "/" }, { label: "Locations", href: "/locations" }, { label: loc.name }]}>
+      <div style={{ fontSize: "11px", color: "#1d9e75", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: "0.5rem" }}>{loc.type}</div>
+      <h1>{loc.name}</h1>
+      <p style={{ color: "#888780", marginTop: "0.25rem" }}>{loc.suburb}, {loc.state}</p>
+
+      <h2>Address</h2>
+      <p>{loc.address}</p>
+      <p>
+        <a href={loc.mapUrl} target="_blank" rel="noopener noreferrer">View on Google Maps →</a>
+      </p>
+
+      <h2>Services at this location</h2>
+      <ul>
+        {loc.services.map((s) => (
+          <li key={s}>{s}</li>
+        ))}
+      </ul>
+
+      <h2>Appointments</h2>
+      <p>
+        To book a consultation at {loc.name}, please use the online booking portal or contact the practice directly.
+      </p>
+      <p>
+        <strong>Phone:</strong> <a href="tel:[phone number]">[phone number]</a><br />
+        <strong>Fax:</strong> [fax number]
+      </p>
+    </PageLayout>
+  );
+}

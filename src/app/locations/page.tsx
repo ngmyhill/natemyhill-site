@@ -1,0 +1,37 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import PageLayout from "@/components/PageLayout";
+import { LOCATIONS } from "@/lib/data";
+
+export const metadata: Metadata = {
+  title: "Locations — Dr Nate Myhill",
+  description: "Dr Nate Myhill consults and operates at seven locations across Melbourne and Albury including Knox, Mitcham, Warringal, John Fawkner and Northern Health.",
+};
+
+export default function LocationsPage() {
+  return (
+    <PageLayout crumbs={[{ label: "Home", href: "/" }, { label: "Locations" }]}>
+      <h1>Consulting &amp; operating locations</h1>
+      <p>
+        Dr Myhill is available across seven locations in metropolitan Melbourne, regional Victoria, and Albury (NSW). Consulting schedules vary — contact the practice for current availability at each location.
+      </p>
+
+      <div style={{ display: "grid", gap: "1.5rem", marginTop: "2rem" }}>
+        {LOCATIONS.map((loc) => (
+          <div key={loc.slug} style={{ background: "#f8f8f6", border: "1px solid #d3d1c7", borderLeft: "3px solid #1d9e75", borderRadius: "4px", padding: "1.5rem" }}>
+            <div style={{ fontSize: "11px", color: "#1d9e75", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: "0.3rem" }}>{loc.type}</div>
+            <h3 style={{ marginTop: 0, marginBottom: "0.25rem" }}>
+              <Link href={`/locations/${loc.slug}`}>{loc.name}</Link>
+            </h3>
+            <p style={{ fontSize: "14px", color: "#888780", margin: "0 0 0.75rem" }}>{loc.suburb}, {loc.state} · {loc.address}</p>
+            <div style={{ fontSize: "13px", display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
+              {loc.services.map((s) => (
+                <span key={s} style={{ background: "#ffffff", border: "1px solid #d3d1c7", borderRadius: "2px", padding: "0.2rem 0.5rem" }}>{s}</span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </PageLayout>
+  );
+}
