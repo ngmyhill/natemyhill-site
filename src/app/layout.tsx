@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: "%s | Dr Nate Myhill — Orthopaedic Surgeon",
   },
   description: "Melbourne orthopaedic surgeon specialising in shoulder, hip and knee surgery. Consulting at Knox, Mitcham, Warringal, John Fawkner and Albury. Book today.",
-  metadataBase: new URL("https://natemyhill.com.au"),
+  metadataBase: new URL("https://drnatemyhill.com.au"),
   openGraph: {
     siteName: "Dr Nate Myhill — Orthopaedic Surgeon",
     locale: "en_AU",
@@ -36,7 +36,7 @@ const physicianSchema = {
   "@type": "Physician",
   name: "Dr Nate Myhill",
   description: "Specialist orthopaedic surgeon practising in Melbourne and Albury, with a focus in shoulder and upper limb surgery, hip and knee reconstruction, and trauma.",
-  url: "https://natemyhill.com.au",
+  url: "https://drnatemyhill.com.au",
   telephone: "[phone number]",
   medicalSpecialty: "Orthopedic Surgery",
   hasCredential: [

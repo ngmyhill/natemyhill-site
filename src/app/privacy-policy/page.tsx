@@ -4,7 +4,7 @@ import { DOCTOR } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Privacy Policy — Dr Nate Myhill",
-  description: "Privacy policy for natemyhill.com.au — how we collect, use and protect your personal information in accordance with the Privacy Act 1988 (Cth).",
+  description: "Privacy policy for drnatemyhill.com.au — how we collect, use and protect your personal information in accordance with the Privacy Act 1988 (Cth).",
 };
 
 export default function PrivacyPolicyPage() {

@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { LOCATIONS, NAV_ITEMS } from "@/lib/data";
 
-const BASE = "https://natemyhill.com.au";
+const BASE = "https://drnatemyhill.com.au";
 
 const procedurePages = [
   "/shoulder-upper-limb/rotator-cuff-repair",

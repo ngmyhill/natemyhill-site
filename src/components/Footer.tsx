@@ -78,7 +78,7 @@ export default function Footer() {
         <span>
           <Link href="/privacy-policy" style={{ color: "#888780" }}>Privacy Policy</Link>
           {" · "}
-          <span>natemyhill.com.au</span>
+          <span>drnatemyhill.com.au</span>
         </span>
       </div>
     </footer>

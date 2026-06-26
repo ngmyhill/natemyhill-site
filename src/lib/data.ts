@@ -7,7 +7,7 @@ export const DOCTOR = {
   email: "[practice email]",
   healthlinkId: "[HealthLink Provider ID]",
   gentuUrl: "[Gentu portal URL]",
-  domain: "natemyhill.com.au",
+  domain: "drnatemyhill.com.au",
 };
 
 export const LOCATIONS = [
