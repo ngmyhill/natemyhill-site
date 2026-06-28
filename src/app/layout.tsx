@@ -21,8 +21,12 @@ export const metadata: Metadata = {
     default: "Dr Nate Myhill — Orthopaedic Surgeon Melbourne",
     template: "%s | Dr Nate Myhill — Orthopaedic Surgeon",
   },
-  description: "Melbourne orthopaedic surgeon specialising in shoulder, hip and knee surgery. Consulting at Knox, Mitcham, Warringal, John Fawkner and Albury. Book today.",
+  description: "Melbourne orthopaedic surgeon with a special interest in shoulder, upper limb and sports surgery. The plan that fits your life — chosen with you, not for you.",
   metadataBase: new URL("https://drnatemyhill.com.au"),
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+  },
   openGraph: {
     siteName: "Dr Nate Myhill — Orthopaedic Surgeon",
     locale: "en_AU",

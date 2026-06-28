@@ -7,13 +7,20 @@ export default function Footer() {
       <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "3rem 1.5rem 2rem", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "2rem" }}>
         {/* Brand */}
         <div>
-          <div style={{ fontFamily: "EB Garamond, Georgia, serif", fontSize: "1.2rem", color: "#ffffff", marginBottom: "0.25rem" }}>
-            Dr Nate Myhill
+          <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "1rem" }}>
+            <svg viewBox="0 0 100 100" width="36" height="36" aria-hidden="true">
+              <circle cx="50" cy="50" r="34" fill="none" stroke="#1d9e75" strokeWidth="8" strokeLinecap="round" strokeDasharray="148.3 65.3" transform="rotate(100 50 50)"/>
+              <circle cx="83.5" cy="44.1" r="7" fill="#f8f8f6"/>
+            </svg>
+            <div>
+              <div style={{ fontFamily: "EB Garamond, Georgia, serif", fontSize: "1.15rem", color: "#ffffff", lineHeight: 1.1 }}>
+                Dr Nate Myhill
+              </div>
+              <div style={{ fontSize: "10px", letterSpacing: "0.18em", textTransform: "uppercase", color: "#1d9e75" }}>
+                Orthopaedic Surgeon
+              </div>
+            </div>
           </div>
-          <div style={{ fontSize: "11px", letterSpacing: "0.18em", textTransform: "uppercase", color: "#1d9e75", marginBottom: "0.25rem" }}>
-            Orthopaedic Surgeon
-          </div>
-          <div style={{ height: "1px", background: "#1d9e75", width: "100%", marginBottom: "1rem" }} />
           <div style={{ fontSize: "13px", lineHeight: 1.7 }}>
             <div>{DOCTOR.credentials}</div>
             <div style={{ marginTop: "0.5rem" }}>

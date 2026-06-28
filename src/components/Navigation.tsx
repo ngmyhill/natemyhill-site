@@ -20,8 +20,11 @@ export default function Navigation() {
       {/* Main nav */}
       <nav style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem", display: "flex", alignItems: "center", justifyContent: "space-between", height: "72px" }}>
         {/* Logo */}
-        <Link href="/" style={{ display: "flex", alignItems: "center", gap: "12px", textDecoration: "none" }}>
-          <div style={{ width: "2.5px", height: "52px", background: "#1d9e75", borderRadius: "2px" }} />
+        <Link href="/" style={{ display: "flex", alignItems: "center", gap: "10px", textDecoration: "none" }}>
+          <svg viewBox="0 0 100 100" width="44" height="44" aria-hidden="true">
+            <circle cx="50" cy="50" r="34" fill="none" stroke="#1d9e75" strokeWidth="8" strokeLinecap="round" strokeDasharray="148.3 65.3" transform="rotate(100 50 50)"/>
+            <circle cx="83.5" cy="44.1" r="7" fill="#1a2744"/>
+          </svg>
           <div>
             <div style={{ fontFamily: "EB Garamond, Georgia, serif", fontSize: "1.35rem", color: "#1a2744", lineHeight: 1.1, letterSpacing: "0.02em" }}>
               Dr Nate Myhill
@@ -29,7 +32,6 @@ export default function Navigation() {
             <div style={{ fontFamily: "Inter, system-ui, sans-serif", fontSize: "10px", color: "#5f5e5a", letterSpacing: "0.2em", textTransform: "uppercase" }}>
               Orthopaedic Surgeon
             </div>
-            <div style={{ height: "1px", background: "#1d9e75", marginTop: "3px" }} />
           </div>
         </Link>
 
