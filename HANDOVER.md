@@ -35,10 +35,9 @@ The top half of this file is for Nate and needs no technical knowledge. The bott
 | HealthLink ID and Medical Objects ID | Nate | Set `healthlinkId` and `medicalObjectsId` in `src/lib/data.ts`. They show on the referrer pages once real. |
 | PDFs: patient information sheets and exercise sheets | Nate | Drop files in `public/downloads/` using the names in `src/lib/downloads.ts`. The sections appear when the files exist. |
 | Anatomy illustrations | Waiting | Needs a human medical illustrator. No AI-generated anatomy images. |
-| Recovery timelines for each procedure | Nate | Proposed, not built. Needs your clinical approval before anything goes live. |
+| Recovery timelines for each procedure | Nate | Drawn for all 19 procedures as images and sent to you for approval. Not on the site yet. Each uses only timings already on that page. |
 | Hip replacement FAQ line "many patients begin walking on the day of surgery" | Nate | Your call: keep, soften or remove. |
 | First-person intro on the About page | Nate | Marked `NATE TO APPROVE` in the code. Confirm or change the words. |
-| Trauma pages say "Prompt appointments" and "aims to provide prompt assessment" | Nate | These are speed promises. The rules allow only "we reply within one business day". Your call. |
 | Online booking | Later | If Xestro ever offers it, set `bookingUrl` in `src/lib/data.ts` and a "Book online" link appears. |
 
 ---
@@ -115,10 +114,10 @@ All DNS is managed at VentraIP. Records below are the intended state.
 |------|------|-------|---------|
 | A | `@` | 216.150.1.1 | Website (Vercel) |
 | A | `www` | 216.150.1.1 | Website (Vercel) |
-| MX | `@` | Google Workspace mail servers | Email |
-| TXT | `@` | SPF record (Google) | Email sending |
-| TXT | `google._domainkey` | DKIM key | Email signing |
-| TXT | `_dmarc` | `v=DMARC1; p=none; ...` | Email reporting |
+| MX | `@` | `smtp.google.com` (priority 1) | Email |
+| TXT | `@` | `v=spf1 include:_spf.google.com ~all` | Email sending |
+| TXT | `google._domainkey` | DKIM key from the Workspace admin console | Email signing |
+| TXT | `_dmarc` | `v=DMARC1; p=none;` (monitor only; can be tightened later) | Email reporting |
 | TXT | `@` | `google-site-verification=...` | Proves ownership to Google (Search Console and Workspace) |
 
 ### The five spare domains
@@ -129,7 +128,7 @@ Registered at VentraIP so nobody else can use the name. Each has:
 - an SPF record of `-all` (no email may be sent from it)
 - a DMARC record with `p=reject`
 
-The spare domain names are not recorded in this repo. Add them here: ______________________.
+The spare domains are `drnatemyhill.au`, `drnatemyhill.com`, `drnatemyhill.co`, `drnatemyhill.net` and `drnatemyhill.site`. Each one, with and without `www`, permanently redirects to https://drnatemyhill.com.au (set in Vercel, Project, Settings, Domains). Auto-renew is on for all six domains at VentraIP. `.au` and `.com.au` renew separately.
 
 **NEVER TOUCH THE EMAIL RECORDS** (MX, SPF, DKIM, DMARC, google-site-verification). A wrong edit stops email, or lets other people send as Nate. DNS is never changed from code.
 

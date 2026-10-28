@@ -55,7 +55,7 @@ All current clinical wording was signed off by Nate and checked against Ahpra ad
 5. Recovery timings say "typically" and "recovery varies between people".
 6. Do not use device or implant brand names in public copy. Say "knotless double-row repair", not a brand.
 7. Credentials must match the Ahpra register exactly: MBBS, FRACS (Ortho), MPH, BSc. The Erasmus MC placement is an "IBRA Scholarship at Erasmus MC, Rotterdam". It is a scholarship, never a "fellowship". (FRACS means Fellow of the Royal Australasian College of Surgeons, which is correct.)
-8. No speed promises for correspondence or appointments beyond "we reply within one business day".
+8. No speed promises for correspondence or appointments beyond "we reply within one business day". Exception: the existing trauma wording ("Prompt appointments" on the home page and "aims to provide prompt assessment" on `/trauma`) was reviewed and approved to stay. Do not add new speed promises.
 9. Any new or changed clinical wording needs Nate's own clinical OK before it is merged. Ask him in plain words and wait for a yes.
 10. Do not add before and after photos, outcome statistics or star ratings.
 
