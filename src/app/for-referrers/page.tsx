@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
-import Link from "next/link";
 import PageLayout from "@/components/PageLayout";
+import ReferrerPanel from "@/components/ReferrerPanel";
 
 export const metadata: Metadata = pageMetadata({
   title: "Referral Information for Clinicians",
@@ -25,15 +25,8 @@ export default function ForReferrersPage() {
       </ul>
 
       <h2>Referral information</h2>
-      <div style={{ display: "grid", gap: "1rem", marginTop: "1rem" }}>
-        <Link href="/for-referrers/how-to-refer" style={{ display: "block", background: "#f8f8f6", border: "1px solid #d3d1c7", borderLeft: "3px solid #1d9e75", borderRadius: "4px", padding: "1rem 1.25rem", textDecoration: "none" }}>
-          <div style={{ fontFamily: "EB Garamond, Georgia, serif", fontSize: "var(--text-h3)", color: "#1a2744", marginBottom: "0.25rem" }}>How to refer</div>
-          <div style={{ fontSize: "13px", color: "#5f5e5a" }}>Contact details, HealthLink ID, urgent referral process and what to include in a referral.</div>
-        </Link>
-        <Link href="/for-referrers/referral-resources" style={{ display: "block", background: "#f8f8f6", border: "1px solid #d3d1c7", borderLeft: "3px solid #1d9e75", borderRadius: "4px", padding: "1rem 1.25rem", textDecoration: "none" }}>
-          <div style={{ fontFamily: "EB Garamond, Georgia, serif", fontSize: "var(--text-h3)", color: "#1a2744", marginBottom: "0.25rem" }}>Referral resources</div>
-          <div style={{ fontSize: "13px", color: "#5f5e5a" }}>Ways to refer a patient and information for referrers.</div>
-        </Link>
+      <div style={{ background: "#f8f8f6", border: "1px solid #d3d1c7", borderTop: "3px solid #1d9e75", borderRadius: "4px", padding: "1.75rem" }}>
+        <ReferrerPanel variant="light" />
       </div>
 
       <h2>Correspondence</h2>
