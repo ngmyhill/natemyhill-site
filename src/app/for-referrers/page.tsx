@@ -38,7 +38,7 @@ export default function ForReferrersPage() {
 
       <h2>Correspondence</h2>
       <p>
-        Dr Myhill aims to provide prompt correspondence following consultations and procedures. If you have not received a letter and require clinical information urgently, please contact the practice directly.
+        If you have not received a letter and require clinical information urgently, please contact the practice directly.
       </p>
     </PageLayout>
   );

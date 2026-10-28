@@ -14,7 +14,7 @@ const faqs = [
   { q: "How long is recovery after rotator cuff repair?", a: "Recovery depends on tear size and repair complexity. A sling is typically worn for 4–6 weeks, physiotherapy begins early, and light activities usually resume by around 3 months. Full recovery typically takes 6–12 months, and recovery varies between people." },
   { q: "Can a rotator cuff tear heal without surgery?", a: "Some partial-thickness tears and smaller full-thickness tears may settle with physiotherapy, activity modification and injection therapy. Dr Myhill will discuss all options at your consultation so you can make an informed choice." },
   { q: "Will I need a general anaesthetic?", a: "Most rotator cuff repairs are performed under general anaesthesia, often combined with a nerve block (interscalene block) to reduce post-operative pain. Dr Myhill will discuss your anaesthetic options with you." },
-  { q: "Is the surgery done arthroscopically?", a: "Most repairs are performed arthroscopically (keyhole surgery), which is associated with smaller incisions and faster recovery. Occasionally, larger or more complex repairs require a mini-open or open approach." },
+  { q: "Is the surgery done arthroscopically?", a: "Most repairs are performed arthroscopically (keyhole surgery). Occasionally, larger or more complex repairs require a mini-open or open approach." },
 ];
 
 export default function RotatorCuffRepairPage() {

@@ -28,7 +28,7 @@ export default function AboutPage() {
         Dr Nate Myhill is a specialist orthopaedic surgeon practising across Melbourne and Albury. His clinical work spans shoulder and upper limb surgery, hip and knee reconstruction, and trauma — with a particular focus in rotator cuff pathology and shoulder replacement.
       </p>
       <p>
-        Dr Myhill's approach is grounded in shared decision-making: a process in which patients are treated as active participants in choosing their own care. That means taking the time to explain your condition clearly, discussing every realistic option — including non-surgical pathways — and arriving at a plan that aligns with your individual values, goals and lifestyle.
+        Dr Myhill makes treatment decisions together with his patients. He takes time to explain your condition and goes through the realistic options, including non-surgical ones. Together you settle on a plan that suits your goals and the way you live.
       </p>
 
       <h2>Qualifications</h2>
@@ -39,9 +39,9 @@ export default function AboutPage() {
         <li><strong>BSc</strong> — Bachelor of Science</li>
       </ul>
 
-      <h2>Fellowship</h2>
+      <h2>Scholarship</h2>
       <p>
-        Dr Myhill completed an <strong>IBRA Scholarship</strong> at Erasmus MC, Rotterdam, Netherlands — an academic medical centre in Europe. The scholarship focused on upper limb elective and trauma surgery, encompassing shoulder, elbow and wrist procedures at an international centre.
+        Dr Myhill completed an <strong>IBRA Scholarship</strong> at Erasmus MC in Rotterdam. It focused on upper limb surgery, both elective and trauma, covering the shoulder, elbow and wrist.
       </p>
 
       <h2>Professional memberships</h2>

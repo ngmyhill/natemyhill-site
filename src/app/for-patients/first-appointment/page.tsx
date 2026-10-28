@@ -14,7 +14,7 @@ export default function FirstAppointmentPage() {
     <PageLayout crumbs={[{ label: "Home", href: "/" }, { label: "For Patients", href: "/for-patients" }, { label: "Your First Appointment" }]}>
       <h1>Your first appointment</h1>
       <p>
-        Your consultation with Dr Myhill is an opportunity to discuss your condition in detail, ask questions, and begin working out what the right path forward looks like for you. Consultations typically take 20–40 minutes depending on your situation.
+        At your first appointment you can talk through your condition, ask questions and start working out what to do next. Consultations typically take 20–40 minutes, depending on your situation.
       </p>
 
       <h2>What to bring</h2>
@@ -31,9 +31,6 @@ export default function FirstAppointmentPage() {
       <h2>What to expect</h2>
       <p>
         Dr Myhill will take a detailed history of your symptoms and their impact on your daily life, activities and goals. He will then perform a physical examination. Based on the history, examination and any imaging available, he will explain your condition and the options available to you.
-      </p>
-      <p>
-        Treatment decisions are made together. Dr Myhill's approach is built on shared decision-making — ensuring you understand your condition and every realistic option, so that the plan you choose reflects your own values and goals.
       </p>
       <p>
         You will rarely be rushed into a decision. For most conditions, there is time to reflect, seek a second opinion, or ask further questions before committing to any course of action.

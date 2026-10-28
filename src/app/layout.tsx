@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     default: "Dr Nate Myhill — Orthopaedic Surgeon Melbourne",
     template: "%s | Dr Nate Myhill",
   },
-  description: "Melbourne orthopaedic surgeon with a special interest in shoulder, upper limb and sports surgery. The plan that fits your life — chosen with you, not for you.",
+  description: "Melbourne orthopaedic surgeon with a special interest in shoulder, upper limb and sports surgery, and general orthopaedics.",
   metadataBase: new URL(SITE_URL),
   icons: {
     icon: "/favicon.svg",

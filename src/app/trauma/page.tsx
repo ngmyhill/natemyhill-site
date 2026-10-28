@@ -17,7 +17,7 @@ export default function TraumaPage() {
         Dr Myhill actively manages both upper and lower limb trauma as part of his orthopaedic practice. Referrals are accepted from GPs, physiotherapists and emergency departments, and long-term follow-up is provided.
       </p>
       <p>
-        While trauma is not the primary marketing focus of the practice, it is an area Dr Myhill engages with actively and takes seriously — both in the acute phase and in the longer-term management of injuries.
+        Dr Myhill treats trauma patients from the first injury through to long-term follow-up.
       </p>
 
       <h2>Upper limb trauma</h2>

@@ -5,7 +5,7 @@ import Link from "next/link";
 import { LOCATIONS } from "@/lib/data";
 
 export const metadata: Metadata = pageMetadata({
-  description: "Melbourne orthopaedic surgeon with a special interest in shoulder, upper limb and sports surgery. The plan that fits your life — chosen with you, not for you.",
+  description: "Melbourne orthopaedic surgeon with a special interest in shoulder, upper limb and sports surgery, and general orthopaedics.",
   path: "/",
 });
 
@@ -13,7 +13,7 @@ const specialties = [
   {
     title: "Shoulder & Upper Limb",
     href: "/shoulder-upper-limb",
-    desc: "Rotator cuff repair, shoulder replacement, instability surgery, elbow and wrist conditions — specialist upper limb care, with fellowship training at Erasmus MC Rotterdam.",
+    desc: "Rotator cuff repair, shoulder replacement, instability surgery, elbow and wrist conditions — specialist upper limb care, including an IBRA Scholarship at Erasmus MC, Rotterdam.",
     links: [
       { label: "Rotator Cuff Repair", href: "/shoulder-upper-limb/rotator-cuff-repair" },
       { label: "Shoulder Replacement", href: "/shoulder-upper-limb/shoulder-replacement" },
@@ -48,17 +48,17 @@ const brandPillars = [
   {
     number: "01",
     title: "We decide together",
-    body: "Shared decision-making is the practice, not a slogan. You have a say in every choice, and every plan is built around your values, goals and lifestyle. You're always a participant, never a passenger.",
+    body: "You have a say in every choice. Your plan starts from your goals and your daily life, and we go through the options together.",
   },
   {
     number: "02",
     title: "We get you moving",
-    body: "Trained across the whole of orthopaedics, with a special interest in the shoulder, upper limb and sports. Surgery is never the point in itself — it's in service of getting you back to the life you want.",
+    body: "Trained across the whole of orthopaedics, with a special interest in the shoulder, upper limb and sports. Surgery is a way to get you back to what you want to do.",
   },
   {
     number: "03",
     title: "We say it straight",
-    body: "Plain English, every time. Clear correspondence for your GP, honest options for you, and the jargon explained before it's ever used. Considered and never reliant on hype.",
+    body: "We explain things in plain English and define any jargon before we use it. Your GP gets a clear letter, and you get straight answers about your options.",
   },
 ];
 
@@ -155,22 +155,18 @@ export default function Home() {
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "3rem", alignItems: "center" }}>
           <div>
             <p style={{ color: "#0f7a59", fontSize: "12px", letterSpacing: "0.18em", textTransform: "uppercase", marginBottom: "0.75rem", fontWeight: 500 }}>Shared decision-making</p>
-            <h2 style={{ marginTop: 0, marginBottom: "1rem" }}>Surgery is rarely the only option — and never a decision made alone</h2>
+            <h2 style={{ marginTop: 0, marginBottom: "1rem" }}>Choosing a treatment is a decision we make together</h2>
             <p style={{ fontSize: "15px", lineHeight: 1.75, marginBottom: "1rem" }}>
-              Every patient arrives with their own goals, values and circumstances. Dr Myhill's approach begins with listening carefully — then making sure you understand your condition and every realistic option available to you.
+              Dr Myhill starts by listening to what the problem is and what you want to get back to. He then explains your condition and the realistic options, including non-surgical ones.
             </p>
             <p style={{ fontSize: "15px", lineHeight: 1.75, marginBottom: "1.5rem" }}>
-              From there, decisions are made together. Whether that means surgery, non-surgical management or watchful waiting, the plan is one you have actively chosen.
+              That might mean surgery, non-surgical treatment or waiting and watching. Whichever it is, you make the choice.
             </p>
             <Link href="/about" style={{ color: "#0f7a59", fontWeight: 500 }}>About Dr Myhill →</Link>
           </div>
           <div style={{ background: "#f8f8f6", border: "1px solid #d3d1c7", borderRadius: "4px", padding: "2rem" }}>
-            <p style={{ fontFamily: "EB Garamond, Georgia, serif", fontSize: "1.15rem", color: "#1a2744", fontStyle: "italic", lineHeight: 1.7, marginBottom: "1.25rem" }}>
-              "Patients are collaborators, not passive recipients. The right plan is the one that fits your life."
-            </p>
-            <div style={{ fontSize: "13px", color: "#5f5e5a", marginBottom: "1.25rem" }}>Dr Nate Myhill · FRACS(Ortho)</div>
             <div style={{ fontSize: "13px", lineHeight: 1.9 }}>
-              <div><strong style={{ color: "#1a2744" }}>Fellowship:</strong> IBRA Scholarship, Erasmus MC Rotterdam</div>
+              <div><strong style={{ color: "#1a2744" }}>Scholarship:</strong> IBRA Scholarship, Erasmus MC Rotterdam</div>
               <div><strong style={{ color: "#1a2744" }}>Memberships:</strong> AOA · IBRA</div>
               <div><strong style={{ color: "#1a2744" }}>Credentials:</strong> MBBS · FRACS(Ortho) · MPH · BSc</div>
             </div>
@@ -205,7 +201,7 @@ export default function Home() {
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
           <h2 style={{ color: "#ffffff", marginTop: 0, marginBottom: "0.5rem" }}>For GPs and referring practitioners</h2>
           <p style={{ color: "#d3d1c7", fontSize: "15px", maxWidth: "540px", lineHeight: 1.7, marginBottom: "1.5rem" }}>
-            Fast turnaround on correspondence. Secure referral via HealthLink or Medical Objects. Consulting at seven locations across Melbourne and Albury. Referring is straightforward.
+            Secure referral via HealthLink or Medical Objects. Consulting at seven locations across Melbourne and Albury. Referring is straightforward.
           </p>
           <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
             <Link href="/for-referrers/how-to-refer" style={{ background: "#34b889", color: "#1a2744", padding: "0.65rem 1.25rem", borderRadius: "4px", fontWeight: 500, textDecoration: "none", fontSize: "14px" }}>

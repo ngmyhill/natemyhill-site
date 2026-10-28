@@ -31,7 +31,7 @@ export default function ShoulderUpperLimbPage() {
         Dr Myhill's primary clinical focus is shoulder and upper limb surgery. His practice spans the shoulder, elbow and wrist, with a particular interest in rotator cuff pathology and shoulder replacement.
       </p>
       <p>
-        Approximately one-third of his upper limb practice involves sports injuries, one-third degenerative conditions, and one-third trauma. His training included an <strong>IBRA Scholarship at Erasmus MC, Rotterdam</strong> — a dedicated upper limb fellowship encompassing complex elective and trauma procedures.
+        Approximately one-third of his upper limb practice involves sports injuries, one-third degenerative conditions, and one-third trauma. His training included an <strong>IBRA Scholarship at Erasmus MC, Rotterdam</strong>, covering complex elective and trauma procedures of the upper limb.
       </p>
 
       <h2>Upper limb procedures</h2>
