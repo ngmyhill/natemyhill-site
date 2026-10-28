@@ -5,7 +5,7 @@ import PageLayout from "@/components/PageLayout";
 import { LOCATIONS } from "@/lib/data";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Locations — Dr Nate Myhill",
+  title: "Locations in Melbourne and Albury",
   description: "Dr Nate Myhill consults and operates at seven locations across Melbourne and Albury including Knox, Mitcham, Warringal, John Fawkner and Northern Health.",
   path: "/locations",
 });

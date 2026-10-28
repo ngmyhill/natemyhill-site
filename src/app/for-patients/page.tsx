@@ -4,7 +4,7 @@ import Link from "next/link";
 import PageLayout from "@/components/PageLayout";
 
 export const metadata: Metadata = pageMetadata({
-  title: "For Patients — Dr Nate Myhill",
+  title: "Patient Information and Resources",
   description: "Patient information from Dr Nate Myhill — your first appointment, fees, pre-operative and post-operative information.",
   path: "/for-patients",
 });

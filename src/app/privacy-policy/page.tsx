@@ -4,7 +4,7 @@ import PageLayout from "@/components/PageLayout";
 import { DOCTOR } from "@/lib/data";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Privacy Policy — Dr Nate Myhill",
+  title: "Privacy Policy and Your Information",
   description: "Privacy policy for drnatemyhill.com.au — how we collect, use and protect your personal information in accordance with the Privacy Act 1988 (Cth).",
   path: "/privacy-policy",
 });

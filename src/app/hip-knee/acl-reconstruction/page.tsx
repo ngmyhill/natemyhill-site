@@ -5,7 +5,7 @@ import RisksSection from "@/components/RisksSection";
 import FAQSection from "@/components/FAQSection";
 
 export const metadata: Metadata = pageMetadata({
-  title: "ACL Reconstruction Melbourne — Dr Nate Myhill",
+  title: "ACL Reconstruction Melbourne",
   description: "Anterior cruciate ligament (ACL) reconstruction for knee instability. Specialist knee surgeon Dr Nate Myhill, Melbourne.",
   path: "/hip-knee/acl-reconstruction",
 });

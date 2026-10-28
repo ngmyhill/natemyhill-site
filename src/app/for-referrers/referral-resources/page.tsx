@@ -3,7 +3,7 @@ import { pageMetadata } from "@/lib/seo";
 import PageLayout from "@/components/PageLayout";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Referral Resources — Dr Nate Myhill",
+  title: "Referral Resources and Template",
   description: "Downloadable referral template and patient information sheets for referring practitioners.",
   path: "/for-referrers/referral-resources",
 });

@@ -4,7 +4,7 @@ import PageLayout from "@/components/PageLayout";
 import RisksSection from "@/components/RisksSection";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Upper Limb Trauma Melbourne — Dr Nate Myhill",
+  title: "Upper Limb Trauma Surgery Melbourne",
   description: "Surgical management of upper limb trauma including shoulder, elbow and wrist fractures. Dr Nate Myhill, Melbourne.",
   path: "/trauma/upper-limb",
 });

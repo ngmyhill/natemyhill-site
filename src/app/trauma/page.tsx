@@ -4,7 +4,7 @@ import Link from "next/link";
 import PageLayout from "@/components/PageLayout";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Orthopaedic Trauma Surgery Melbourne — Dr Nate Myhill",
+  title: "Orthopaedic Trauma Surgery Melbourne",
   description: "Upper and lower limb trauma surgery accepted from GPs, physiotherapists and emergency departments. Specialist orthopaedic surgeon Dr Nate Myhill, Melbourne.",
   path: "/trauma",
 });

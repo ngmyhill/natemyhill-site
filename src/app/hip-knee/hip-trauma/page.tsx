@@ -5,7 +5,7 @@ import RisksSection from "@/components/RisksSection";
 import FAQSection from "@/components/FAQSection";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Hip Fracture & Trauma Surgery Melbourne — Dr Nate Myhill",
+  title: "Hip Fracture Surgery Melbourne",
   description: "Surgical management of hip fractures and lower limb trauma. Dr Nate Myhill, specialist orthopaedic surgeon in Melbourne.",
   path: "/hip-knee/hip-trauma",
 });

@@ -5,7 +5,7 @@ import RisksSection from "@/components/RisksSection";
 import FAQSection from "@/components/FAQSection";
 
 export const metadata: Metadata = pageMetadata({
-  title: "UCL Reconstruction (Elbow) Melbourne — Dr Nate Myhill",
+  title: "UCL Elbow Reconstruction Melbourne",
   description: "Ulnar collateral ligament (UCL) reconstruction for medial elbow instability. Upper limb surgeon Dr Nate Myhill, Melbourne.",
   path: "/shoulder-upper-limb/ucl-reconstruction",
 });

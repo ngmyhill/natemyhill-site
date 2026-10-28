@@ -5,7 +5,7 @@ import RisksSection from "@/components/RisksSection";
 import FAQSection from "@/components/FAQSection";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Shoulder Instability Surgery Melbourne — Dr Nate Myhill",
+  title: "Shoulder Instability Surgery Melbourne",
   description: "Labral repair (Bankart) and Latarjet procedure for shoulder instability and recurrent dislocation. Specialist shoulder surgeon in Melbourne.",
   path: "/shoulder-upper-limb/shoulder-instability",
 });

@@ -5,7 +5,7 @@ import RisksSection from "@/components/RisksSection";
 import FAQSection from "@/components/FAQSection";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Shoulder Replacement Melbourne — Dr Nate Myhill",
+  title: "Shoulder Replacement Melbourne",
   description: "Anatomic and reverse total shoulder replacement with Dr Nate Myhill, specialist orthopaedic surgeon in Melbourne.",
   path: "/shoulder-upper-limb/shoulder-replacement",
 });

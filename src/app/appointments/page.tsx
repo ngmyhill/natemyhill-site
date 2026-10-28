@@ -4,7 +4,7 @@ import PageLayout from "@/components/PageLayout";
 import { DOCTOR } from "@/lib/data";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Book an Appointment",
+  title: "Book an Orthopaedic Appointment",
   description: "Book an appointment with Dr Nate Myhill, specialist orthopaedic surgeon. Consult at Knox, Mitcham, Warringal, John Fawkner or Albury.",
   path: "/appointments",
 });

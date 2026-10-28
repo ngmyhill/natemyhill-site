@@ -5,7 +5,7 @@ import RisksSection from "@/components/RisksSection";
 import FAQSection from "@/components/FAQSection";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Rotator Cuff Repair Melbourne — Dr Nate Myhill",
+  title: "Rotator Cuff Repair Melbourne",
   description: "Specialist rotator cuff repair in Melbourne. Dr Nate Myhill performs arthroscopic and open repair of partial and full-thickness rotator cuff tears.",
   path: "/shoulder-upper-limb/rotator-cuff-repair",
 });

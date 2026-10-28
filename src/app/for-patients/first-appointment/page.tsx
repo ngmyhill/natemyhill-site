@@ -4,7 +4,7 @@ import PageLayout from "@/components/PageLayout";
 import { DOCTOR } from "@/lib/data";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Your First Appointment — Dr Nate Myhill",
+  title: "Your First Orthopaedic Appointment",
   description: "Preparing for your first consultation with Dr Nate Myhill. What to bring, what to expect, and how appointments work.",
   path: "/for-patients/first-appointment",
 });

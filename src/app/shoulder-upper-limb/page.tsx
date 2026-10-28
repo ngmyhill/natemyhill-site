@@ -4,7 +4,7 @@ import Link from "next/link";
 import PageLayout from "@/components/PageLayout";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Shoulder & Upper Limb Surgery Melbourne — Dr Nate Myhill",
+  title: "Shoulder and Upper Limb Surgery",
   description: "Dr Nate Myhill specialises in shoulder and upper limb surgery in Melbourne, including rotator cuff repair, shoulder replacement, instability, elbow and wrist surgery.",
   path: "/shoulder-upper-limb",
 });

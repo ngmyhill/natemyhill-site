@@ -4,7 +4,7 @@ import Link from "next/link";
 import PageLayout from "@/components/PageLayout";
 
 export const metadata: Metadata = pageMetadata({
-  title: "For Referrers — Dr Nate Myhill",
+  title: "Referral Information for Clinicians",
   description: "Referral information for GPs, physiotherapists and emergency departments. How to refer to Dr Nate Myhill, specialist orthopaedic surgeon.",
   path: "/for-referrers",
 });

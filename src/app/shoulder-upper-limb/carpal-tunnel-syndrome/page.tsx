@@ -5,7 +5,7 @@ import RisksSection from "@/components/RisksSection";
 import FAQSection from "@/components/FAQSection";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Carpal Tunnel Syndrome Surgery Melbourne — Dr Nate Myhill",
+  title: "Carpal Tunnel Surgery Melbourne",
   description: "Carpal tunnel decompression for median nerve compression at the wrist. Upper limb surgeon Dr Nate Myhill, Melbourne.",
   path: "/shoulder-upper-limb/carpal-tunnel-syndrome",
 });

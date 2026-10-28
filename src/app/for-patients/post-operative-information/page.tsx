@@ -3,7 +3,7 @@ import { pageMetadata } from "@/lib/seo";
 import PageLayout from "@/components/PageLayout";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Post-operative Information — Dr Nate Myhill",
+  title: "Post-operative Care Information",
   description: "Post-operative care information from Dr Nate Myhill. Wound care, pain management, exercises and follow-up.",
   path: "/for-patients/post-operative-information",
 });

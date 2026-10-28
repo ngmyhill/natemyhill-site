@@ -5,7 +5,7 @@ import RisksSection from "@/components/RisksSection";
 import FAQSection from "@/components/FAQSection";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Meniscal Repair Melbourne — Dr Nate Myhill",
+  title: "Meniscal Repair Surgery Melbourne",
   description: "Arthroscopic meniscal repair to preserve the knee's natural cushioning. Specialist knee surgeon Dr Nate Myhill, Melbourne.",
   path: "/hip-knee/meniscal-repair",
 });

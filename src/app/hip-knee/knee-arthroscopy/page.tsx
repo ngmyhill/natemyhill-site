@@ -5,7 +5,7 @@ import RisksSection from "@/components/RisksSection";
 import FAQSection from "@/components/FAQSection";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Knee Arthroscopy Melbourne — Dr Nate Myhill",
+  title: "Knee Arthroscopy Surgery Melbourne",
   description: "Diagnostic and therapeutic knee arthroscopy. Specialist knee surgeon Dr Nate Myhill, Melbourne.",
   path: "/hip-knee/knee-arthroscopy",
 });

@@ -5,7 +5,7 @@ import RisksSection from "@/components/RisksSection";
 import FAQSection from "@/components/FAQSection";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Tennis Elbow Surgery Melbourne — Dr Nate Myhill",
+  title: "Tennis Elbow Surgery Melbourne",
   description: "Surgical treatment of lateral epicondylitis (tennis elbow) in Melbourne when conservative treatment has not helped. Dr Nate Myhill, upper limb surgeon.",
   path: "/shoulder-upper-limb/tennis-elbow",
 });

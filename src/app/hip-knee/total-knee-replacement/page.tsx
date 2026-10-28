@@ -5,7 +5,7 @@ import RisksSection from "@/components/RisksSection";
 import FAQSection from "@/components/FAQSection";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Total Knee Replacement Melbourne — Dr Nate Myhill",
+  title: "Total Knee Replacement Melbourne",
   description: "Total knee arthroplasty for end-stage knee arthritis in Melbourne. Specialist orthopaedic surgeon Dr Nate Myhill.",
   path: "/hip-knee/total-knee-replacement",
 });

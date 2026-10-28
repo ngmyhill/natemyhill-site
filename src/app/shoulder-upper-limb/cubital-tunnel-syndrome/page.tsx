@@ -5,7 +5,7 @@ import RisksSection from "@/components/RisksSection";
 import FAQSection from "@/components/FAQSection";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Cubital Tunnel Syndrome Melbourne — Dr Nate Myhill",
+  title: "Cubital Tunnel Surgery Melbourne",
   description: "Surgical decompression of the ulnar nerve at the elbow for cubital tunnel syndrome. Upper limb surgeon Dr Nate Myhill, Melbourne.",
   path: "/shoulder-upper-limb/cubital-tunnel-syndrome",
 });

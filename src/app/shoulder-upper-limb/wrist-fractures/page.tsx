@@ -5,7 +5,7 @@ import RisksSection from "@/components/RisksSection";
 import FAQSection from "@/components/FAQSection";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Wrist Fracture Surgery Melbourne — Dr Nate Myhill",
+  title: "Wrist Fracture Surgery Melbourne",
   description: "Surgical management of distal radius and scaphoid fractures. Upper limb trauma surgeon Dr Nate Myhill, Melbourne.",
   path: "/shoulder-upper-limb/wrist-fractures",
 });

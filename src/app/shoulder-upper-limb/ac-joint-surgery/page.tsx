@@ -5,7 +5,7 @@ import RisksSection from "@/components/RisksSection";
 import FAQSection from "@/components/FAQSection";
 
 export const metadata: Metadata = pageMetadata({
-  title: "AC Joint Surgery Melbourne — Dr Nate Myhill",
+  title: "AC Joint Separation Surgery Melbourne",
   description: "Surgical management of acromioclavicular (AC) joint separation and arthritis in Melbourne. Dr Nate Myhill, specialist shoulder surgeon.",
   path: "/shoulder-upper-limb/ac-joint-surgery",
 });

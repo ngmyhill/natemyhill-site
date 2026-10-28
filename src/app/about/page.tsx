@@ -3,7 +3,7 @@ import { pageMetadata } from "@/lib/seo";
 import PageLayout from "@/components/PageLayout";
 
 export const metadata: Metadata = pageMetadata({
-  title: "About Dr Nate Myhill — Orthopaedic Surgeon",
+  title: "About Your Orthopaedic Surgeon",
   description: "Dr Nate Myhill is a specialist orthopaedic surgeon with FRACS(Ortho), an IBRA Scholarship at Erasmus MC Rotterdam, and membership of AOA and IBRA. Based in Melbourne.",
   path: "/about",
 });

@@ -5,7 +5,7 @@ import RisksSection from "@/components/RisksSection";
 import FAQSection from "@/components/FAQSection";
 
 export const metadata: Metadata = pageMetadata({
-  title: "OK Procedure (Outerbridge-Kashiwagi) Melbourne — Dr Nate Myhill",
+  title: "OK Procedure for Elbow Arthritis",
   description: "The Outerbridge-Kashiwagi (OK) procedure for elbow arthritis and loose bodies. Specialist elbow surgeon Dr Nate Myhill, Melbourne.",
   path: "/shoulder-upper-limb/ok-procedure",
 });

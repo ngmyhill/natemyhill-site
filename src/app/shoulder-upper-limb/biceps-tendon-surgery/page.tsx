@@ -5,7 +5,7 @@ import RisksSection from "@/components/RisksSection";
 import FAQSection from "@/components/FAQSection";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Biceps Tendon Surgery Melbourne — Dr Nate Myhill",
+  title: "Biceps Tendon Surgery Melbourne",
   description: "Biceps tenodesis and tenotomy for long head of biceps tendon pathology. Specialist shoulder and upper limb surgeon in Melbourne.",
   path: "/shoulder-upper-limb/biceps-tendon-surgery",
 });

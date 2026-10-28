@@ -4,7 +4,7 @@ import PageLayout from "@/components/PageLayout";
 import { DOCTOR } from "@/lib/data";
 
 export const metadata: Metadata = pageMetadata({
-  title: "How to Refer — Dr Nate Myhill",
+  title: "How to Refer a Patient for Surgery",
   description: "How to refer a patient to Dr Nate Myhill. Contact details, HealthLink ID, urgent referral process and what to include.",
   path: "/for-referrers/how-to-refer",
 });

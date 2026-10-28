@@ -20,7 +20,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: {
     default: "Dr Nate Myhill — Orthopaedic Surgeon Melbourne",
-    template: "%s | Dr Nate Myhill — Orthopaedic Surgeon",
+    template: "%s | Dr Nate Myhill",
   },
   description: "Melbourne orthopaedic surgeon with a special interest in shoulder, upper limb and sports surgery. The plan that fits your life — chosen with you, not for you.",
   metadataBase: new URL(SITE_URL),

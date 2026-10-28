@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const loc = LOCATIONS.find((l) => l.slug === slug);
   if (!loc) return {};
   return pageMetadata({
-    title: `${loc.name}, ${loc.suburb} — Dr Nate Myhill`,
+    title: `${loc.name} in ${loc.suburb}`,
     description: `Dr Nate Myhill consults at ${loc.name} in ${loc.suburb}, ${loc.state}. ${loc.type}. ${loc.services.join(", ")}.`,
     path: `/locations/${loc.slug}`,
   });

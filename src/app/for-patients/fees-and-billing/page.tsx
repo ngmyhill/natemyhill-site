@@ -3,7 +3,7 @@ import { pageMetadata } from "@/lib/seo";
 import PageLayout from "@/components/PageLayout";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Fees & Billing — Dr Nate Myhill",
+  title: "Fees and Billing Information",
   description: "Fee information, out-of-pocket estimates, health fund and Medicare information for Dr Nate Myhill's orthopaedic practice.",
   path: "/for-patients/fees-and-billing",
 });

@@ -5,7 +5,7 @@ import RisksSection from "@/components/RisksSection";
 import FAQSection from "@/components/FAQSection";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Total Hip Replacement Melbourne — Dr Nate Myhill",
+  title: "Total Hip Replacement Melbourne",
   description: "Total hip arthroplasty for hip arthritis in Melbourne. Specialist orthopaedic surgeon Dr Nate Myhill.",
   path: "/hip-knee/total-hip-replacement",
 });
