@@ -5,6 +5,18 @@ import { DOCTOR } from "./src/lib/data";
 const liveHost = DOCTOR.domain.replace(/\./g, "\\.");
 
 const nextConfig: NextConfig = {
+  // Launch-day redirect: only the old production host. Preview hosts
+  // (natemyhill-git-*.vercel.app and deployment URLs) are not matched.
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "natemyhill\\.vercel\\.app" }],
+        destination: `https://${DOCTOR.domain}/:path*`,
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {
