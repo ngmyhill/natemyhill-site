@@ -16,9 +16,15 @@ const faqs = [
   { q: "How long until the numbness and tingling resolve?", a: "Symptoms of numbness and tingling often improve quickly after surgery. However, complete nerve recovery, particularly in cases of prolonged or severe compression, can take weeks to months. Weakness and muscle wasting may take longer to recover." },
 ];
 
+const glance = [
+  { label: "Setting", value: "Usually a day procedure" },
+  { label: "Anaesthetic", value: "Local (with or without sedation) or general" },
+  { label: "Light activities", value: "Typically within a few days, though full hand strength may take several weeks" },
+];
+
 export default function CarpalTunnelPage() {
   return (
-    <PageLayout crumbs={[{ label: "Home", href: "/" }, { label: "Shoulder & Upper Limb", href: "/shoulder-upper-limb" }, { label: "Carpal Tunnel Syndrome" }]}>
+    <PageLayout glance={glance} crumbs={[{ label: "Home", href: "/" }, { label: "Shoulder & Upper Limb", href: "/shoulder-upper-limb" }, { label: "Carpal Tunnel Syndrome" }]}>
       <h1>Carpal tunnel syndrome</h1>
       <p>
         Carpal tunnel syndrome is the most common peripheral nerve compression condition. It occurs when the median nerve is compressed as it passes through the carpal tunnel, a narrow channel at the base of the wrist bounded by small wrist bones and a strong band of connective tissue (the transverse carpal ligament).

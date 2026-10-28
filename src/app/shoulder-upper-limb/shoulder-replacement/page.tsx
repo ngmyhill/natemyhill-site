@@ -16,9 +16,16 @@ const faqs = [
   { q: "What is recovery like after shoulder replacement?", a: "You will typically stay in hospital for 1–2 nights. A sling is worn for 4–6 weeks. Physiotherapy begins soon after surgery. People typically regain comfortable function by around 3–6 months, with ongoing improvement over 12 months. Recovery varies between people." },
 ];
 
+const glance = [
+  { label: "Operation time", value: "Typically 90–120 minutes" },
+  { label: "Anaesthetic", value: "General anaesthesia, usually with a nerve block" },
+  { label: "Hospital stay", value: "Typically 1–2 nights" },
+  { label: "Sling", value: "About 4–6 weeks" },
+];
+
 export default function ShoulderReplacementPage() {
   return (
-    <PageLayout crumbs={[{ label: "Home", href: "/" }, { label: "Shoulder & Upper Limb", href: "/shoulder-upper-limb" }, { label: "Shoulder Replacement" }]}>
+    <PageLayout glance={glance} crumbs={[{ label: "Home", href: "/" }, { label: "Shoulder & Upper Limb", href: "/shoulder-upper-limb" }, { label: "Shoulder Replacement" }]}>
       <h1>Shoulder replacement</h1>
       <p>
         Shoulder replacement (shoulder arthroplasty) is a surgical procedure in which the arthritic or damaged surfaces of the shoulder joint are replaced with artificial components. It is indicated when significant arthritis or irreparable rotator cuff damage causes persistent pain and functional limitation that has not responded to non-surgical measures.

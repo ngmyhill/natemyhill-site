@@ -16,9 +16,15 @@ const faqs = [
   { q: "Can I kneel after a knee replacement?", a: "Many patients can kneel after knee replacement, though it may feel uncomfortable. There is no clinical evidence that kneeling harms the implant. Discuss your specific goals with Dr Myhill." },
 ];
 
+const glance = [
+  { label: "Hospital stay", value: "Typically 2–4 nights" },
+  { label: "Anaesthetic", value: "General or spinal" },
+  { label: "Physiotherapy", value: "Continues for 6–12 weeks" },
+];
+
 export default function TotalKneeReplacementPage() {
   return (
-    <PageLayout crumbs={[{ label: "Home", href: "/" }, { label: "Hip & Knee", href: "/hip-knee" }, { label: "Total Knee Replacement" }]}>
+    <PageLayout glance={glance} crumbs={[{ label: "Home", href: "/" }, { label: "Hip & Knee", href: "/hip-knee" }, { label: "Total Knee Replacement" }]}>
       <h1>Total knee replacement</h1>
       <p>
         Total knee replacement (total knee arthroplasty) is a common orthopaedic procedure. It involves replacing the worn articular surfaces of the knee joint, which are the femur (thigh bone), tibia (shin bone) and sometimes the undersurface of the patella (kneecap), with prosthetic components.

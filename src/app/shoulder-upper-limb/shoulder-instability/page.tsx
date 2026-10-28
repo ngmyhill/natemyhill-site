@@ -16,9 +16,14 @@ const faqs = [
   { q: "What is the recovery time?", a: "A sling is typically worn for 4–6 weeks. Physiotherapy begins early, with return to contact sport usually at 6–9 months for arthroscopic repair, and potentially earlier following Latarjet due to the bony augmentation." },
 ];
 
+const glance = [
+  { label: "Sling", value: "4–6 weeks" },
+  { label: "Return to contact sports", value: "Typically 6–9 months after arthroscopic repair" },
+];
+
 export default function ShoulderInstabilityPage() {
   return (
-    <PageLayout crumbs={[{ label: "Home", href: "/" }, { label: "Shoulder & Upper Limb", href: "/shoulder-upper-limb" }, { label: "Shoulder Instability" }]}>
+    <PageLayout glance={glance} crumbs={[{ label: "Home", href: "/" }, { label: "Shoulder & Upper Limb", href: "/shoulder-upper-limb" }, { label: "Shoulder Instability" }]}>
       <h1>Shoulder instability</h1>
       <p>
         Shoulder instability refers to a shoulder joint that dislocates, partially dislocates (subluxes) or feels loose and unreliable. It most commonly results from a traumatic dislocation that tears the labrum (the soft tissue rim of the shoulder socket), but can also arise from ligamentous laxity or repetitive overhead activity.

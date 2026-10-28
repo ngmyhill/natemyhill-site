@@ -16,9 +16,14 @@ const faqs = [
   { q: "When can I return to sport after ACL reconstruction?", a: "Return to sport is guided by objective criteria, not a fixed time period. People are typically cleared for return to unrestricted sport at around 9–12 months, once strength tests and functional assessments confirm readiness. Recovery varies between people." },
 ];
 
+const glance = [
+  { label: "Operation time", value: "Typically 60–90 minutes" },
+  { label: "Return to unrestricted sport", value: "Rehabilitation is a graded process taking 9–12 months" },
+];
+
 export default function ACLReconstructionPage() {
   return (
-    <PageLayout crumbs={[{ label: "Home", href: "/" }, { label: "Hip & Knee", href: "/hip-knee" }, { label: "ACL Reconstruction" }]}>
+    <PageLayout glance={glance} crumbs={[{ label: "Home", href: "/" }, { label: "Hip & Knee", href: "/hip-knee" }, { label: "ACL Reconstruction" }]}>
       <h1>ACL reconstruction</h1>
       <p>
         The anterior cruciate ligament (ACL) is a central stabilising structure of the knee. ACL rupture is one of the most common serious sporting injuries, typically occurring during pivoting, cutting or landing movements in sports such as football, netball, basketball and skiing. It usually presents with an audible pop, immediate swelling, and a feeling of the knee giving way.

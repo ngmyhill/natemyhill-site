@@ -219,3 +219,20 @@ main:focus {
   .about-head { grid-template-columns: 1fr; gap: 1.5rem; }
   .about-portrait { grid-column: 1; grid-row: 1; aspect-ratio: 4 / 3; }
 }
+
+/* Page layout: article with an optional "At a glance" rail on procedure pages */
+.page-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 3rem; align-items: start; }
+.page-grid:not(.has-glance) > article { max-width: 54rem; }
+.page-grid.has-glance { grid-template-columns: minmax(0, 1fr) 300px; }
+.glance { position: sticky; top: 1.5rem; background: #f8f8f6; border: 1px solid #d3d1c7; border-top: 3px solid #1d9e75; border-radius: 4px; padding: 1.5rem; }
+.glance h2 { margin: 0 0 1rem; font-size: var(--text-h3); }
+.glance dl { margin: 0; display: grid; gap: 0.9rem; }
+.glance dt { font-size: 13px; color: #5f5e5a; }
+.glance dd { margin: 0.1rem 0 0; color: #1a2744; font-size: 15px; line-height: 1.5; }
+.glance p { margin: 1.1rem 0 0; font-size: 13px; color: #5f5e5a; }
+.two-col { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0 2.5rem; }
+@media (max-width: 900px) {
+  .page-grid.has-glance { grid-template-columns: minmax(0, 1fr); }
+  .glance { position: static; }
+  .two-col { grid-template-columns: minmax(0, 1fr); }
+}

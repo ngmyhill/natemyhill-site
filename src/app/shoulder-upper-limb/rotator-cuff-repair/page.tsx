@@ -17,9 +17,16 @@ const faqs = [
   { q: "Is the surgery done arthroscopically?", a: "Most repairs are performed arthroscopically (keyhole surgery). Occasionally, larger or more complex repairs require a mini-open or open approach." },
 ];
 
+const glance = [
+  { label: "Anaesthetic", value: "Most repairs are performed under general anaesthesia" },
+  { label: "Sling", value: "Typically 4–6 weeks" },
+  { label: "Light activities", value: "Usually by around 3 months" },
+  { label: "Full recovery", value: "Typically 6–12 months, depending on tear size and repair complexity" },
+];
+
 export default function RotatorCuffRepairPage() {
   return (
-    <PageLayout crumbs={[{ label: "Home", href: "/" }, { label: "Shoulder & Upper Limb", href: "/shoulder-upper-limb" }, { label: "Rotator Cuff Repair" }]}>
+    <PageLayout glance={glance} crumbs={[{ label: "Home", href: "/" }, { label: "Shoulder & Upper Limb", href: "/shoulder-upper-limb" }, { label: "Rotator Cuff Repair" }]}>
       <h1>Rotator cuff repair</h1>
       <p>
         The rotator cuff is a group of four muscles and their tendons that surround the shoulder joint, providing stability and enabling arm movement. Tears in the rotator cuff, ranging from partial-thickness to full-thickness, are among the most common shoulder injuries, affecting both active individuals and older adults.

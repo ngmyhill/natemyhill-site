@@ -15,9 +15,14 @@ const faqs = [
   { q: "What can be treated during knee arthroscopy?", a: "Common findings and treatments include meniscal tears (repair or trimming), loose bodies (removal), cartilage lesions, inflamed synovial tissue (synovectomy) and assessment and treatment of ligament injuries." },
 ];
 
+const glance = [
+  { label: "Setting", value: "Usually a day procedure" },
+  { label: "Light activity", value: "Typically within 1–2 weeks after diagnostic arthroscopy or minor meniscal trimming" },
+];
+
 export default function KneeArthroscopyPage() {
   return (
-    <PageLayout crumbs={[{ label: "Home", href: "/" }, { label: "Hip & Knee", href: "/hip-knee" }, { label: "Knee Arthroscopy" }]}>
+    <PageLayout glance={glance} crumbs={[{ label: "Home", href: "/" }, { label: "Hip & Knee", href: "/hip-knee" }, { label: "Knee Arthroscopy" }]}>
       <h1>Knee arthroscopy</h1>
       <p>
         Knee arthroscopy is a minimally invasive surgical procedure in which a small camera (arthroscope) and instruments are inserted into the knee joint through small incisions. It allows direct visualisation of the structures inside the knee and is used for both diagnostic and therapeutic purposes.

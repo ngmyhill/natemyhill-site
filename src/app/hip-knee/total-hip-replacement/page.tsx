@@ -17,31 +17,43 @@ const faqs = [
   { q: "When can I return to driving?", a: "Return to driving is typically around 6 weeks after surgery, provided you can perform an emergency stop safely and are no longer taking opioid medications. Dr Myhill will advise based on your specific recovery." },
 ];
 
+const glance = [
+  { label: "Hospital stay", value: "Typically 2–4 nights" },
+  { label: "Anaesthetic", value: "General or spinal" },
+  { label: "Driving", value: "Typically around 6 weeks, once you can perform an emergency stop safely and are no longer taking opioid medications" },
+  { label: "Light activities", value: "Typically within about 6 weeks" },
+];
+
 export default function TotalHipReplacementPage() {
   return (
-    <PageLayout crumbs={[{ label: "Home", href: "/" }, { label: "Hip & Knee", href: "/hip-knee" }, { label: "Total Hip Replacement" }]}>
+    <PageLayout glance={glance} crumbs={[{ label: "Home", href: "/" }, { label: "Hip & Knee", href: "/hip-knee" }, { label: "Total Hip Replacement" }]}>
       <h1>Total hip replacement</h1>
       <p>
         Total hip replacement (total hip arthroplasty) is a well-established surgical procedure in which the arthritic surfaces of the hip joint are replaced with prosthetic components. It is commonly used to reduce pain and improve function in people with end-stage hip arthritis.
       </p>
 
-      <h2>Causes of hip arthritis</h2>
-      <ul>
-        <li>Primary osteoarthritis — the most common cause, related to wear and degeneration over time</li>
-        <li>Rheumatoid and inflammatory arthritis</li>
-        <li>Post-traumatic arthritis following fractures or dislocations</li>
-        <li>Avascular necrosis — loss of blood supply to the femoral head</li>
-        <li>Hip dysplasia — abnormal joint development</li>
-      </ul>
-
-      <h2>Symptoms</h2>
-      <ul>
-        <li>Groin, thigh or buttock pain</li>
-        <li>Stiffness — particularly difficulty putting on shoes and socks</li>
-        <li>Pain that limits walking distance</li>
-        <li>Night pain disturbing sleep</li>
-        <li>A limp</li>
-      </ul>
+      <div className="two-col">
+        <div>
+          <h2>Causes of hip arthritis</h2>
+          <ul>
+            <li>Primary osteoarthritis — the most common cause, related to wear and degeneration over time</li>
+            <li>Rheumatoid and inflammatory arthritis</li>
+            <li>Post-traumatic arthritis following fractures or dislocations</li>
+            <li>Avascular necrosis — loss of blood supply to the femoral head</li>
+            <li>Hip dysplasia — abnormal joint development</li>
+          </ul>
+        </div>
+        <div>
+          <h2>Symptoms</h2>
+          <ul>
+            <li>Groin, thigh or buttock pain</li>
+            <li>Stiffness — particularly difficulty putting on shoes and socks</li>
+            <li>Pain that limits walking distance</li>
+            <li>Night pain disturbing sleep</li>
+            <li>A limp</li>
+          </ul>
+        </div>
+      </div>
 
       <h2>The procedure</h2>
       <p>
