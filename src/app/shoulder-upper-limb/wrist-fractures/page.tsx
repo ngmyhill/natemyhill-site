@@ -44,7 +44,6 @@ export default function WristFracturesPage() {
         Undisplaced scaphoid fractures may be treated in a cast, though surgery with a headless compression screw offers a faster return to function in younger, active patients. Displaced fractures and non-unions generally require surgical intervention. Dr Myhill will discuss the most appropriate approach for your fracture pattern and circumstances.
       </p>
 
-      {/* DRAFT: clinical review by Dr Myhill required */}
       <RisksSection
         items={[
           "infection",

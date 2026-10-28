@@ -44,7 +44,6 @@ export default function BiceptsTendonSurgeryPage() {
         Both procedures are typically performed arthroscopically and are often carried out alongside treatment of coexisting rotator cuff or shoulder conditions.
       </p>
 
-      {/* DRAFT: clinical review by Dr Myhill required */}
       <RisksSection
         items={[
           "infection",

@@ -46,7 +46,6 @@ export default function MeniscalRepairPage() {
         When a tear cannot be repaired, the unstable torn portion is trimmed back to a stable rim. This is a common, effective procedure for symptomatic tears that cause locking, catching or functional limitation.
       </p>
 
-      {/* DRAFT: clinical review by Dr Myhill required */}
       <RisksSection
         items={[
           "infection",

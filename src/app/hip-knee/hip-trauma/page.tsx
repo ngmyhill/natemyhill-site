@@ -43,7 +43,6 @@ export default function HipTraumaPage() {
         Urgent trauma referrals may be directed to the practice by phone. Dr Myhill has an interest in trauma and is committed to long-term follow-up for injured patients. See the <a href="/for-referrers/how-to-refer">referrer information page</a> for contact details.
       </p>
 
-      {/* DRAFT: clinical review by Dr Myhill required */}
       <RisksSection
         items={[
           "infection",

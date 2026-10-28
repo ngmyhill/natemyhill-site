@@ -42,7 +42,6 @@ export default function UpperLimbTraumaPage() {
         See the <a href="/shoulder-upper-limb/wrist-fractures">wrist fractures page</a> for more detail on the management of distal radius and scaphoid fractures.
       </p>
 
-      {/* DRAFT: clinical review by Dr Myhill required */}
       <RisksSection
         items={[
           "infection",

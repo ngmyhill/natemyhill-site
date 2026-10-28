@@ -56,7 +56,6 @@ export default function CarpalTunnelPage() {
         People typically return to light activities within a few days, though full hand strength may take several weeks. Recovery varies between people.
       </p>
 
-      {/* DRAFT: clinical review by Dr Myhill required */}
       <RisksSection
         items={[
           "infection",

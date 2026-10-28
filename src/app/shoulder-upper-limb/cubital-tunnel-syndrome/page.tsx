@@ -57,7 +57,6 @@ export default function CubitalTunnelPage() {
         Surgery is typically performed as a day procedure under general or regional anaesthesia.
       </p>
 
-      {/* DRAFT: clinical review by Dr Myhill required */}
       <RisksSection
         items={[
           "infection",

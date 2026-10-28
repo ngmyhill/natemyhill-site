@@ -39,7 +39,6 @@ export default function TotalKneeReplacementPage() {
         An enhanced recovery pathway begins on the day of surgery, with physiotherapy-assisted walking within hours of the operation. Hospital stay is typically 2–4 nights. Physiotherapy at home or in a rehabilitation facility continues for 6–12 weeks. Recovery typically plateaus by around 12 months, though it varies between people.
       </p>
 
-      {/* DRAFT: clinical review by Dr Myhill required */}
       <RisksSection
         items={[
           "infection",

@@ -38,7 +38,6 @@ export default function ACJointSurgeryPage() {
         AC joint stabilisation for higher-grade separations typically involves reconstructing the coracoclavicular ligaments, sometimes with augmentation. Distal clavicle resection for arthritis is performed arthroscopically as a day procedure. Dr Myhill will discuss the most appropriate procedure for your situation.
       </p>
 
-      {/* DRAFT: clinical review by Dr Myhill required */}
       <RisksSection
         items={[
           "infection",

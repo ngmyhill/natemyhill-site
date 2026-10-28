@@ -51,7 +51,6 @@ export default function TennisElbowPage() {
         Recovery after surgery involves a period of rest followed by a progressive physiotherapy programme over several months.
       </p>
 
-      {/* DRAFT: clinical review by Dr Myhill required */}
       <RisksSection
         items={[
           "infection",

@@ -44,7 +44,6 @@ export default function ACLReconstructionPage() {
         Rehabilitation after ACL reconstruction is a graded process taking 9–12 months for return to unrestricted sport. Criteria-based rehabilitation — rather than time alone — guides progression through each phase. Full participation in contact and pivoting sports is not recommended until objective strength and functional testing criteria are met.
       </p>
 
-      {/* DRAFT: clinical review by Dr Myhill required */}
       <RisksSection
         items={[
           "infection",

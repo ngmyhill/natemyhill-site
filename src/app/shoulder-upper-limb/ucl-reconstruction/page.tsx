@@ -52,7 +52,6 @@ export default function UCLReconstructionPage() {
         A splint or brace is worn for approximately 6 weeks. Physiotherapy progresses from range of motion to strengthening and finally sport-specific rehabilitation. Return to overhead throwing typically takes 12–18 months.
       </p>
 
-      {/* DRAFT: clinical review by Dr Myhill required */}
       <RisksSection
         items={[
           "infection",

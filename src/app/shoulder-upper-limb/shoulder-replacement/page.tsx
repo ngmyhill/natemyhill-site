@@ -59,7 +59,6 @@ export default function ShoulderReplacementPage() {
         A sling is worn for approximately 4–6 weeks after surgery. Physiotherapy begins early to restore movement before progressing to strengthening. People typically reach comfortable, functional use of the arm by around 3–6 months, with continued improvement over 12 months. Recovery varies between people.
       </p>
 
-      {/* DRAFT: clinical review by Dr Myhill required */}
       <RisksSection
         items={[
           "infection",

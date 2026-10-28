@@ -43,7 +43,6 @@ export default function OKProcedurePage() {
         Recovery following the OK procedure involves a supervised physiotherapy programme to regain elbow range of motion and strength. Many people notice improved extension and less pain with movement, though results vary from person to person and the joint will remain arthritic.
       </p>
 
-      {/* DRAFT: clinical review by Dr Myhill required */}
       <RisksSection
         items={[
           "infection",

@@ -57,7 +57,6 @@ export default function ShoulderInstabilityPage() {
         Following surgery, a sling is worn for 4–6 weeks. Physiotherapy commences early to restore movement and strength. Return to contact sports typically occurs at 6–9 months for arthroscopic repair, though recovery varies between people.
       </p>
 
-      {/* DRAFT: clinical review by Dr Myhill required */}
       <RisksSection
         items={[
           "infection",

@@ -42,7 +42,6 @@ export default function LowerLimbTraumaPage() {
         Many ankle fractures can be managed in a boot or cast. Displaced, unstable or bimalleolar (involving both sides of the ankle) fractures typically require surgical fixation with plates and screws.
       </p>
 
-      {/* DRAFT: clinical review by Dr Myhill required */}
       <RisksSection
         items={[
           "infection",

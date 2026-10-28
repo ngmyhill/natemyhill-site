@@ -42,7 +42,6 @@ export default function KneeArthroscopyPage() {
         Recovery depends on the specific procedure performed. After diagnostic arthroscopy or minor meniscal trimming, people typically return to light activity within 1–2 weeks, though recovery varies between people. After meniscal repair or cartilage procedures, a more protective rehabilitation programme is required.
       </p>
 
-      {/* DRAFT: clinical review by Dr Myhill required */}
       <RisksSection
         items={[
           "infection",

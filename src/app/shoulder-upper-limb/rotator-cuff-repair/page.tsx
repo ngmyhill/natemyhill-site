@@ -61,7 +61,6 @@ export default function RotatorCuffRepairPage() {
         Following surgery, your arm will be placed in a sling for approximately 4–6 weeks. Physiotherapy begins early to maintain range of motion before progressing to strengthening exercises. People typically return to light activities by around 3 months; full recovery typically takes 6–12 months depending on tear size and repair complexity. Recovery varies between people.
       </p>
 
-      {/* DRAFT: clinical review by Dr Myhill required */}
       <RisksSection
         items={[
           "infection",

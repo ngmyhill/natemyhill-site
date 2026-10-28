@@ -56,7 +56,6 @@ export default function TotalHipReplacementPage() {
         Walking typically begins on the day of or the day after surgery. Hospital stay is typically 2–4 nights. A physiotherapy programme continues for several months. People typically return to light activities within about 6 weeks and to most normal activities by around 3 months, but recovery varies between people.
       </p>
 
-      {/* DRAFT: clinical review by Dr Myhill required */}
       <RisksSection
         items={[
           "infection",
