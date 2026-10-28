@@ -1,303 +1,198 @@
-# Dr Nate Myhill — Site Handover Document
-**Last updated:** October 2026  
-**Project:** drnatemyhill.com.au — orthopaedic surgeon website  
-**Status:** Built, deployed to Vercel, brand applied. Awaiting real contact data + domain connection.
+# Dr Nate Myhill website: handover
+
+**Last updated:** October 2026
+**Live site:** https://drnatemyhill.com.au
+**Repo:** https://github.com/ngmyhill/natemyhill-site
+
+The top half of this file is for Nate and needs no technical knowledge. The bottom half is for whoever (or whatever) works on the code next. AI assistants must also follow `AGENTS.md`.
 
 ---
 
-## Quick summary
+## The five things to know
 
-A 47-page Next.js website for Dr Nate Myhill, orthopaedic surgeon, Melbourne. Built from scratch across 8 phases. The site is live at **https://natemyhill.vercel.app** — the production alias pending domain connection.
+1. The site is live. Anything merged into the `main` branch goes live on its own, about a minute later.
+2. Every change is made on a separate branch first. You get a private preview link, check it on your phone, and only then say "merge it".
+3. Claude handles the code. You decide whether the words and the look are right.
+4. Wording about treatments, results and credentials is regulated (Ahpra). Claude has a rulebook for this in `AGENTS.md`, and nothing clinical should go live without your own OK.
+5. Never touch the email DNS records (see the DNS section). They keep your email working.
 
 ---
 
-## Tech stack
+## Current state
+
+- Live at https://drnatemyhill.com.au since launch. The old address natemyhill.vercel.app redirects to it.
+- Launch work done: security update, Ahpra advertising wording pass, a "Risks and complications" section on all 19 procedure pages, correct page titles and canonical links, accessibility fixes (skip link, focus outlines, contrast), the phone-first header with a sticky Call | Book bar on phones, your two headshots, and a share image for links sent in messages.
+- Design refresh done: new home page, a first-person About page with a training timeline, an "At a glance" box on eight procedure pages, a compact referral panel for GPs, locations grouped by region.
+- Contact: phone (03) 9416 1466, fax (03) 9419 3847, email admin@drnatemyhill.com.au. Booking is by phone or email, because Xestro (the practice software) has no patient self-booking.
+- There is no booking form and no analytics on the site. The privacy policy says so. No health information is collected.
+
+### Open items
+
+| Item | Who | Notes |
+|------|-----|-------|
+| Your feedback on the live site | Nate | Anything that reads wrong, looks wrong or is missing |
+| Hospital logos | Nate | Put files at `public/images/locations/<slug>.svg`, `.png` or `.webp`. They appear on the Locations pages by themselves. Only use logos you have permission for. |
+| HealthLink ID and Medical Objects ID | Nate | Set `healthlinkId` and `medicalObjectsId` in `src/lib/data.ts`. They show on the referrer pages once real. |
+| PDFs: patient information sheets and exercise sheets | Nate | Drop files in `public/downloads/` using the names in `src/lib/downloads.ts`. The sections appear when the files exist. |
+| Anatomy illustrations | Waiting | Needs a human medical illustrator. No AI-generated anatomy images. |
+| Recovery timelines for each procedure | Nate | Proposed, not built. Needs your clinical approval before anything goes live. |
+| Hip replacement FAQ line "many patients begin walking on the day of surgery" | Nate | Your call: keep, soften or remove. |
+| First-person intro on the About page | Nate | Marked `NATE TO APPROVE` in the code. Confirm or change the words. |
+| Trauma pages say "Prompt appointments" and "aims to provide prompt assessment" | Nate | These are speed promises. The rules allow only "we reply within one business day". Your call. |
+| Online booking | Later | If Xestro ever offers it, set `bookingUrl` in `src/lib/data.ts` and a "Book online" link appears. |
+
+---
+
+## How Nate makes a change with Claude
+
+1. **Install the Claude desktop app** (claude.com/download) and sign in. Use the **Code** section.
+2. **Get the project onto your computer.** Easiest: install GitHub Desktop, choose File, Clone repository, and pick `ngmyhill/natemyhill-site`. Or tell Claude: "Clone https://github.com/ngmyhill/natemyhill-site into my Documents folder."
+3. **Open the `natemyhill-site` folder** in Claude Code. The first time, Claude may need to install a few things and may ask you to sign in to GitHub. Follow its prompts.
+4. **Describe the change in plain words.** Say what you want and on which page. You do not need technical terms.
+5. **Claude makes the change on a new branch** (not the live site), checks the site still builds, and sends you a **preview link**. It takes about a minute.
+6. **Open the preview on your phone**, and on a computer if you can. Look at the page you changed and the pages around it.
+7. **Not quite right?** Tell Claude what to change. The same preview link updates.
+8. **Happy?** Say **"merge it"**. Claude merges the branch into `main`.
+9. **It goes live in about a minute** at https://drnatemyhill.com.au. If it still looks old, see Troubleshooting.
+10. **Anything about treatments, results, risks or credentials:** Claude must ask for your OK on the exact words before merging. You are the clinical sign-off.
+
+### Example prompts
+
+- "Change the phone number on the site to ..."
+- "Add the Knox Private logo I've put in my Downloads folder."
+- "Add a new procedure page for ..."
+- "Update the hip replacement recovery section to say ..."
+- "Add the HealthLink ID ... and the Medical Objects ID ..."
+- "Check the whole site still follows AGENTS.md."
+- "Show me everything that changed since last week."
+- "Undo the last change I merged."
+
+---
+
+## Troubleshooting
+
+**The build fails.**
+Tell Claude: "The build failed. Fix it and explain what was wrong." Do not merge until the build passes. Production only updates when something is merged, so a failed branch never reaches the live site.
+
+**The preview link asks me to log in to Vercel.**
+Previews are private. Sign in with the Vercel account on team `ngmyhill-9985`. Someone who is not on the team cannot open them, which is intended.
+
+**The live site looks old after I merged.**
+Wait two minutes, then reload hard (Ctrl+Shift+R on a computer, or open it in a private window). Browsers and phones cache pages. Try mobile data instead of Wi-Fi to rule out a local DNS cache. You can also check the Deployments tab in Vercel to see whether the latest one finished.
+
+**Vercel shows a "verifying your browser" or firewall challenge.**
+Vercel does this when it sees many automated checks in a short time, for example scripted tests or crawlers. It is not an outage. Complete the check, or wait ten minutes and try again.
+
+**I merged something wrong.**
+Tell Claude: "Undo the last change that went live." It makes a branch that reverses it, you check the preview, then say "merge it".
+
+**Email stopped working.**
+Do not edit DNS to fix it. Check the Google Workspace admin console and the DNS section below, and ask someone who knows email records.
+
+---
+
+## Accounts and who owns them
+
+| Service | What it is for | Details |
+|---------|----------------|---------|
+| Vercel | Hosts the site, builds previews | Team `ngmyhill-9985`, **Pro plan** (needed because this is a commercial practice site). Project `natemyhill`. Dashboard: vercel.com/ngmyhill-9985s-projects/natemyhill |
+| GitHub | Holds the code | `ngmyhill/natemyhill-site`, **public** repository |
+| VentraIP | Domain registrar and DNS | Six domains (see the DNS section) |
+| Google Workspace | Email | `nate@drnatemyhill.com.au`, with aliases `admin@drnatemyhill.com.au` and `referrals@drnatemyhill.com.au` |
+| Google Search Console | Search visibility | Property `sc-domain:drnatemyhill.com.au` |
+
+**Warning about making the repo private.** On the Vercel Pro plan, if the GitHub repository is ever made private, Vercel refuses to deploy commits whose author is not a member of the Vercel team. Keep the repo public, or add every person who commits to the Vercel team first. Nothing secret should ever be in the repo either way.
+
+---
+
+## DNS map
+
+All DNS is managed at VentraIP. Records below are the intended state.
+
+### drnatemyhill.com.au (primary, live)
+
+| Type | Name | Value | Purpose |
+|------|------|-------|---------|
+| A | `@` | 216.150.1.1 | Website (Vercel) |
+| A | `www` | 216.150.1.1 | Website (Vercel) |
+| MX | `@` | Google Workspace mail servers | Email |
+| TXT | `@` | SPF record (Google) | Email sending |
+| TXT | `google._domainkey` | DKIM key | Email signing |
+| TXT | `_dmarc` | `v=DMARC1; p=none; ...` | Email reporting |
+| TXT | `@` | `google-site-verification=...` | Proves ownership to Google (Search Console and Workspace) |
+
+### The five spare domains
+
+Registered at VentraIP so nobody else can use the name. Each has:
+
+- A `@` and A `www` pointing to 216.150.1.1
+- an SPF record of `-all` (no email may be sent from it)
+- a DMARC record with `p=reject`
+
+The spare domain names are not recorded in this repo. Add them here: ______________________.
+
+**NEVER TOUCH THE EMAIL RECORDS** (MX, SPF, DKIM, DMARC, google-site-verification). A wrong edit stops email, or lets other people send as Nate. DNS is never changed from code.
+
+---
+
+## Technical reference
+
+### Stack
 
 | Layer | Choice |
 |-------|--------|
-| Framework | Next.js 16.2.9 — App Router (`src/app/`) |
-| React | 19.2.4 — Server Components by default |
+| Framework | Next.js 16 App Router (`src/app`). Next 16 has breaking changes. Read `node_modules/next/dist/docs/` before changing metadata, headers, config, images or layout. |
+| UI | React 19, Server Components by default |
+| Styling | Tailwind CSS 4. Config is in `src/app/globals.css` (`@theme`), not a config file. Most layout uses inline styles and a few CSS classes. |
+| Fonts | EB Garamond (headings), Inter (body), through `next/font/google` |
 | Language | TypeScript |
-| Styling | Tailwind CSS 4 (breaking change from v3 — see below) |
-| Fonts | EB Garamond (headings) + Inter (body) via `next/font/google` |
-| Deployment | Vercel (the free Hobby tier is for non-commercial use only, so a Pro plan is required for a commercial practice site) |
-| Node | 20.20.2 via nvm |
+| Hosting | Vercel Pro. `main` is production, other branches are previews. |
+| Node | 20 or newer |
 
-### Tailwind CSS 4 — critical differences from v3
-- Config is **not** in `tailwind.config.ts` — it's in `src/app/globals.css` inside `@theme inline {}`
-- Import is `@import "tailwindcss"` — NOT `@tailwind base/components/utilities`
-- PostCSS plugin: `@tailwindcss/postcss` in `postcss.config.mjs`
+### Commands
 
-### Always prefix terminal commands with:
-```bash
-export NVM_DIR="$HOME/.nvm" && \. "$NVM_DIR/nvm.sh" && ...
+```
+npm install
+npm run dev       # http://localhost:3000
+npm run build     # must pass before merging
+npm run lint      # some old lint errors exist; do not add new ones
 ```
 
----
+### Key files
 
-## Project root
-```
-/Users/nate/natemyhill/
-```
+See the "Where things live" table in `AGENTS.md`. In short:
 
-## Key files
+- `src/lib/data.ts`: phone, email, fax, IDs, locations, navigation, `hasRealValue()`. A value written as `"[like this]"` is hidden until replaced with a real one.
+- `src/app/<specialty>/<slug>/page.tsx`: the 19 procedure pages. Each has a `RisksSection`, and eight have an "At a glance" list built only from facts on the page.
+- `src/components/`: `PageLayout`, `RisksSection`, `FAQSection`, `CTABox`, `ReferrerPanel`, `Navigation`, `Footer`, `MobileActionBar`, `LocationLogo`.
+- `src/lib/seo.ts`: `pageMetadata()` for titles, canonical links and share cards.
+- `next.config.ts`: the redirect from natemyhill.vercel.app and the noindex header for every host that is not the live domain.
+- `public/images`, `public/images/locations`, `public/downloads`: images, logos and PDFs.
 
-| File | What it does |
-|------|-------------|
-| `src/lib/data.ts` | Central data — DOCTOR, LOCATIONS, NAV_ITEMS. **All `[placeholder]` values need filling.** |
-| `src/app/layout.tsx` | Root layout — fonts, metadata, Navigation, Footer, Physician JSON-LD |
-| `src/app/globals.css` | Tailwind 4 import + brand colours in `@theme inline` |
-| `src/components/Navigation.tsx` | `"use client"` — two-tier nav with dropdown + mobile hamburger + SVG logo mark |
-| `src/components/Footer.tsx` | 4-column footer in navy + SVG logo mark |
-| `src/components/PageLayout.tsx` | Shared wrapper — breadcrumbs, prose article, optional aside, CTA |
-| `src/components/CTABox.tsx` | Book appointment or Refer a patient CTA block |
-| `src/components/FAQSection.tsx` | `"use client"` — accordion FAQ component |
-| `src/components/Breadcrumb.tsx` | Breadcrumb nav |
-| `src/app/sitemap.ts` | Auto-generated XML sitemap |
-| `src/app/robots.ts` | robots.txt |
-| `src/app/locations/[slug]/page.tsx` | Dynamic location pages |
-| `public/logo-mark.svg` | SVG arc mark (teal arc + navy point) — for light backgrounds |
-| `public/logo-mark-reversed.svg` | Same mark with off-white point — for dark backgrounds |
-| `public/favicon.svg` | SVG favicon — navy square with arc mark |
-| `brand_assets/` | Extracted brand guide HTML from "Melbourne Upper Limb Logo Design.zip" |
+### Site map
 
----
+Home, About, Appointments, Locations (and 7 location pages), Privacy policy; Shoulder and upper limb hub with 11 procedure pages; Hip and knee hub with 6; Trauma hub with 2; For patients hub with 4 pages; For referrers hub with how-to-refer and referral resources. 47 pages in total, all listed in `src/app/sitemap.ts`.
 
-## Brand identity
-
-**Practice name:** Dr Nate Myhill — Orthopaedic Surgeon  
-**Tagline:** "The plan that fits your life."  
-**Descriptor:** General Orthopaedics · Special interest: shoulder & upper limb  
-
-### The logo mark
-An open arc (teal) with a leading point (navy on light, off-white on dark). SVG:
-```svg
-<svg viewBox="0 0 100 100">
-  <circle cx="50" cy="50" r="34" fill="none" stroke="#1d9e75" stroke-width="8"
-    stroke-linecap="round" stroke-dasharray="148.3 65.3" transform="rotate(100 50 50)"/>
-  <circle cx="83.5" cy="44.1" r="7" fill="#1a2744"/>
-</svg>
-```
-
-### Colour palette
+### Brand
 
 | Token | Hex | Use |
 |-------|-----|-----|
 | Navy | `#1A2744` | Primary, backgrounds, headings |
-| Teal | `#1D9E75` | Accent, CTAs, borders |
-| Slate | `#5F5E5A` | Body text |
-| Warm Grey | `#D3D1C7` | Borders, dividers |
-| Off-white | `#F8F8F6` | Page backgrounds |
-| Muted | `#888780` | Secondary text |
+| Teal (original) | `#1D9E75` | Logo mark and decorative borders only |
+| Dark teal | `#0F7A59` | Text and buttons on light surfaces (AA contrast) |
+| Light teal | `#34B889` | Text and buttons on navy |
+| Slate | `#5F5E5A` | Body and muted text |
+| Warm grey | `#D3D1C7` | Borders |
+| Off-white | `#F8F8F6` | Section backgrounds |
 
-### Typography
-- **EB Garamond** — display, names, pull quotes. Humanist serif, warmth + authority.
-- **Inter** — body, labels, UI. Clear at small sizes.
+Tagline: "The plan that fits your life." Home page hero only. Voice: warm, plain, no hype, no superlatives.
 
-### Three brand pillars
-1. **We decide together** — Shared decision-making is the practice, not a slogan.
-2. **We get you moving** — One surgeon for the whole limb; surgery serves getting back to life.
-3. **We say it straight** — Plain English, every time. AHPRA-compliant by design.
+### Safety checks the site already has
 
-### Voice
-Warm, but never chummy. Plain, but never dumbed-down. Certain, but never superior.  
-No hype, no superlatives, no comparative claims (AHPRA rules).
+- `X-Robots-Tag: noindex` on every host except the live domain, so previews never appear in search.
+- One `<main>`, a skip link, focus outlines, AA colour contrast, no horizontal scroll from 320 to 1440px.
+- Placeholders in `data.ts` cannot appear on the site, because every use goes through `hasRealValue()`.
 
----
+### Placeholders still in `data.ts` (hidden on purpose)
 
-## All 47 pages
-
-### Static pages
-| URL | Purpose |
-|-----|---------|
-| `/` | Homepage — hero, brand pillars, specialties, about strip, locations, referrer CTA |
-| `/about` | Dr Myhill bio, credentials, fellowship, approach |
-| `/appointments` | Call or email the practice, optional online booking link, what to bring |
-| `/locations` | All 7 locations overview |
-| `/locations/[slug]` | Individual location pages (7 dynamic pages) |
-| `/privacy-policy` | Privacy Act 1988 compliant policy |
-
-### Shoulder & Upper Limb (`/shoulder-upper-limb`)
-- `/shoulder-upper-limb` — Hub page
-- `/shoulder-upper-limb/rotator-cuff-repair`
-- `/shoulder-upper-limb/shoulder-replacement`
-- `/shoulder-upper-limb/shoulder-instability`
-- `/shoulder-upper-limb/ac-joint-surgery`
-- `/shoulder-upper-limb/biceps-tendon-surgery`
-- `/shoulder-upper-limb/tennis-elbow`
-- `/shoulder-upper-limb/ok-procedure` (OK Procedure — WALANT tenolysis)
-- `/shoulder-upper-limb/ucl-reconstruction`
-- `/shoulder-upper-limb/cubital-tunnel-syndrome`
-- `/shoulder-upper-limb/carpal-tunnel-syndrome`
-- `/shoulder-upper-limb/wrist-fractures`
-
-### Hip & Knee (`/hip-knee`)
-- `/hip-knee` — Hub page
-- `/hip-knee/total-hip-replacement`
-- `/hip-knee/total-knee-replacement`
-- `/hip-knee/acl-reconstruction`
-- `/hip-knee/meniscal-repair`
-- `/hip-knee/knee-arthroscopy`
-- `/hip-knee/hip-trauma`
-
-### Trauma (`/trauma`)
-- `/trauma` — Hub page
-- `/trauma/upper-limb`
-- `/trauma/lower-limb`
-
-### For Patients (`/for-patients`)
-- `/for-patients` — Hub page
-- `/for-patients/first-appointment`
-- `/for-patients/fees-and-billing`
-- `/for-patients/pre-operative-information`
-- `/for-patients/post-operative-information`
-
-### For Referrers (`/for-referrers`)
-- `/for-referrers` — Hub page
-- `/for-referrers/how-to-refer`
-- `/for-referrers/referral-resources`
-
-### Technical
-- `/sitemap.xml` — Auto-generated
-- `/robots.txt` — Auto-generated
-
-### Location slugs
-`wantirna` · `mitcham` · `heidelberg` · `coburg` · `albury` · `epping` · `footscray`
-
----
-
-## Placeholders still to fill in `src/lib/data.ts`
-
-Open `/Users/nate/natemyhill/src/lib/data.ts` and replace every `[…]` value:
-
-```ts
-export const DOCTOR = {
-  phone: "[phone number]",          // e.g. "(03) 1234 5678"
-  fax: "[fax number]",
-  email: "[practice email]",        // e.g. "admin@drnatemyhill.com.au"
-  healthlinkId: "[HealthLink Provider ID]",
-  medicalObjectsId: "[Medical Objects ID]",
-  bookingUrl: "[online booking URL]",   // optional: leave as a [placeholder] and the site shows phone and email only
-  domain: "drnatemyhill.com.au",    // already set
-};
-```
-
-For each location in `LOCATIONS`, fill:
-- `address` — street address
-- `postcode`
-- Any missing fields
-
----
-
-## Assets still needed
-
-| Asset | Where to put it | Notes |
-|-------|----------------|-------|
-| Headshots | Done: `public/images/nate-myhill-navy.jpg` (home hero), `public/images/nate-myhill-light.jpg` (About page), 1068x1600, about 100-150 KB each. Originals are 7200x10786 and are not in the repo | Re-export at 1600px long edge, JPEG ~82, metadata stripped, if they are ever replaced |
-| Share image | Done: `public/og-image.jpg` (1200x630, navy, headshot right, name left) | Used for Open Graph and Twitter large cards |
-| Exercise sheets (PDF) | `public/downloads/` | Post-op patient resources |
-
----
-
-## Domain setup
-
-**Target domain:** `drnatemyhill.com.au`  
-Also register `natemyhill.com.au` and redirect it here.
-
-To connect the domain after registering it:
-1. Go to [vercel.com/ngmyhill-9985s-projects/natemyhill](https://vercel.com/ngmyhill-9985s-projects/natemyhill)
-2. Settings → Domains → Add `drnatemyhill.com.au`
-3. Vercel provides DNS records → add them at your registrar (VentraIP / CrazyDomains / Netfleet — `.com.au` needs ABN)
-
----
-
-## Vercel deployment
-
-**Account:** `ngmyhill-9985` (logged in via `vercel whoami`)  
-**Project:** `ngmyhill-9985s-projects/natemyhill`  
-**Production URL:** https://natemyhill.vercel.app  
-**Dashboard:** https://vercel.com/ngmyhill-9985s-projects/natemyhill
-
-To redeploy after any changes:
-```bash
-export NVM_DIR="$HOME/.nvm" && \. "$NVM_DIR/nvm.sh"
-cd /Users/nate/natemyhill
-vercel --yes --prod
-```
-
----
-
-## Git history
-
-```
-3e21dfb  Apply Melbourne Upper Limb brand guide to site
-c8aa578  Update domain to drnatemyhill.com.au across all files
-f7e2181  Initial site build — 47 pages, Phase 6
-d4a9d25  Initial commit from Create Next App
-```
-
----
-
-## SEO & structured data
-
-- **Physician JSON-LD** in root layout (no Review/AggregateRating — AHPRA compliance)
-- Each page has unique `title` and `description` via `export const metadata`
-- Title template: `"%s | Dr Nate Myhill — Orthopaedic Surgeon"`
-- `metadataBase`: `https://drnatemyhill.com.au`
-- Sitemap covers all 47 pages + location slugs
-- No comparative claims anywhere (AHPRA advertising rules)
-
----
-
-## AHPRA advertising rules (critical)
-
-The site is designed to be compliant. Keep these in mind for any new content:
-- ❌ No testimonials or patient reviews
-- ❌ No "leading", "best", "world-class", "excellent outcomes" or similar superlatives
-- ❌ No before/after photos without strict conditions
-- ❌ No comparative claims ("more experienced than…")
-- ✅ Factual credentials, fellowship details, scope of practice
-- ✅ Plain descriptions of procedures and what to expect
-- ✅ Shared decision-making language
-
-**Have the finished site reviewed by your indemnity insurer or a health law adviser before publicising.**
-
----
-
-## Phase status
-
-| Phase | Name | Status |
-|-------|------|--------|
-| 0 | Discovery & Goals | ✅ Complete |
-| 1 | Brand Identity | ✅ Complete |
-| 2 | Visual Identity | ✅ Complete |
-| 3 | Site Architecture (42 pages) | ✅ Complete |
-| 4 | Content Strategy | ✅ Complete |
-| 5 | SEO & Technical Strategy | ✅ Complete |
-| 6 | Build & Deploy to Vercel | ✅ Complete |
-| 7 | Handover & Launch Checklist | ⏳ Pending |
-
----
-
-## Immediate to-do before launch
-
-1. **Fill placeholders** in `src/lib/data.ts` — phone, fax, email, HealthLink ID, Medical Objects ID, all location addresses. `bookingUrl` is optional: the practice uses Xestro, which has no patient self-booking widget we know of, so the site leads with phone and email and only shows a "Book online" link once `bookingUrl` is a real URL
-2. ~~**Add headshot**~~ — done, see the assets table
-3. **Register domain** — `drnatemyhill.com.au` (and `natemyhill.com.au` as redirect)
-4. **Connect domain** in Vercel Dashboard
-5. **Add PDF downloads** — patient information and exercise sheets → `public/downloads/` (the Referral resources page links to them and they do not exist yet; there is no referral template, referrers use any standard letter)
-6. **Legal review** — indemnity insurer or health law adviser before publicising
-7. **Phase 7** — Formal handover doc and launch checklist
-
----
-
-## How to continue in a new Claude session
-
-Start the session from the project directory:
-```
-/Users/nate/natemyhill
-```
-
-Say: *"Continue building the Dr Nate Myhill website. Read HANDOVER.md for full context."*
-
-Claude will have everything it needs to continue without re-explaining the project.
+`healthlinkId`, `medicalObjectsId`, `bookingUrl`, and each location's `address` and `phone`. The site shows no street addresses for now, only hospital names and suburbs.
