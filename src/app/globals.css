@@ -10,6 +10,16 @@
   --color-off-white: #f8f8f6;
 }
 
+/* Type scale. Display is for the home hero, h1 for inner pages. Mobile sizes are the clamp minimums. */
+@theme static {
+  --text-display: clamp(2.25rem, 1.35rem + 3.8vw, 3.5rem); /* about 56px at desktop */
+  --text-h1: clamp(2rem, 1.5rem + 2.1vw, 2.75rem); /* about 44px */
+  --text-h2: clamp(1.65rem, 1.25rem + 1.5vw, 2.25rem); /* about 36px */
+  --text-h3: clamp(1.25rem, 1.12rem + 0.5vw, 1.4rem); /* about 22px */
+  --text-lead: clamp(1.1rem, 1rem + 0.4vw, 1.25rem); /* about 20px */
+  --text-body: clamp(1rem, 0.96rem + 0.15vw, 1.0625rem); /* 16 to 17px */
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -17,7 +27,7 @@ html {
 body {
   color: #5f5e5a;
   background: #ffffff;
-  font-size: 17px;
+  font-size: var(--text-body);
   line-height: 1.7;
   font-family: "Inter", system-ui, sans-serif;
 }
@@ -29,9 +39,12 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
 }
 
-h1 { font-size: clamp(1.75rem, 4vw, 2.75rem); }
-h2 { font-size: clamp(1.4rem, 3vw, 2rem); }
-h3 { font-size: 1.25rem; }
+h1 { font-size: var(--text-h1); }
+h2 { font-size: var(--text-h2); }
+h3 { font-size: var(--text-h3); }
+
+.display { font-size: var(--text-display); line-height: 1.08; }
+.lead { font-size: var(--text-lead); line-height: 1.6; }
 
 a { color: #0f7a59; text-decoration: none; }
 a:hover { text-decoration: underline; }

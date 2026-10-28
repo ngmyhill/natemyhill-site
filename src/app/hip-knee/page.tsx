@@ -33,7 +33,7 @@ export default function HipKneePage() {
       <div style={{ display: "grid", gap: "1rem", marginTop: "1rem" }}>
         {procedures.map((p) => (
           <Link key={p.href} href={p.href} style={{ display: "block", background: "#f8f8f6", border: "1px solid #d3d1c7", borderLeft: "3px solid #1d9e75", borderRadius: "4px", padding: "1rem 1.25rem", textDecoration: "none" }}>
-            <div style={{ fontFamily: "EB Garamond, Georgia, serif", fontSize: "1.05rem", color: "#1a2744", marginBottom: "0.25rem" }}>{p.label}</div>
+            <div style={{ fontFamily: "EB Garamond, Georgia, serif", fontSize: "var(--text-h3)", color: "#1a2744", marginBottom: "0.25rem" }}>{p.label}</div>
             <div style={{ fontSize: "13px", color: "#5f5e5a" }}>{p.desc}</div>
           </Link>
         ))}

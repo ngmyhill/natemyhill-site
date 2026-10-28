@@ -26,7 +26,7 @@ export default function ForPatientsPage() {
       <div style={{ display: "grid", gap: "1rem", marginTop: "1.5rem" }}>
         {items.map((item) => (
           <Link key={item.href} href={item.href} style={{ display: "block", background: "#f8f8f6", border: "1px solid #d3d1c7", borderLeft: "3px solid #1d9e75", borderRadius: "4px", padding: "1rem 1.25rem", textDecoration: "none" }}>
-            <div style={{ fontFamily: "EB Garamond, Georgia, serif", fontSize: "1.05rem", color: "#1a2744", marginBottom: "0.25rem" }}>{item.label}</div>
+            <div style={{ fontFamily: "EB Garamond, Georgia, serif", fontSize: "var(--text-h3)", color: "#1a2744", marginBottom: "0.25rem" }}>{item.label}</div>
             <div style={{ fontSize: "13px", color: "#5f5e5a" }}>{item.desc}</div>
           </Link>
         ))}
