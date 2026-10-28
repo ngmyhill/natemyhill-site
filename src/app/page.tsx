@@ -94,7 +94,7 @@ export default function Home() {
       {/* How we work */}
       <section style={{ background: "#ffffff", padding: "4.5rem 1.5rem" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <h2 style={{ marginTop: 0, marginBottom: "2.5rem" }}>How we work</h2>
+          <h2 style={{ marginTop: 0, marginBottom: "2rem" }}>How we work</h2>
           <div className="how-grid">
             <div>
               <h3 className="statement">We decide together</h3>
@@ -114,11 +114,11 @@ export default function Home() {
           </div>
           <div className="how-pair">
             <div>
-              <h3 style={{ marginTop: 0 }}>We get you moving</h3>
+              <h3 style={{ marginTop: 0, marginBottom: "0.5rem" }}>We get you moving</h3>
               <p style={{ margin: 0 }}>Trained across the whole of orthopaedics, with a special interest in the shoulder, upper limb and sports. Surgery is a way to get you back to what you want to do.</p>
             </div>
             <div>
-              <h3 style={{ marginTop: 0 }}>We say it straight</h3>
+              <h3 style={{ marginTop: 0, marginBottom: "0.5rem" }}>We say it straight</h3>
               <p style={{ margin: 0 }}>We explain things in plain English and define any jargon before we use it. Your GP gets a clear letter, and you get straight answers about your options.</p>
             </div>
           </div>
@@ -128,7 +128,7 @@ export default function Home() {
       {/* What Dr Myhill treats */}
       <section style={{ padding: "4.5rem 1.5rem", background: "#f8f8f6", borderTop: "1px solid #d3d1c7" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <h2 style={{ marginTop: 0, marginBottom: "2.5rem" }}>What Dr Myhill treats</h2>
+          <h2 style={{ marginTop: 0, marginBottom: "2rem" }}>What Dr Myhill treats</h2>
           <div className="treat-grid">
             <div className="treat-feature on-navy">
               <h3 style={{ marginTop: 0, marginBottom: "0.75rem" }}>
@@ -175,7 +175,7 @@ export default function Home() {
       {/* Locations */}
       <section style={{ padding: "4.5rem 1.5rem", background: "#f8f8f6" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <h2 style={{ marginTop: 0, marginBottom: "1.5rem", }}>Consulting locations</h2>
+          <h2 style={{ marginTop: 0, marginBottom: "2rem" }}>Consulting locations</h2>
           <p style={{ marginBottom: "1.5rem" }}>Dr Myhill consults at {LOCATION_COUNT_WORD} locations across Melbourne and Albury.</p>
           <div style={{ borderTop: "1px solid #d3d1c7" }}>
             {regions.map((region) => (
@@ -201,7 +201,7 @@ export default function Home() {
       {/* Referrers */}
       <section className="on-navy" style={{ background: "#1a2744", padding: "4rem 1.5rem" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <h2 style={{ color: "#ffffff", marginTop: 0, marginBottom: "1.75rem" }}>For GPs and referring practitioners</h2>
+          <h2 style={{ color: "#ffffff", marginTop: 0, marginBottom: "2rem" }}>For GPs and referring practitioners</h2>
           <ReferrerPanel variant="navy" />
         </div>
       </section>
