@@ -65,7 +65,7 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section style={{ background: "#1a2744", color: "#ffffff", padding: "5rem 1.5rem 4.5rem" }}>
+      <section className="on-navy" style={{ background: "#1a2744", color: "#ffffff", padding: "5rem 1.5rem 4.5rem" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "3rem", alignItems: "center" }}>
           <div>
             <p style={{ color: "#34b889", fontSize: "12px", letterSpacing: "0.22em", textTransform: "uppercase", marginBottom: "1.25rem", fontWeight: 500 }}>
@@ -108,7 +108,7 @@ export default function Home() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "2rem" }}>
             {brandPillars.map((p) => (
               <div key={p.number} style={{ borderTop: "3px solid #1d9e75", paddingTop: "1.5rem" }}>
-                <div style={{ fontSize: "11px", letterSpacing: "0.2em", color: "#0f7a59", marginBottom: "0.75rem", fontWeight: 500 }}>{p.number}</div>
+                <div style={{ fontSize: "12px", letterSpacing: "0.2em", color: "#0f7a59", marginBottom: "0.75rem", fontWeight: 500 }}>{p.number}</div>
                 <h3 style={{ fontFamily: "EB Garamond, Georgia, serif", fontSize: "1.4rem", fontWeight: 400, color: "#1a2744", marginTop: 0, marginBottom: "0.75rem" }}>{p.title}</h3>
                 <p style={{ fontSize: "14px", lineHeight: 1.75, color: "#5f5e5a", margin: 0 }}>{p.body}</p>
               </div>
@@ -182,7 +182,7 @@ export default function Home() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "1rem" }}>
             {LOCATIONS.map((loc) => (
               <Link key={loc.slug} href={`/locations/${loc.slug}`} style={{ display: "block", background: "#ffffff", border: "1px solid #d3d1c7", borderRadius: "4px", padding: "1.25rem", textDecoration: "none" }}>
-                <div style={{ fontSize: "11px", color: "#0f7a59", marginBottom: "0.25rem", textTransform: "uppercase", letterSpacing: "0.1em" }}>{loc.state}</div>
+                <div style={{ fontSize: "12px", color: "#0f7a59", marginBottom: "0.25rem", textTransform: "uppercase", letterSpacing: "0.1em" }}>{loc.state}</div>
                 <div style={{ fontFamily: "EB Garamond, Georgia, serif", fontSize: "1.05rem", color: "#1a2744", marginBottom: "0.2rem" }}>{loc.name}</div>
                 <div style={{ fontSize: "13px", color: "#5f5e5a" }}>{loc.suburb} · {loc.type}</div>
               </Link>
@@ -195,7 +195,7 @@ export default function Home() {
       </section>
 
       {/* Referrer CTA */}
-      <section style={{ background: "#1a2744", padding: "3.5rem 1.5rem" }}>
+      <section className="on-navy" style={{ background: "#1a2744", padding: "3.5rem 1.5rem" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
           <h2 style={{ color: "#ffffff", marginTop: 0, marginBottom: "0.5rem" }}>For GPs and referring practitioners</h2>
           <p style={{ color: "#d3d1c7", fontSize: "15px", maxWidth: "540px", lineHeight: 1.7, marginBottom: "1.5rem" }}>

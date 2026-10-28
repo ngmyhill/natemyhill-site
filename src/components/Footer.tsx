@@ -3,7 +3,7 @@ import { DOCTOR, LOCATIONS } from "@/lib/data";
 
 export default function Footer() {
   return (
-    <footer style={{ background: "#1a2744", color: "#d3d1c7", marginTop: "auto" }}>
+    <footer className="on-navy" style={{ background: "#1a2744", color: "#d3d1c7", marginTop: "auto" }}>
       <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "3rem 1.5rem 2rem", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "2rem" }}>
         {/* Brand */}
         <div>
@@ -16,7 +16,7 @@ export default function Footer() {
               <div style={{ fontFamily: "EB Garamond, Georgia, serif", fontSize: "1.15rem", color: "#ffffff", lineHeight: 1.1 }}>
                 Dr Nate Myhill
               </div>
-              <div style={{ fontSize: "10px", letterSpacing: "0.18em", textTransform: "uppercase", color: "#34b889" }}>
+              <div style={{ fontSize: "12px", letterSpacing: "0.18em", textTransform: "uppercase", color: "#34b889" }}>
                 Orthopaedic Surgeon
               </div>
             </div>

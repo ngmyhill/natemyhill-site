@@ -21,7 +21,7 @@ export default function LocationsPage() {
       <div style={{ display: "grid", gap: "1.5rem", marginTop: "2rem" }}>
         {LOCATIONS.map((loc) => (
           <div key={loc.slug} style={{ background: "#f8f8f6", border: "1px solid #d3d1c7", borderLeft: "3px solid #1d9e75", borderRadius: "4px", padding: "1.5rem" }}>
-            <div style={{ fontSize: "11px", color: "#0f7a59", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: "0.3rem" }}>{loc.type}</div>
+            <div style={{ fontSize: "12px", color: "#0f7a59", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: "0.3rem" }}>{loc.type}</div>
             <h3 style={{ marginTop: 0, marginBottom: "0.25rem" }}>
               <Link href={`/locations/${loc.slug}`}>{loc.name}</Link>
             </h3>

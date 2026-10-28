@@ -26,7 +26,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
 
   return (
     <PageLayout crumbs={[{ label: "Home", href: "/" }, { label: "Locations", href: "/locations" }, { label: loc.name }]}>
-      <div style={{ fontSize: "11px", color: "#0f7a59", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: "0.5rem" }}>{loc.type}</div>
+      <div style={{ fontSize: "12px", color: "#0f7a59", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: "0.5rem" }}>{loc.type}</div>
       <h1>{loc.name}</h1>
       <p style={{ color: "#5f5e5a", marginTop: "0.25rem" }}>{loc.suburb}, {loc.state}</p>
 

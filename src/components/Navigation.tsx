@@ -10,7 +10,7 @@ export default function Navigation() {
   return (
     <header style={{ background: "#ffffff", borderBottom: "1px solid #d3d1c7" }}>
       {/* Top bar */}
-      <div style={{ background: "#1a2744", color: "#ffffff", fontSize: "13px", padding: "6px 0" }}>
+      <div className="on-navy" style={{ background: "#1a2744", color: "#ffffff", fontSize: "13px", padding: "6px 0" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
           <span>{DOCTOR.phone}</span>
           <Link href="/for-referrers" style={{ color: "#34b889", fontWeight: 500 }}>For Referrers</Link>
@@ -18,7 +18,7 @@ export default function Navigation() {
       </div>
 
       {/* Main nav */}
-      <nav style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem", display: "flex", alignItems: "center", justifyContent: "space-between", height: "72px" }}>
+      <nav aria-label="Main" style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem", display: "flex", alignItems: "center", justifyContent: "space-between", height: "72px" }}>
         {/* Logo */}
         <Link href="/" style={{ display: "flex", alignItems: "center", gap: "10px", textDecoration: "none" }}>
           <svg viewBox="0 0 100 100" width="44" height="44" aria-hidden="true">
@@ -29,7 +29,7 @@ export default function Navigation() {
             <div style={{ fontFamily: "EB Garamond, Georgia, serif", fontSize: "1.35rem", color: "#1a2744", lineHeight: 1.1, letterSpacing: "0.02em" }}>
               Dr Nate Myhill
             </div>
-            <div style={{ fontFamily: "Inter, system-ui, sans-serif", fontSize: "10px", color: "#5f5e5a", letterSpacing: "0.2em", textTransform: "uppercase" }}>
+            <div style={{ fontFamily: "Inter, system-ui, sans-serif", fontSize: "12px", color: "#5f5e5a", letterSpacing: "0.2em", textTransform: "uppercase" }}>
               Orthopaedic Surgeon
             </div>
           </div>
@@ -59,7 +59,7 @@ export default function Navigation() {
                 }}
               >
                 {item.label}
-                {item.children && <span style={{ marginLeft: "4px", fontSize: "10px" }}>▾</span>}
+                {item.children && <span style={{ marginLeft: "4px", fontSize: "12px" }}>▾</span>}
               </Link>
               {item.children && openDropdown === item.label && (
                 <div style={{
@@ -116,42 +116,43 @@ export default function Navigation() {
           onClick={() => setMobileOpen(!mobileOpen)}
           style={{ display: "none", background: "none", border: "none", cursor: "pointer", fontSize: "1.5rem", color: "#1a2744" }}
           className="show-mobile"
-          aria-label="Toggle menu"
+          aria-label="Main menu"
+          aria-expanded={mobileOpen}
+          aria-controls="mobile-menu"
         >
           {mobileOpen ? "✕" : "☰"}
         </button>
       </nav>
 
       {/* Mobile menu */}
-      {mobileOpen && (
-        <div style={{ background: "#f8f8f6", borderTop: "1px solid #d3d1c7", padding: "1rem 1.5rem" }}>
-          {NAV_ITEMS.map((item) => (
-            <div key={item.href}>
-              <Link
-                href={item.href}
-                onClick={() => setMobileOpen(false)}
-                style={{ display: "block", padding: "0.6rem 0", color: "#1a2744", fontWeight: 500, borderBottom: "1px solid #d3d1c7" }}
-              >
-                {item.label}
-              </Link>
-              {item.children && (
-                <div style={{ paddingLeft: "1rem" }}>
-                  {item.children.map((child) => (
-                    <Link
-                      key={child.href}
-                      href={child.href}
-                      onClick={() => setMobileOpen(false)}
-                      style={{ display: "block", padding: "0.4rem 0", color: "#5f5e5a", fontSize: "14px", borderBottom: "1px solid #f0efea" }}
-                    >
-                      {child.label}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-      )}
+      {/* Always rendered so aria-controls on the toggle always points at a real element */}
+      <div id="mobile-menu" hidden={!mobileOpen} style={{ background: "#f8f8f6", borderTop: "1px solid #d3d1c7", padding: "1rem 1.5rem" }}>
+        {NAV_ITEMS.map((item) => (
+          <div key={item.href}>
+            <Link
+              href={item.href}
+              onClick={() => setMobileOpen(false)}
+              style={{ display: "block", padding: "0.6rem 0", color: "#1a2744", fontWeight: 500, borderBottom: "1px solid #d3d1c7" }}
+            >
+              {item.label}
+            </Link>
+            {item.children && (
+              <div style={{ paddingLeft: "1rem" }}>
+                {item.children.map((child) => (
+                  <Link
+                    key={child.href}
+                    href={child.href}
+                    onClick={() => setMobileOpen(false)}
+                    style={{ display: "block", padding: "0.4rem 0", color: "#5f5e5a", fontSize: "14px", borderBottom: "1px solid #f0efea" }}
+                  >
+                    {child.label}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
 
       <style>{`
         @media (max-width: 900px) {

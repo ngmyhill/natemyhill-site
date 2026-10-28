@@ -68,8 +68,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
+        <a href="#main-content" className="skip-link">
+          Skip to main content
+        </a>
         <Navigation />
-        <div style={{ flex: 1 }}>{children}</div>
+        <main id="main-content" tabIndex={-1} style={{ flex: 1 }}>
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

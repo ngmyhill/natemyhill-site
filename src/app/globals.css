@@ -43,3 +43,44 @@ a:hover { text-decoration: underline; }
 .prose h2 { margin: 2rem 0 0.75rem; }
 .prose h3 { margin: 1.5rem 0 0.5rem; }
 .prose strong { color: #1a2744; font-weight: 500; }
+
+/* Accessibility: skip link and keyboard focus */
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: 0;
+  z-index: 100;
+  padding: 0.6rem 1rem;
+  background: #1a2744;
+  color: #ffffff;
+  font-size: 14px;
+  border-radius: 0 0 4px 4px;
+  transform: translateY(-120%);
+}
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+  text-decoration: none;
+  outline: 2px solid #ffffff;
+  outline-offset: -4px;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+  outline: 2px solid #0f7a59;
+  outline-offset: 2px;
+}
+
+/* On navy surfaces the dark teal outline is too faint, so use white */
+.on-navy a:focus-visible,
+.on-navy button:focus-visible {
+  outline-color: #ffffff;
+}
+
+main:focus {
+  outline: none;
+}
