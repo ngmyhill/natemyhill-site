@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import PageLayout from "@/components/PageLayout";
-import { DOCTOR } from "@/lib/data";
+import { DOCTOR, hasRealValue } from "@/lib/data";
 
 export const metadata: Metadata = pageMetadata({
   title: "Your First Orthopaedic Appointment",
@@ -41,12 +41,14 @@ export default function FirstAppointmentPage() {
 
       <h2>Booking</h2>
       <p>
-        Appointments can be booked online through the Gentu patient portal or by contacting the practice directly:
+        To make an appointment, please contact the practice:
       </p>
       <ul>
-        <li><strong>Online:</strong> <a href={DOCTOR.gentuUrl} target="_blank" rel="noopener noreferrer">Book via Gentu →</a></li>
         <li><strong>Phone:</strong> <a href={`tel:${DOCTOR.phone}`}>{DOCTOR.phone}</a></li>
         <li><strong>Email:</strong> <a href={`mailto:${DOCTOR.email}`}>{DOCTOR.email}</a></li>
+        {hasRealValue(DOCTOR.bookingUrl) && (
+          <li><strong>Online:</strong> <a href={DOCTOR.bookingUrl} target="_blank" rel="noopener noreferrer">Book online →</a></li>
+        )}
       </ul>
     </PageLayout>
   );

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import PageLayout from "@/components/PageLayout";
-import { DOCTOR } from "@/lib/data";
+import { DOCTOR, hasRealValue } from "@/lib/data";
 
 export const metadata: Metadata = pageMetadata({
   title: "Book an Orthopaedic Appointment",
@@ -20,30 +20,34 @@ export default function AppointmentsPage() {
         Dr Myhill accepts both privately referred and self-referred patients. A GP or specialist referral is required to claim Medicare rebates; patients without a referral are seen as private (self-funded) patients.
       </p>
 
-      <h2>Online booking</h2>
+      <h2>Call the practice</h2>
       <p>
-        Appointments can be booked online through the Gentu patient portal. You will need your referral details and health fund information (if applicable) to complete your booking.
-      </p>
-      <div style={{ margin: "1.5rem 0" }}>
-        <a
-          href={DOCTOR.gentuUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ background: "#0f7a59", color: "#ffffff", padding: "0.75rem 1.75rem", borderRadius: "4px", fontWeight: 500, textDecoration: "none", fontSize: "15px", display: "inline-block" }}
-        >
-          Book online via Gentu →
-        </a>
-      </div>
-
-      <h2>Book by phone</h2>
-      <p>
-        You can also contact the practice directly by phone or email:
+        The easiest way to make an appointment is to call the practice or send an email. Please have your referral details and health fund information (if applicable) ready.
       </p>
       <ul>
         <li><strong>Phone:</strong> <a href={`tel:${DOCTOR.phone}`}>{DOCTOR.phone}</a></li>
-        <li><strong>Fax:</strong> {DOCTOR.fax}</li>
         <li><strong>Email:</strong> <a href={`mailto:${DOCTOR.email}`}>{DOCTOR.email}</a></li>
+        <li><strong>Fax:</strong> {DOCTOR.fax}</li>
       </ul>
+
+      {hasRealValue(DOCTOR.bookingUrl) && (
+        <>
+          <h2>Book online</h2>
+          <p>
+            If you prefer, you can request an appointment online.
+          </p>
+          <div style={{ margin: "1.5rem 0" }}>
+            <a
+              href={DOCTOR.bookingUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ background: "#0f7a59", color: "#ffffff", padding: "0.75rem 1.75rem", borderRadius: "4px", fontWeight: 500, textDecoration: "none", fontSize: "15px", display: "inline-block" }}
+            >
+              Book online →
+            </a>
+          </div>
+        </>
+      )}
 
       <h2>What to bring</h2>
       <ul>

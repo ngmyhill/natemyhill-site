@@ -23,11 +23,12 @@ export default function HowToReferPage() {
         <li><strong>Fax:</strong> {DOCTOR.fax}</li>
         <li><strong>Email:</strong> <a href={`mailto:${DOCTOR.email}`}>{DOCTOR.email}</a></li>
         <li><strong>HealthLink Provider ID:</strong> {DOCTOR.healthlinkId}</li>
+        <li><strong>Medical Objects ID:</strong> {DOCTOR.medicalObjectsId}</li>
       </ul>
 
       <h2>eReferral (preferred)</h2>
       <p>
-        Secure eReferral via <strong>HealthLink</strong> is the preferred method. Search for Dr Nate Myhill using HealthLink Provider ID: <strong>{DOCTOR.healthlinkId}</strong>.
+        Referrals can be sent securely by <strong>HealthLink</strong> or <strong>Medical Objects</strong>, which is the preferred method. Search for Dr Nate Myhill using HealthLink Provider ID <strong>{DOCTOR.healthlinkId}</strong> or Medical Objects ID <strong>{DOCTOR.medicalObjectsId}</strong>.
       </p>
 
       <h2>Fax referrals</h2>

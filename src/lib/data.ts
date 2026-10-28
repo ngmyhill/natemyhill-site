@@ -6,9 +6,16 @@ export const DOCTOR = {
   fax: "[fax number]",
   email: "[practice email]",
   healthlinkId: "[HealthLink Provider ID]",
-  gentuUrl: "[Gentu portal URL]",
+  medicalObjectsId: "[Medical Objects ID]",
+  bookingUrl: "[online booking URL]", // leave as a [placeholder] until online booking exists; the site then shows phone and email only
   domain: "drnatemyhill.com.au",
 };
+
+// True when a DOCTOR field holds a real value rather than a "[placeholder]".
+export function hasRealValue(value: string): boolean {
+  const v = value.trim();
+  return v !== "" && !/^\[.*\]$/.test(v);
+}
 
 // Single source of truth for the public site address. Derived from DOCTOR.domain.
 export const SITE_URL = `https://${DOCTOR.domain}`;

@@ -20,7 +20,7 @@ A 47-page Next.js website for Dr Nate Myhill, orthopaedic surgeon, Melbourne. Bu
 | Language | TypeScript |
 | Styling | Tailwind CSS 4 (breaking change from v3 — see below) |
 | Fonts | EB Garamond (headings) + Inter (body) via `next/font/google` |
-| Deployment | Vercel (free tier) |
+| Deployment | Vercel (the free Hobby tier is for non-commercial use only, so a Pro plan is required for a commercial practice site) |
 | Node | 20.20.2 via nvm |
 
 ### Tailwind CSS 4 — critical differences from v3
@@ -112,7 +112,7 @@ No hype, no superlatives, no comparative claims (AHPRA rules).
 |-----|---------|
 | `/` | Homepage — hero, brand pillars, specialties, about strip, locations, referrer CTA |
 | `/about` | Dr Myhill bio, credentials, fellowship, approach |
-| `/appointments` | How to book, Gentu portal link, what to bring |
+| `/appointments` | Call or email the practice, optional online booking link, what to bring |
 | `/locations` | All 7 locations overview |
 | `/locations/[slug]` | Individual location pages (7 dynamic pages) |
 | `/privacy-policy` | Privacy Act 1988 compliant policy |
@@ -162,7 +162,7 @@ No hype, no superlatives, no comparative claims (AHPRA rules).
 - `/robots.txt` — Auto-generated
 
 ### Location slugs
-`wantirna` · `mitcham` · `heidelberg` · `warringal` · `john-fawkner` · `albury` · one more (check `src/lib/data.ts`)
+`wantirna` · `mitcham` · `heidelberg` · `coburg` · `albury` · `epping` · `footscray`
 
 ---
 
@@ -176,7 +176,8 @@ export const DOCTOR = {
   fax: "[fax number]",
   email: "[practice email]",        // e.g. "admin@drnatemyhill.com.au"
   healthlinkId: "[HealthLink Provider ID]",
-  gentuUrl: "[Gentu portal URL]",   // the patient booking portal URL
+  medicalObjectsId: "[Medical Objects ID]",
+  bookingUrl: "[online booking URL]",   // optional: leave as a [placeholder] and the site shows phone and email only
   domain: "drnatemyhill.com.au",    // already set
 };
 ```
@@ -280,7 +281,7 @@ The site is designed to be compliant. Keep these in mind for any new content:
 
 ## Immediate to-do before launch
 
-1. **Fill placeholders** in `src/lib/data.ts` — phone, fax, email, HealthLink ID, Gentu URL, all location addresses
+1. **Fill placeholders** in `src/lib/data.ts` — phone, fax, email, HealthLink ID, Medical Objects ID, all location addresses. `bookingUrl` is optional: the practice uses Xestro, which has no patient self-booking widget we know of, so the site leads with phone and email and only shows a "Book online" link once `bookingUrl` is a real URL
 2. **Add headshot** — `public/headshot.jpg` and wire into About page + homepage
 3. **Register domain** — `drnatemyhill.com.au` (and `natemyhill.com.au` as redirect)
 4. **Connect domain** in Vercel Dashboard

@@ -37,7 +37,7 @@ export default function PrivacyPolicyPage() {
       <p>We collect personal information directly from you when you:</p>
       <ul>
         <li>Contact us by phone, email or online form</li>
-        <li>Book an appointment through the Gentu patient portal</li>
+        <li>Contact the practice to make an appointment</li>
         <li>Download resources from this website</li>
         <li>Are referred to us by a GP, specialist or other health practitioner</li>
       </ul>
@@ -60,7 +60,8 @@ export default function PrivacyPolicyPage() {
         <li>Hospitals and anaesthetists involved in your procedure</li>
         <li>Medicare Australia and your health fund for billing purposes</li>
         <li>WorkCover or TAC, where applicable</li>
-        <li>Our practice management and appointment booking software provider (Gentu)</li>
+        {/* DRAFT: confirm Xestro's overseas technology partners with Xestro before launch (APP 8) */}
+        <li>Our practice management software provider (Xestro), which stores clinical and appointment records in Australia</li>
         <li>IT service providers who assist in operating our systems, under confidentiality obligations</li>
       </ul>
       <p>
@@ -72,7 +73,7 @@ export default function PrivacyPolicyPage() {
         Health information is sensitive information under the Privacy Act and is handled with additional care. We collect health information only where necessary for providing care, and we take reasonable steps to protect it from misuse, interference, loss, and unauthorised access or disclosure.
       </p>
       <p>
-        <strong>This website does not collect detailed clinical health information.</strong> Clinical communication is handled through secure channels — by phone, fax, secure email, or the Gentu patient portal.
+        <strong>This website does not collect detailed clinical health information.</strong> Clinical communication is handled through secure channels — by phone, fax or secure email, or through secure messaging services such as HealthLink and Medical Objects.
       </p>
 
       <h2>6. Storage and security</h2>

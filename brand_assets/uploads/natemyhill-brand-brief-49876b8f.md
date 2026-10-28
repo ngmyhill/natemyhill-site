@@ -15,7 +15,7 @@
 | **Fellowship** | IBRA Scholarship, Erasmus MC, Rotterdam, Netherlands |
 | **Memberships** | AOA (Australian Orthopaedic Association) · IBRA (International Bone Research Association) |
 | **Domain** | natemyhill.com.au |
-| **Practice software** | Gentu (patient portal for online bookings) |
+| **Practice software** | Xestro (practice management; no known patient self-booking) |
 
 ---
 
@@ -143,7 +143,7 @@ A full Next.js website has been built at `natemyhill.com.au` with 47 pages:
 
 ### Features
 - SEO-optimised — unique title/meta on every page, XML sitemap, structured data (Physician schema)
-- Online booking via Gentu patient portal (button on every page)
+- Call or email the practice to book (online booking link only if one becomes available)
 - FAQ accordions on all procedure pages
 - Downloadable PDF placeholders for referral template, patient info sheets and exercise sheets (PDFs to be created)
 - AHPRA-compliant copy throughout — no testimonials, no comparative or superlative claims
@@ -184,7 +184,7 @@ The following are non-negotiable requirements under the AHPRA Advertising Guidel
 **Target go-live: August 2026**
 
 The website is built and ready to deploy. Outstanding items before launch:
-1. Fill in practice contact details (phone, fax, email, HealthLink ID, Gentu URL, location addresses)
+1. Fill in practice contact details (phone, fax, email, HealthLink ID, Medical Objects ID, optional booking URL, location addresses)
 2. Deploy to Vercel and connect `natemyhill.com.au` domain
 3. Add headshot to website
 4. Create PDF downloads (referral template, patient info sheets, exercise sheets)

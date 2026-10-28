@@ -199,7 +199,7 @@ export default function Home() {
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
           <h2 style={{ color: "#ffffff", marginTop: 0, marginBottom: "0.5rem" }}>For GPs and referring practitioners</h2>
           <p style={{ color: "#d3d1c7", fontSize: "15px", maxWidth: "540px", lineHeight: 1.7, marginBottom: "1.5rem" }}>
-            Fast turnaround on correspondence. Secure eReferral via HealthLink. Consulting at seven locations across Melbourne and Albury. Referring is straightforward.
+            Fast turnaround on correspondence. Secure referral via HealthLink or Medical Objects. Consulting at seven locations across Melbourne and Albury. Referring is straightforward.
           </p>
           <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
             <Link href="/for-referrers/how-to-refer" style={{ background: "#34b889", color: "#1a2744", padding: "0.65rem 1.25rem", borderRadius: "4px", fontWeight: 500, textDecoration: "none", fontSize: "14px" }}>
