@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
+import Image from "next/image";
 import PageLayout from "@/components/PageLayout";
 
 export const metadata: Metadata = pageMetadata({
@@ -15,6 +16,14 @@ export default function AboutPage() {
       <p style={{ fontFamily: "EB Garamond, Georgia, serif", fontSize: "1.15rem", color: "#1a2744", fontStyle: "italic" }}>
         MBBS · FRACS(Ortho) · MPH · BSc
       </p>
+      <Image
+        src="/images/nate-myhill-light.jpg"
+        alt="Dr Nate Myhill, orthopaedic surgeon"
+        width={1068}
+        height={1600}
+        sizes="(max-width: 700px) 40vw, 260px"
+        style={{ float: "right", width: "min(260px, 40%)", height: "auto", margin: "0 0 1rem 1.5rem", borderRadius: "4px", border: "1px solid #d3d1c7" }}
+      />
       <p>
         Dr Nate Myhill is a specialist orthopaedic surgeon practising across Melbourne and Albury. His clinical work spans shoulder and upper limb surgery, hip and knee reconstruction, and trauma — with a particular focus in rotator cuff pathology and shoulder replacement.
       </p>

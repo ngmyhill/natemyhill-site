@@ -4,6 +4,7 @@ import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { SITE_URL } from "@/lib/data";
+import { OG_IMAGE } from "@/lib/seo";
 
 const ebGaramond = EB_Garamond({
   subsets: ["latin"],
@@ -32,7 +33,9 @@ export const metadata: Metadata = {
     siteName: "Dr Nate Myhill — Orthopaedic Surgeon",
     locale: "en_AU",
     type: "website",
+    images: [OG_IMAGE],
   },
+  twitter: { card: "summary_large_image", images: [OG_IMAGE.url] },
   robots: { index: true, follow: true },
 };
 

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
+import Image from "next/image";
 import Link from "next/link";
 import { LOCATIONS } from "@/lib/data";
 
@@ -66,7 +67,7 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="on-navy" style={{ background: "#1a2744", color: "#ffffff", padding: "5rem 1.5rem 4.5rem" }}>
-        <div style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "3rem", alignItems: "center" }}>
+        <div className="hero-grid" style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr auto", gap: "3rem", alignItems: "center" }}>
           <div>
             <p style={{ color: "#34b889", fontSize: "12px", letterSpacing: "0.22em", textTransform: "uppercase", marginBottom: "1.25rem", fontWeight: 500 }}>
               General Orthopaedics · Special interest: shoulder &amp; upper limb
@@ -86,12 +87,17 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          {/* Logo mark — large, reversed */}
-          <div className="hero-mark" style={{ display: "flex", alignItems: "center", justifyContent: "center", opacity: 0.18 }} aria-hidden="true">
-            <svg viewBox="0 0 100 100" width="200" height="200">
-              <circle cx="50" cy="50" r="34" fill="none" stroke="#1d9e75" strokeWidth="7" strokeLinecap="round" strokeDasharray="148.3 65.3" transform="rotate(100 50 50)"/>
-              <circle cx="83.5" cy="44.1" r="7" fill="#f8f8f6"/>
-            </svg>
+          {/* Portrait: sits beside the text on wide screens, under it on phones */}
+          <div className="hero-photo">
+            <Image
+              src="/images/nate-myhill-navy.jpg"
+              alt="Dr Nate Myhill, orthopaedic surgeon"
+              width={1068}
+              height={1600}
+              sizes="(max-width: 800px) 280px, 380px"
+              preload
+              style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "50% 15%", display: "block" }}
+            />
           </div>
         </div>
       </section>

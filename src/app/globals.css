@@ -85,7 +85,15 @@ main:focus {
   outline: none;
 }
 
-/* The large decorative hero mark pushes the page wider than a phone screen */
-@media (max-width: 700px) {
-  .hero-mark { display: none !important; }
+/* Home hero portrait: a card beside the text, stacked under it on phones */
+.hero-photo {
+  width: 380px;
+  height: 460px;
+  overflow: hidden;
+  border-radius: 4px;
+  border-bottom: 4px solid #1d9e75;
+}
+@media (max-width: 800px) {
+  .hero-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
+  .hero-photo { width: 100%; max-width: 280px; height: 300px; }
 }

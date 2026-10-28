@@ -193,7 +193,8 @@ For each location in `LOCATIONS`, fill:
 
 | Asset | Where to put it | Notes |
 |-------|----------------|-------|
-| Headshot | `public/headshot.jpg` | Used on About page and homepage hero |
+| Headshots | Done: `public/images/nate-myhill-navy.jpg` (home hero), `public/images/nate-myhill-light.jpg` (About page), 1068x1600, about 100-150 KB each. Originals are 7200x10786 and are not in the repo | Re-export at 1600px long edge, JPEG ~82, metadata stripped, if they are ever replaced |
+| Share image | Done: `public/og-image.jpg` (1200x630, navy, headshot right, name left) | Used for Open Graph and Twitter large cards |
 | Referral template PDF | `public/downloads/referral-template.pdf` | Linked from For Referrers pages |
 | Exercise sheets (PDF) | `public/downloads/` | Post-op patient resources |
 
@@ -282,7 +283,7 @@ The site is designed to be compliant. Keep these in mind for any new content:
 ## Immediate to-do before launch
 
 1. **Fill placeholders** in `src/lib/data.ts` — phone, fax, email, HealthLink ID, Medical Objects ID, all location addresses. `bookingUrl` is optional: the practice uses Xestro, which has no patient self-booking widget we know of, so the site leads with phone and email and only shows a "Book online" link once `bookingUrl` is a real URL
-2. **Add headshot** — `public/headshot.jpg` and wire into About page + homepage
+2. ~~**Add headshot**~~ — done, see the assets table
 3. **Register domain** — `drnatemyhill.com.au` (and `natemyhill.com.au` as redirect)
 4. **Connect domain** in Vercel Dashboard
 5. **Add PDF downloads** — referral template + exercise sheets → `public/downloads/`
