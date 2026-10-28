@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import PageLayout from "@/components/PageLayout";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "For Patients — Dr Nate Myhill",
   description: "Patient information from Dr Nate Myhill — your first appointment, fees, pre-operative and post-operative information.",
-};
+  path: "/for-patients",
+});
 
 const items = [
   { label: "Your first appointment", href: "/for-patients/first-appointment", desc: "What to bring, what to expect, and how to make the most of your consultation." },

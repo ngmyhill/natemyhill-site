@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import PageLayout from "@/components/PageLayout";
 import RisksSection from "@/components/RisksSection";
 import FAQSection from "@/components/FAQSection";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Wrist Fracture Surgery Melbourne — Dr Nate Myhill",
   description: "Surgical management of distal radius and scaphoid fractures. Upper limb trauma surgeon Dr Nate Myhill, Melbourne.",
-};
+  path: "/shoulder-upper-limb/wrist-fractures",
+});
 
 const faqs = [
   { q: "Do all wrist fractures need surgery?", a: "Not all wrist fractures require surgery. Many distal radius fractures — particularly in older patients with lower functional demands — can be managed in a cast or splint. Surgery is considered when the fracture is significantly displaced, unstable or when anatomical alignment is important for return to function." },

@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import PageLayout from "@/components/PageLayout";
 import RisksSection from "@/components/RisksSection";
 import FAQSection from "@/components/FAQSection";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Shoulder Replacement Melbourne — Dr Nate Myhill",
   description: "Anatomic and reverse total shoulder replacement with Dr Nate Myhill, specialist orthopaedic surgeon in Melbourne.",
-};
+  path: "/shoulder-upper-limb/shoulder-replacement",
+});
 
 const faqs = [
   { q: "What is the difference between anatomic and reverse shoulder replacement?", a: "An anatomic total shoulder replacement replicates the natural ball-and-socket anatomy and is used when the rotator cuff is intact. A reverse shoulder replacement switches the positions of the ball and socket, allowing the deltoid muscle to power the arm when the rotator cuff is severely damaged or absent. Dr Myhill will recommend the most appropriate design based on your anatomy and function." },

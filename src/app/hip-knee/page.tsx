@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import PageLayout from "@/components/PageLayout";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Hip & Knee Surgery Melbourne — Dr Nate Myhill",
   description: "Specialist hip and knee surgery in Melbourne. Dr Nate Myhill performs total hip and knee replacement, ACL reconstruction, meniscal repair and knee arthroscopy.",
-};
+  path: "/hip-knee",
+});
 
 const procedures = [
   { label: "Total Hip Replacement", href: "/hip-knee/total-hip-replacement", desc: "Total hip arthroplasty for hip arthritis and selected hip fractures." },

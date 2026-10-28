@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import PageLayout from "@/components/PageLayout";
 import { DOCTOR } from "@/lib/data";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "How to Refer — Dr Nate Myhill",
   description: "How to refer a patient to Dr Nate Myhill. Contact details, HealthLink ID, urgent referral process and what to include.",
-};
+  path: "/for-referrers/how-to-refer",
+});
 
 export default function HowToReferPage() {
   return (

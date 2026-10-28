@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import { LOCATIONS } from "@/lib/data";
 
-export const metadata: Metadata = {
-  title: "Dr Nate Myhill — Orthopaedic Surgeon Melbourne",
+export const metadata: Metadata = pageMetadata({
   description: "Melbourne orthopaedic surgeon with a special interest in shoulder, upper limb and sports surgery. The plan that fits your life — chosen with you, not for you.",
-};
+  path: "/",
+});
 
 const specialties = [
   {

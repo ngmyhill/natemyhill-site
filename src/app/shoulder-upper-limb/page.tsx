@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import PageLayout from "@/components/PageLayout";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Shoulder & Upper Limb Surgery Melbourne — Dr Nate Myhill",
   description: "Dr Nate Myhill specialises in shoulder and upper limb surgery in Melbourne, including rotator cuff repair, shoulder replacement, instability, elbow and wrist surgery.",
-};
+  path: "/shoulder-upper-limb",
+});
 
 const procedures = [
   { label: "Rotator Cuff Repair", href: "/shoulder-upper-limb/rotator-cuff-repair", desc: "Arthroscopic and open repair of partial and full-thickness rotator cuff tears." },

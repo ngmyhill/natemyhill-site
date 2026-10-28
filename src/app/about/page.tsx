@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import PageLayout from "@/components/PageLayout";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "About Dr Nate Myhill — Orthopaedic Surgeon",
   description: "Dr Nate Myhill is a specialist orthopaedic surgeon with FRACS(Ortho), an IBRA Scholarship at Erasmus MC Rotterdam, and membership of AOA and IBRA. Based in Melbourne.",
-};
+  path: "/about",
+});
 
 export default function AboutPage() {
   return (

@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import PageLayout from "@/components/PageLayout";
 import RisksSection from "@/components/RisksSection";
 import FAQSection from "@/components/FAQSection";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Biceps Tendon Surgery Melbourne — Dr Nate Myhill",
   description: "Biceps tenodesis and tenotomy for long head of biceps tendon pathology. Specialist shoulder and upper limb surgeon in Melbourne.",
-};
+  path: "/shoulder-upper-limb/biceps-tendon-surgery",
+});
 
 const faqs = [
   { q: "What is the difference between tenodesis and tenotomy?", a: "A tenotomy simply releases the biceps tendon from its attachment, relieving pain quickly but sometimes leaving a visible 'Popeye' deformity (a bulge in the lower arm). A tenodesis releases the tendon and reattaches it lower down the arm, preserving normal appearance and reducing the chance of deformity. Tenodesis is generally preferred in younger, more active patients." },

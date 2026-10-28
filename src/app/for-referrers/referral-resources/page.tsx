@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import PageLayout from "@/components/PageLayout";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Referral Resources — Dr Nate Myhill",
   description: "Downloadable referral template and patient information sheets for referring practitioners.",
-};
+  path: "/for-referrers/referral-resources",
+});
 
 export default function ReferralResourcesPage() {
   return (

@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import PageLayout from "@/components/PageLayout";
 import { DOCTOR } from "@/lib/data";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Your First Appointment — Dr Nate Myhill",
   description: "Preparing for your first consultation with Dr Nate Myhill. What to bring, what to expect, and how appointments work.",
-};
+  path: "/for-patients/first-appointment",
+});
 
 export default function FirstAppointmentPage() {
   return (

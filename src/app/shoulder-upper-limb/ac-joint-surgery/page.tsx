@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import PageLayout from "@/components/PageLayout";
 import RisksSection from "@/components/RisksSection";
 import FAQSection from "@/components/FAQSection";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "AC Joint Surgery Melbourne — Dr Nate Myhill",
   description: "Surgical management of acromioclavicular (AC) joint separation and arthritis in Melbourne. Dr Nate Myhill, specialist shoulder surgeon.",
-};
+  path: "/shoulder-upper-limb/ac-joint-surgery",
+});
 
 const faqs = [
   { q: "Do all AC joint separations need surgery?", a: "No. Lower-grade separations (Grades 1 and 2, and most Grade 3) can be managed non-surgically with a sling, physiotherapy and time. Surgery is generally considered for higher-grade separations causing persistent deformity, pain or functional limitation." },

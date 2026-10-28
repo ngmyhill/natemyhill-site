@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import PageLayout from "@/components/PageLayout";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Post-operative Information — Dr Nate Myhill",
   description: "Post-operative care information from Dr Nate Myhill. Wound care, pain management, exercises and follow-up.",
-};
+  path: "/for-patients/post-operative-information",
+});
 
 export default function PostOperativePage() {
   return (

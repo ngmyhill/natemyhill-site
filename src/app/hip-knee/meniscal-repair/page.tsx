@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import PageLayout from "@/components/PageLayout";
 import RisksSection from "@/components/RisksSection";
 import FAQSection from "@/components/FAQSection";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Meniscal Repair Melbourne — Dr Nate Myhill",
   description: "Arthroscopic meniscal repair to preserve the knee's natural cushioning. Specialist knee surgeon Dr Nate Myhill, Melbourne.",
-};
+  path: "/hip-knee/meniscal-repair",
+});
 
 const faqs = [
   { q: "Can all meniscal tears be repaired?", a: "No. Tear location, pattern, tissue quality and patient factors all determine whether repair is feasible. Tears in the outer (red) zone of the meniscus with a good blood supply have a better chance of healing. Tears in the inner zone with poor blood supply are more commonly treated by trimming (partial meniscectomy)." },

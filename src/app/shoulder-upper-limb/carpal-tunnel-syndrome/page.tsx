@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import PageLayout from "@/components/PageLayout";
 import RisksSection from "@/components/RisksSection";
 import FAQSection from "@/components/FAQSection";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Carpal Tunnel Syndrome Surgery Melbourne — Dr Nate Myhill",
   description: "Carpal tunnel decompression for median nerve compression at the wrist. Upper limb surgeon Dr Nate Myhill, Melbourne.",
-};
+  path: "/shoulder-upper-limb/carpal-tunnel-syndrome",
+});
 
 const faqs = [
   { q: "What is carpal tunnel release?", a: "Carpal tunnel release is a procedure to cut the transverse carpal ligament — the tight band of tissue forming the roof of the carpal tunnel. This relieves pressure on the median nerve running beneath it. It is a common hand and wrist procedure." },

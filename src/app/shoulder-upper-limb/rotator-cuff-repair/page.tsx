@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import PageLayout from "@/components/PageLayout";
 import RisksSection from "@/components/RisksSection";
 import FAQSection from "@/components/FAQSection";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Rotator Cuff Repair Melbourne — Dr Nate Myhill",
   description: "Specialist rotator cuff repair in Melbourne. Dr Nate Myhill performs arthroscopic and open repair of partial and full-thickness rotator cuff tears.",
-};
+  path: "/shoulder-upper-limb/rotator-cuff-repair",
+});
 
 const faqs = [
   { q: "How long is recovery after rotator cuff repair?", a: "Recovery depends on tear size and repair complexity. A sling is typically worn for 4–6 weeks, physiotherapy begins early, and light activities usually resume by around 3 months. Full recovery typically takes 6–12 months, and recovery varies between people." },

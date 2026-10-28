@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import PageLayout from "@/components/PageLayout";
 import RisksSection from "@/components/RisksSection";
 import FAQSection from "@/components/FAQSection";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "OK Procedure (Outerbridge-Kashiwagi) Melbourne — Dr Nate Myhill",
   description: "The Outerbridge-Kashiwagi (OK) procedure for elbow arthritis and loose bodies. Specialist elbow surgeon Dr Nate Myhill, Melbourne.",
-};
+  path: "/shoulder-upper-limb/ok-procedure",
+});
 
 const faqs = [
   { q: "What is the OK procedure?", a: "The Outerbridge-Kashiwagi (OK) procedure is a surgical technique for treating elbow arthritis. It involves removing loose bodies (fragments of bone or cartilage) and creating a window in the olecranon fossa to improve elbow extension. It can be performed arthroscopically." },

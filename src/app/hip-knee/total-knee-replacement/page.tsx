@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import PageLayout from "@/components/PageLayout";
 import RisksSection from "@/components/RisksSection";
 import FAQSection from "@/components/FAQSection";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Total Knee Replacement Melbourne — Dr Nate Myhill",
   description: "Total knee arthroplasty for end-stage knee arthritis in Melbourne. Specialist orthopaedic surgeon Dr Nate Myhill.",
-};
+  path: "/hip-knee/total-knee-replacement",
+});
 
 const faqs = [
   { q: "Am I too young for a knee replacement?", a: "Age alone does not determine suitability. Dr Myhill considers the severity of arthritis, symptom burden, functional limitation and activity goals. Younger patients do have a higher lifetime risk of requiring a revision (repeat) procedure." },

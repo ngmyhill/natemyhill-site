@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import PageLayout from "@/components/PageLayout";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Pre-operative Information — Dr Nate Myhill",
   description: "How to prepare for surgery with Dr Nate Myhill. Fasting guidelines, medications, what to arrange at home.",
-};
+  path: "/for-patients/pre-operative-information",
+});
 
 export default function PreOperativePage() {
   return (

@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import PageLayout from "@/components/PageLayout";
 import RisksSection from "@/components/RisksSection";
 import FAQSection from "@/components/FAQSection";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Knee Arthroscopy Melbourne — Dr Nate Myhill",
   description: "Diagnostic and therapeutic knee arthroscopy. Specialist knee surgeon Dr Nate Myhill, Melbourne.",
-};
+  path: "/hip-knee/knee-arthroscopy",
+});
 
 const faqs = [
   { q: "Is knee arthroscopy a major operation?", a: "Knee arthroscopy is a minimally invasive procedure performed through small portals. It is usually a day procedure. Recovery is generally quick, though the timeframe depends on what is found and treated during surgery." },

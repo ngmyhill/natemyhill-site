@@ -3,6 +3,7 @@ import { EB_Garamond, Inter } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { SITE_URL } from "@/lib/data";
 
 const ebGaramond = EB_Garamond({
   subsets: ["latin"],
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
     template: "%s | Dr Nate Myhill — Orthopaedic Surgeon",
   },
   description: "Melbourne orthopaedic surgeon with a special interest in shoulder, upper limb and sports surgery. The plan that fits your life — chosen with you, not for you.",
-  metadataBase: new URL("https://drnatemyhill.com.au"),
+  metadataBase: new URL(SITE_URL),
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
@@ -40,7 +41,7 @@ const physicianSchema = {
   "@type": "Physician",
   name: "Dr Nate Myhill",
   description: "Specialist orthopaedic surgeon practising in Melbourne and Albury, with a focus in shoulder and upper limb surgery, hip and knee reconstruction, and trauma.",
-  url: "https://drnatemyhill.com.au",
+  url: SITE_URL,
   telephone: "[phone number]",
   medicalSpecialty: "Orthopedic Surgery",
   hasCredential: [

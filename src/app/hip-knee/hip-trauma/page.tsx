@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import PageLayout from "@/components/PageLayout";
 import RisksSection from "@/components/RisksSection";
 import FAQSection from "@/components/FAQSection";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Hip Fracture & Trauma Surgery Melbourne — Dr Nate Myhill",
   description: "Surgical management of hip fractures and lower limb trauma. Dr Nate Myhill, specialist orthopaedic surgeon in Melbourne.",
-};
+  path: "/hip-knee/hip-trauma",
+});
 
 const faqs = [
   { q: "Do hip fractures always require surgery?", a: "The vast majority of hip fractures in adults require surgical treatment — either fixation with screws or a nail, or hip replacement (hemiarthroplasty or total hip replacement). Non-surgical management carries significant risks in most patients and is reserved for exceptional circumstances." },

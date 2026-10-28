@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import PageLayout from "@/components/PageLayout";
 import RisksSection from "@/components/RisksSection";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Upper Limb Trauma Melbourne — Dr Nate Myhill",
   description: "Surgical management of upper limb trauma including shoulder, elbow and wrist fractures. Dr Nate Myhill, Melbourne.",
-};
+  path: "/trauma/upper-limb",
+});
 
 export default function UpperLimbTraumaPage() {
   return (

@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import PageLayout from "@/components/PageLayout";
 import RisksSection from "@/components/RisksSection";
 import FAQSection from "@/components/FAQSection";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Total Hip Replacement Melbourne — Dr Nate Myhill",
   description: "Total hip arthroplasty for hip arthritis in Melbourne. Specialist orthopaedic surgeon Dr Nate Myhill.",
-};
+  path: "/hip-knee/total-hip-replacement",
+});
 
 const faqs = [
   { q: "How long does a hip replacement last?", a: "Modern hip replacements are designed to last many years, and some implants last 20 years or more. Longevity varies from person to person and depends on factors including implant design, surgical technique, activity level and body weight." },

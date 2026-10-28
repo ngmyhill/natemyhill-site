@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import PageLayout from "@/components/PageLayout";
 import { DOCTOR } from "@/lib/data";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Book an Appointment",
   description: "Book an appointment with Dr Nate Myhill, specialist orthopaedic surgeon. Consult at Knox, Mitcham, Warringal, John Fawkner or Albury.",
-};
+  path: "/appointments",
+});
 
 export default function AppointmentsPage() {
   return (

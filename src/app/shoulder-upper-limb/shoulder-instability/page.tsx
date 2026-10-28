@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import PageLayout from "@/components/PageLayout";
 import RisksSection from "@/components/RisksSection";
 import FAQSection from "@/components/FAQSection";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Shoulder Instability Surgery Melbourne — Dr Nate Myhill",
   description: "Labral repair (Bankart) and Latarjet procedure for shoulder instability and recurrent dislocation. Specialist shoulder surgeon in Melbourne.",
-};
+  path: "/shoulder-upper-limb/shoulder-instability",
+});
 
 const faqs = [
   { q: "What is the difference between a Bankart repair and a Latarjet procedure?", a: "A Bankart repair reattaches the torn labrum back to the glenoid using anchors and is performed arthroscopically. The Latarjet procedure transfers a piece of bone from the coracoid process to the front of the glenoid socket, providing a bony block against re-dislocation. The Latarjet is preferred when there is significant bone loss from the glenoid or in cases of failed Bankart repair." },

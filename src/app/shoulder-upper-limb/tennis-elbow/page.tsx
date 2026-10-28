@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import PageLayout from "@/components/PageLayout";
 import RisksSection from "@/components/RisksSection";
 import FAQSection from "@/components/FAQSection";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Tennis Elbow Surgery Melbourne — Dr Nate Myhill",
   description: "Surgical treatment of lateral epicondylitis (tennis elbow) in Melbourne when conservative treatment has not helped. Dr Nate Myhill, upper limb surgeon.",
-};
+  path: "/shoulder-upper-limb/tennis-elbow",
+});
 
 const faqs = [
   { q: "How long should I try conservative treatment before considering surgery?", a: "Most clinicians recommend at least 6–12 months of consistent conservative treatment before surgery is considered. This includes physiotherapy, activity modification, bracing, corticosteroid or PRP injection, and rest." },

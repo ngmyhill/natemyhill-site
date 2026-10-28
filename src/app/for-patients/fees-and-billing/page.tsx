@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import PageLayout from "@/components/PageLayout";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Fees & Billing — Dr Nate Myhill",
   description: "Fee information, out-of-pocket estimates, health fund and Medicare information for Dr Nate Myhill's orthopaedic practice.",
-};
+  path: "/for-patients/fees-and-billing",
+});
 
 export default function FeesAndBillingPage() {
   return (

@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import PageLayout from "@/components/PageLayout";
 import RisksSection from "@/components/RisksSection";
 import FAQSection from "@/components/FAQSection";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "UCL Reconstruction (Elbow) Melbourne — Dr Nate Myhill",
   description: "Ulnar collateral ligament (UCL) reconstruction for medial elbow instability. Upper limb surgeon Dr Nate Myhill, Melbourne.",
-};
+  path: "/shoulder-upper-limb/ucl-reconstruction",
+});
 
 const faqs = [
   { q: "What is UCL reconstruction of the elbow?", a: "UCL reconstruction (sometimes called Tommy John surgery) involves replacing the torn or stretched ulnar collateral ligament on the inner side of the elbow with a graft tendon, typically taken from the forearm or lower limb. It aims to restore medial stability to the elbow." },

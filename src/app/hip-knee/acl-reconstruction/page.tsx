@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import PageLayout from "@/components/PageLayout";
 import RisksSection from "@/components/RisksSection";
 import FAQSection from "@/components/FAQSection";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "ACL Reconstruction Melbourne — Dr Nate Myhill",
   description: "Anterior cruciate ligament (ACL) reconstruction for knee instability. Specialist knee surgeon Dr Nate Myhill, Melbourne.",
-};
+  path: "/hip-knee/acl-reconstruction",
+});
 
 const faqs = [
   { q: "Do I need surgery after ACL rupture?", a: "Not everyone with an ACL rupture requires surgery. Non-surgical management with physiotherapy can be appropriate for less active patients or those with low functional demands. Surgery is generally recommended for patients wishing to return to pivoting and cutting sports, or those with significant instability in daily life." },

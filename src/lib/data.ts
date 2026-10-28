@@ -10,6 +10,9 @@ export const DOCTOR = {
   domain: "drnatemyhill.com.au",
 };
 
+// Single source of truth for the public site address. Derived from DOCTOR.domain.
+export const SITE_URL = `https://${DOCTOR.domain}`;
+
 export const LOCATIONS = [
   {
     slug: "wantirna",

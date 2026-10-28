@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import PageLayout from "@/components/PageLayout";
 import RisksSection from "@/components/RisksSection";
 import FAQSection from "@/components/FAQSection";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Cubital Tunnel Syndrome Melbourne — Dr Nate Myhill",
   description: "Surgical decompression of the ulnar nerve at the elbow for cubital tunnel syndrome. Upper limb surgeon Dr Nate Myhill, Melbourne.",
-};
+  path: "/shoulder-upper-limb/cubital-tunnel-syndrome",
+});
 
 const faqs = [
   { q: "What causes cubital tunnel syndrome?", a: "The ulnar nerve can be compressed or stretched at the elbow when the elbow is held in a flexed position for prolonged periods, from direct pressure on the inner elbow, or from bony changes or scar tissue within the cubital tunnel. Certain activities — such as resting on the elbow or holding a phone for extended periods — can aggravate symptoms." },
