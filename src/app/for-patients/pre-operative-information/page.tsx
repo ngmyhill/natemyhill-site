@@ -18,7 +18,7 @@ export default function PreOperativePage() {
 
       <h2>Fasting</h2>
       <p>
-        You must not eat or drink (except for small sips of water with any essential medications, as specifically instructed) for at least 6 hours before your surgery. Clear fluids may be permitted up to 2 hours before your procedure — the hospital will provide specific instructions.
+        You must not eat or drink (except for small sips of water with any essential medications, as specifically instructed) for at least 6 hours before your surgery. Clear fluids may be permitted up to 2 hours before your procedure. The hospital will provide specific instructions.
       </p>
       <p>
         <strong>Do not eat or drink if you are unsure.</strong> Eating or drinking before anaesthesia is a serious risk. If in doubt, contact the hospital.
@@ -26,7 +26,7 @@ export default function PreOperativePage() {
 
       <h2>Medications</h2>
       <p>
-        Please bring a list of all your current medications to your pre-operative assessment appointment. The following general guidance applies — however, always follow specific instructions given to you:
+        Please bring a list of all your current medications to your pre-operative assessment appointment. The following general guidance applies. However, always follow specific instructions given to you:
       </p>
       <ul>
         <li><strong>Blood thinners</strong> (warfarin, rivaroxaban, apixaban, clopidogrel, aspirin) — you will usually be advised to stop these before surgery. Do not stop without specific guidance.</li>
@@ -63,7 +63,7 @@ export default function PreOperativePage() {
 
       <h2>Questions?</h2>
       <p>
-        If you have any concerns before your operation, contact the practice or the hospital directly. Do not hesitate to call — no question is too small.
+        If you have any concerns before your operation, contact the practice or the hospital directly. Do not hesitate to call. No question is too small.
       </p>
     </PageLayout>
   );

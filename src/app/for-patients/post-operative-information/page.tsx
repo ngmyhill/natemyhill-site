@@ -38,7 +38,7 @@ export default function PostOperativePage() {
 
       <h2>Mobility and precautions</h2>
       <p>
-        Specific mobility guidelines depend on your procedure. Procedure-specific instruction sheets are available from the practice — see below.
+        Specific mobility guidelines depend on your procedure. Procedure-specific instruction sheets are available from the practice. See below.
       </p>
       <ul>
         <li>Use any prescribed aids (crutches, sling, brace) as directed</li>

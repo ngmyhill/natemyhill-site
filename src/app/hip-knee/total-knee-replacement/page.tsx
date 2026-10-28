@@ -21,12 +21,12 @@ export default function TotalKneeReplacementPage() {
     <PageLayout crumbs={[{ label: "Home", href: "/" }, { label: "Hip & Knee", href: "/hip-knee" }, { label: "Total Knee Replacement" }]}>
       <h1>Total knee replacement</h1>
       <p>
-        Total knee replacement (total knee arthroplasty) is a common orthopaedic procedure. It involves replacing the worn articular surfaces of the knee joint — the femur (thigh bone), tibia (shin bone) and sometimes the undersurface of the patella (kneecap) — with prosthetic components.
+        Total knee replacement (total knee arthroplasty) is a common orthopaedic procedure. It involves replacing the worn articular surfaces of the knee joint, which are the femur (thigh bone), tibia (shin bone) and sometimes the undersurface of the patella (kneecap), with prosthetic components.
       </p>
 
       <h2>Why knee replacement?</h2>
       <p>
-        End-stage knee arthritis causes persistent pain, stiffness and functional limitation that can significantly impact quality of life. When conservative measures — including physiotherapy, weight management, bracing and injections — no longer provide adequate relief, total knee replacement can reduce pain and improve function. Results vary from person to person.
+        End-stage knee arthritis causes persistent pain, stiffness and functional limitation that can significantly impact quality of life. When conservative measures, including physiotherapy, weight management, bracing and injections, no longer provide adequate relief, total knee replacement can reduce pain and improve function. Results vary from person to person.
       </p>
 
       <h2>The procedure</h2>

@@ -11,9 +11,9 @@ export const metadata: Metadata = pageMetadata({
 });
 
 const faqs = [
-  { q: "What causes cubital tunnel syndrome?", a: "The ulnar nerve can be compressed or stretched at the elbow when the elbow is held in a flexed position for prolonged periods, from direct pressure on the inner elbow, or from bony changes or scar tissue within the cubital tunnel. Certain activities — such as resting on the elbow or holding a phone for extended periods — can aggravate symptoms." },
+  { q: "What causes cubital tunnel syndrome?", a: "The ulnar nerve can be compressed or stretched at the elbow when the elbow is held in a flexed position for prolonged periods, from direct pressure on the inner elbow, or from bony changes or scar tissue within the cubital tunnel. Certain activities, such as resting on the elbow or holding a phone for extended periods, can aggravate symptoms." },
   { q: "Does cubital tunnel syndrome always need surgery?", a: "Mild cases can often be managed with activity modification, night splinting in slight elbow extension, and physiotherapy. Surgery is considered when symptoms are moderate to severe, persistent, or when there is evidence of nerve dysfunction on nerve conduction studies." },
-  { q: "What are the surgical options?", a: "The most common procedure is simple decompression — releasing the tight tissue over the cubital tunnel to relieve pressure on the nerve. In some cases, ulnar nerve transposition (moving the nerve to the front of the elbow) is performed. Dr Myhill will discuss the most appropriate approach for your situation." },
+  { q: "What are the surgical options?", a: "The most common procedure is simple decompression, releasing the tight tissue over the cubital tunnel to relieve pressure on the nerve. In some cases, ulnar nerve transposition (moving the nerve to the front of the elbow) is performed. Dr Myhill will discuss the most appropriate approach for your situation." },
 ];
 
 export default function CubitalTunnelPage() {
@@ -21,7 +21,7 @@ export default function CubitalTunnelPage() {
     <PageLayout crumbs={[{ label: "Home", href: "/" }, { label: "Shoulder & Upper Limb", href: "/shoulder-upper-limb" }, { label: "Cubital Tunnel Syndrome" }]}>
       <h1>Cubital tunnel syndrome</h1>
       <p>
-        Cubital tunnel syndrome is the second most common peripheral nerve compression in the upper limb, after carpal tunnel syndrome. It occurs when the ulnar nerve — which passes through the cubital tunnel on the inner side of the elbow — becomes compressed or irritated.
+        Cubital tunnel syndrome is the second most common peripheral nerve compression in the upper limb, after carpal tunnel syndrome. It occurs when the ulnar nerve, which passes through the cubital tunnel on the inner side of the elbow, becomes compressed or irritated.
       </p>
 
       <h2>Symptoms</h2>
@@ -51,7 +51,7 @@ export default function CubitalTunnelPage() {
 
       <h2>Surgical decompression</h2>
       <p>
-        When conservative measures fail or nerve dysfunction is significant, surgical decompression is performed. This involves releasing the tight tissue (flexor carpi ulnaris fascia and the cubital tunnel retinaculum) that overlies the nerve, relieving the compression. In selected cases — such as where the nerve is unstable or previous decompression has failed — ulnar nerve transposition (moving the nerve to the front of the elbow) may be required.
+        When conservative measures fail or nerve dysfunction is significant, surgical decompression is performed. This involves releasing the tight tissue (flexor carpi ulnaris fascia and the cubital tunnel retinaculum) that overlies the nerve, relieving the compression. In selected cases, such as where the nerve is unstable or previous decompression has failed, ulnar nerve transposition (moving the nerve to the front of the elbow) may be required.
       </p>
       <p>
         Surgery is typically performed as a day procedure under general or regional anaesthesia.

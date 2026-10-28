@@ -15,7 +15,7 @@ export default function LocationsPage() {
     <PageLayout crumbs={[{ label: "Home", href: "/" }, { label: "Locations" }]}>
       <h1>Consulting &amp; operating locations</h1>
       <p>
-        Dr Myhill is available across seven locations in metropolitan Melbourne, regional Victoria, and Albury (NSW). Consulting schedules vary — contact the practice for current availability at each location.
+        Dr Myhill is available across seven locations in metropolitan Melbourne, regional Victoria, and Albury (NSW). Consulting schedules vary. Contact the practice for current availability at each location.
       </p>
 
       <div style={{ display: "grid", gap: "1.5rem", marginTop: "2rem" }}>

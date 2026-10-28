@@ -70,7 +70,7 @@ export default function AppointmentsPage() {
       <h2>What to bring</h2>
       <ul>
         <li>Your GP or specialist referral letter</li>
-        <li>Any relevant imaging (X-rays, MRI or CT scans) — on CD or via an online link</li>
+        <li>Any relevant imaging (X-rays, MRI or CT scans), on CD or via an online link</li>
         <li>Your Medicare card and health fund card</li>
         <li>A list of your current medications</li>
         <li>Your WorkCover or TAC claim number, if applicable</li>

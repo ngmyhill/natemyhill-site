@@ -13,7 +13,7 @@ export const metadata: Metadata = pageMetadata({
 const faqs = [
   { q: "Do I need surgery after ACL rupture?", a: "Not everyone with an ACL rupture requires surgery. Non-surgical management with physiotherapy can be appropriate for less active patients or those with low functional demands. Surgery is generally recommended for patients wishing to return to pivoting and cutting sports, or those with significant instability in daily life." },
   { q: "What graft is used for ACL reconstruction?", a: "The most commonly used graft is the hamstring tendon (taken from the inner knee). Patellar tendon and quadriceps tendon grafts are also used. Allograft (cadaveric) tendon is an option in some patients. Dr Myhill will discuss graft choice with you based on your anatomy, activity level and goals." },
-  { q: "When can I return to sport after ACL reconstruction?", a: "Return to sport is guided by objective criteria — not a fixed time period. People are typically cleared for return to unrestricted sport at around 9–12 months, once strength tests and functional assessments confirm readiness. Recovery varies between people." },
+  { q: "When can I return to sport after ACL reconstruction?", a: "Return to sport is guided by objective criteria, not a fixed time period. People are typically cleared for return to unrestricted sport at around 9–12 months, once strength tests and functional assessments confirm readiness. Recovery varies between people." },
 ];
 
 export default function ACLReconstructionPage() {
@@ -26,12 +26,12 @@ export default function ACLReconstructionPage() {
 
       <h2>Diagnosis</h2>
       <p>
-        Clinical diagnosis is made on examination with Lachman's and pivot shift tests. MRI confirms ACL rupture and identifies associated injuries to the menisci, cartilage and other ligaments — which are common at the time of ACL injury.
+        Clinical diagnosis is made on examination with Lachman's and pivot shift tests. MRI confirms ACL rupture and identifies associated injuries to the menisci, cartilage and other ligaments, which are common at the time of ACL injury.
       </p>
 
       <h2>Non-surgical management</h2>
       <p>
-        For some patients — particularly older, less active individuals or those with low functional demands — physiotherapy-based rehabilitation without surgery can achieve good outcomes. The decision is made together with Dr Myhill based on your activity goals, instability symptoms and associated injuries.
+        For some patients, particularly older, less active individuals or those with low functional demands, physiotherapy-based rehabilitation without surgery can achieve good outcomes. The decision is made together with Dr Myhill based on your activity goals, instability symptoms and associated injuries.
       </p>
 
       <h2>ACL reconstruction surgery</h2>
@@ -41,7 +41,7 @@ export default function ACLReconstructionPage() {
 
       <h2>Recovery and return to sport</h2>
       <p>
-        Rehabilitation after ACL reconstruction is a graded process taking 9–12 months for return to unrestricted sport. Criteria-based rehabilitation — rather than time alone — guides progression through each phase. Full participation in contact and pivoting sports is not recommended until objective strength and functional testing criteria are met.
+        Rehabilitation after ACL reconstruction is a graded process taking 9–12 months for return to unrestricted sport. Criteria-based rehabilitation, rather than time alone, guides progression through each phase. Full participation in contact and pivoting sports is not recommended until objective strength and functional testing criteria are met.
       </p>
 
       <RisksSection

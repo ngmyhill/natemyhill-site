@@ -20,7 +20,7 @@ export default function ACJointSurgeryPage() {
     <PageLayout crumbs={[{ label: "Home", href: "/" }, { label: "Shoulder & Upper Limb", href: "/shoulder-upper-limb" }, { label: "AC Joint Surgery" }]}>
       <h1>Acromioclavicular (AC) joint surgery</h1>
       <p>
-        The acromioclavicular (AC) joint is where the collarbone (clavicle) meets the outer tip of the shoulder blade (acromion). It can be injured through trauma — producing AC joint separation — or develop arthritis as part of the normal ageing process.
+        The acromioclavicular (AC) joint is where the collarbone (clavicle) meets the outer tip of the shoulder blade (acromion). It can be injured through trauma, producing AC joint separation, or develop arthritis as part of the normal ageing process.
       </p>
 
       <h2>AC joint separation</h2>

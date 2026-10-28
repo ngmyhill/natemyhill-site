@@ -20,7 +20,7 @@ export default function TennisElbowPage() {
     <PageLayout crumbs={[{ label: "Home", href: "/" }, { label: "Shoulder & Upper Limb", href: "/shoulder-upper-limb" }, { label: "Tennis Elbow" }]}>
       <h1>Tennis elbow (lateral epicondylitis)</h1>
       <p>
-        Tennis elbow is a condition characterised by pain on the outer side of the elbow, arising from degeneration of the tendons that attach at the lateral epicondyle (the bony bump on the outside of the elbow). Despite the name, it affects far more than just tennis players — it commonly occurs in any activity involving repetitive wrist extension or gripping.
+        Tennis elbow is a condition characterised by pain on the outer side of the elbow, arising from degeneration of the tendons that attach at the lateral epicondyle (the bony bump on the outside of the elbow). Despite the name, it affects far more than just tennis players. It commonly occurs in any activity involving repetitive wrist extension or gripping.
       </p>
 
       <h2>Symptoms</h2>

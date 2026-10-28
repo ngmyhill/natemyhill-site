@@ -19,9 +19,9 @@ export default function ForReferrersPage() {
 
       <h2>What Dr Myhill sees</h2>
       <ul>
-        <li><strong>Shoulder & upper limb</strong> — rotator cuff tears, shoulder arthritis (for replacement), shoulder instability, AC joint pathology, biceps pathology, tennis elbow, the OK (Outerbridge-Kashiwagi) elbow procedure, UCL reconstruction, cubital tunnel syndrome, carpal tunnel syndrome, wrist fractures</li>
-        <li><strong>Hip & knee</strong> — hip and knee arthritis (for replacement), ACL reconstruction, meniscal injuries, knee arthroscopy, hip fractures</li>
-        <li><strong>Trauma</strong> — upper and lower limb fractures and dislocations, including proximal humerus, clavicle, distal radius, scaphoid, elbow, hip, femur, tibia and ankle injuries</li>
+        <li><strong>Shoulder & upper limb</strong>: rotator cuff tears, shoulder arthritis (for replacement), shoulder instability, AC joint pathology, biceps pathology, tennis elbow, the OK (Outerbridge-Kashiwagi) elbow procedure, UCL reconstruction, cubital tunnel syndrome, carpal tunnel syndrome, wrist fractures</li>
+        <li><strong>Hip & knee</strong>: hip and knee arthritis (for replacement), ACL reconstruction, meniscal injuries, knee arthroscopy, hip fractures</li>
+        <li><strong>Trauma</strong>: upper and lower limb fractures and dislocations, including proximal humerus, clavicle, distal radius, scaphoid, elbow, hip, femur, tibia and ankle injuries</li>
       </ul>
 
       <h2>Referral information</h2>

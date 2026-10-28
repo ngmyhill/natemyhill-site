@@ -13,7 +13,7 @@ const specialties = [
   {
     title: "Shoulder & Upper Limb",
     href: "/shoulder-upper-limb",
-    desc: "Rotator cuff repair, shoulder replacement, instability surgery, elbow and wrist conditions — specialist upper limb care, including an IBRA Scholarship at Erasmus MC, Rotterdam.",
+    desc: "Rotator cuff repair, shoulder replacement, instability surgery, elbow and wrist conditions, with specialist upper limb care including an IBRA Scholarship at Erasmus MC, Rotterdam.",
     links: [
       { label: "Rotator Cuff Repair", href: "/shoulder-upper-limb/rotator-cuff-repair" },
       { label: "Shoulder Replacement", href: "/shoulder-upper-limb/shoulder-replacement" },
@@ -24,7 +24,7 @@ const specialties = [
   {
     title: "Hip & Knee",
     href: "/hip-knee",
-    desc: "Total hip and knee replacement, ACL reconstruction, meniscal repair and knee arthroscopy — helping patients return to the activities that matter to them.",
+    desc: "Total hip and knee replacement, ACL reconstruction, meniscal repair and knee arthroscopy, helping patients return to the activities that matter to them.",
     links: [
       { label: "Total Hip Replacement", href: "/hip-knee/total-hip-replacement" },
       { label: "Total Knee Replacement", href: "/hip-knee/total-knee-replacement" },
@@ -76,7 +76,7 @@ export default function Home() {
               The plan that fits<br />your life.
             </h1>
             <p style={{ color: "#d3d1c7", fontSize: "1.05rem", lineHeight: 1.75, maxWidth: "520px", marginBottom: "2rem" }}>
-              Orthopaedic surgery in Melbourne, chosen with you — with a special interest in the shoulder, upper limb and sports.
+              Orthopaedic surgery in Melbourne, chosen with you. Special interest in the shoulder, upper limb and sports.
             </p>
             <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
               <Link href="/appointments" style={{ background: "#34b889", color: "#1a2744", padding: "0.75rem 1.75rem", borderRadius: "4px", fontWeight: 500, textDecoration: "none", fontSize: "15px" }}>

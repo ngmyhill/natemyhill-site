@@ -5,14 +5,14 @@ import PageLayout from "@/components/PageLayout";
 
 export const metadata: Metadata = pageMetadata({
   title: "Patient Information and Resources",
-  description: "Patient information from Dr Nate Myhill — your first appointment, fees, pre-operative and post-operative information.",
+  description: "Patient information from Dr Nate Myhill: your first appointment, fees, pre-operative and post-operative information.",
   path: "/for-patients",
 });
 
 const items = [
   { label: "Your first appointment", href: "/for-patients/first-appointment", desc: "What to bring, what to expect, and how to make the most of your consultation." },
   { label: "Fees & billing", href: "/for-patients/fees-and-billing", desc: "Fee disclosure, health fund billing, out-of-pocket estimates and Medicare information." },
-  { label: "Pre-operative information", href: "/for-patients/pre-operative-information", desc: "Preparing for surgery — including fasting, medications, and what to arrange at home." },
+  { label: "Pre-operative information", href: "/for-patients/pre-operative-information", desc: "Preparing for surgery, including fasting, medications, and what to arrange at home." },
   { label: "Post-operative information", href: "/for-patients/post-operative-information", desc: "What to expect after surgery, wound care, and exercise sheets." },
 ];
 

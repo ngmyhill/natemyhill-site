@@ -41,7 +41,7 @@ export default function HowToReferPage() {
 
       <h2>Urgent referrals</h2>
       <p>
-        For urgent or semi-urgent referrals — including trauma, acute fractures or time-sensitive orthopaedic presentations — please phone the practice directly: <a href={`tel:${DOCTOR.phoneTel}`}>{DOCTOR.phone}</a>.
+        For urgent or semi-urgent referrals, including trauma, acute fractures or time-sensitive orthopaedic presentations, please phone the practice directly: <a href={`tel:${DOCTOR.phoneTel}`}>{DOCTOR.phone}</a>.
       </p>
       <p>
         Emergency departments may also contact Dr Myhill's rooms directly for advice on acute orthopaedic presentations.
@@ -55,7 +55,7 @@ export default function HowToReferPage() {
         <li>Imaging results and reports (X-ray, MRI, CT)</li>
         <li>Current medications and relevant past medical and surgical history</li>
         <li>Relevant allied health reports</li>
-        <li>Urgency — routine, semi-urgent or urgent</li>
+        <li>Urgency: routine, semi-urgent or urgent</li>
         <li>WorkCover or TAC details, if applicable</li>
         <li>Health fund details (if known)</li>
       </ul>

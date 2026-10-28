@@ -24,7 +24,7 @@ export default function LowerLimbTraumaPage() {
 
       <h2>Femoral shaft fractures</h2>
       <p>
-        Fractures of the femoral shaft (thigh bone) are managed surgically in almost all cases using intramedullary nail fixation — a metal rod passed down the centre of the femur. This aims to restore alignment and allows early mobilisation.
+        Fractures of the femoral shaft (thigh bone) are managed surgically in almost all cases using intramedullary nail fixation, a metal rod passed down the centre of the femur. This aims to restore alignment and allows early mobilisation.
       </p>
 
       <h2>Tibial fractures</h2>
@@ -34,7 +34,7 @@ export default function LowerLimbTraumaPage() {
 
       <h2>Periarticular knee fractures</h2>
       <p>
-        Fractures around the knee joint — including distal femoral fractures and proximal tibial fractures (tibial plateau fractures) — often require surgical fixation to restore the joint surface and allow early movement.
+        Fractures around the knee joint, including distal femoral fractures and proximal tibial fractures (tibial plateau fractures), often require surgical fixation to restore the joint surface and allow early movement.
       </p>
 
       <h2>Ankle fractures</h2>

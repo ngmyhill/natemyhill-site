@@ -20,12 +20,12 @@ export default function FirstAppointmentPage() {
       <h2>What to bring</h2>
       <ul>
         <li><strong>Your referral letter</strong> from your GP or specialist</li>
-        <li><strong>Imaging</strong> — any X-rays, MRI or CT scans, ideally on CD or via an online portal link. Printed images alone may not be sufficient.</li>
+        <li><strong>Imaging</strong>: any X-rays, MRI or CT scans, ideally on CD or via an online portal link. Printed images alone may not be sufficient.</li>
         <li><strong>Medicare card</strong> and <strong>health fund card</strong></li>
-        <li><strong>Current medications list</strong> — including dose and frequency</li>
-        <li><strong>Previous medical and surgical history</strong> — including any prior orthopaedic procedures</li>
+        <li><strong>Current medications list</strong>: including dose and frequency</li>
+        <li><strong>Previous medical and surgical history</strong>: including any prior orthopaedic procedures</li>
         <li><strong>WorkCover or TAC claim number</strong>, if applicable</li>
-        <li>A support person or family member, if you wish — particularly if you think you may find medical information difficult to retain alone</li>
+        <li>A support person or family member, if you wish, particularly if you think you may find medical information difficult to retain alone</li>
       </ul>
 
       <h2>What to expect</h2>

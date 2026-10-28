@@ -20,7 +20,7 @@ export default function UCLReconstructionPage() {
     <PageLayout crumbs={[{ label: "Home", href: "/" }, { label: "Shoulder & Upper Limb", href: "/shoulder-upper-limb" }, { label: "UCL Reconstruction" }]}>
       <h1>UCL reconstruction (elbow)</h1>
       <p>
-        The ulnar collateral ligament (UCL) is located on the inner side of the elbow and provides stability against the valgus (outward) forces experienced during throwing. UCL injuries are most common in overhead throwing athletes — including cricketers, baseball pitchers and javelin throwers — but can also result from acute trauma.
+        The ulnar collateral ligament (UCL) is located on the inner side of the elbow and provides stability against the valgus (outward) forces experienced during throwing. UCL injuries are most common in overhead throwing athletes, including cricketers, baseball pitchers and javelin throwers, but can also result from acute trauma.
       </p>
 
       <h2>Symptoms of UCL injury</h2>
@@ -44,7 +44,7 @@ export default function UCLReconstructionPage() {
 
       <h2>UCL reconstruction</h2>
       <p>
-        When surgery is indicated — typically for high-demand throwing athletes with complete tears or failed conservative management — UCL reconstruction involves replacing the damaged ligament with a graft tendon. The graft (commonly the palmaris longus tendon from the forearm, or an allograft) is threaded through tunnels drilled in the medial epicondyle and the ulna, recreating the native ligament.
+        When surgery is indicated, typically for high-demand throwing athletes with complete tears or failed conservative management, UCL reconstruction involves replacing the damaged ligament with a graft tendon. The graft (commonly the palmaris longus tendon from the forearm, or an allograft) is threaded through tunnels drilled in the medial epicondyle and the ulna, recreating the native ligament.
       </p>
 
       <h2>Recovery</h2>

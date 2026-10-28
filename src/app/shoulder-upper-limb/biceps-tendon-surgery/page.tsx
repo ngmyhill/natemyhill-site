@@ -20,7 +20,7 @@ export default function BiceptsTendonSurgeryPage() {
     <PageLayout crumbs={[{ label: "Home", href: "/" }, { label: "Shoulder & Upper Limb", href: "/shoulder-upper-limb" }, { label: "Biceps Tendon Surgery" }]}>
       <h1>Biceps tendon surgery</h1>
       <p>
-        The long head of the biceps tendon runs from the shoulder joint down to the forearm. It can become inflamed, partially torn, or unstable within the bicipital groove of the humerus — causing anterior shoulder pain that may be mistaken for other shoulder conditions.
+        The long head of the biceps tendon runs from the shoulder joint down to the forearm. It can become inflamed, partially torn, or unstable within the bicipital groove of the humerus, causing anterior shoulder pain that may be mistaken for other shoulder conditions.
       </p>
 
       <h2>Conditions treated</h2>

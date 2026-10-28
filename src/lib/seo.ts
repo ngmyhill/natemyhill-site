@@ -30,7 +30,7 @@ export function pageMetadata({ title, description, path }: PageMetadataInput): M
       ...(fullTitle ? { title: fullTitle } : {}),
       description,
       url: path,
-      siteName: "Dr Nate Myhill — Orthopaedic Surgeon",
+      siteName: "Dr Nate Myhill, Orthopaedic Surgeon",
       locale: "en_AU",
       type: "website",
       images: [OG_IMAGE],

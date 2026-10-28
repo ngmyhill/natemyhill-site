@@ -11,9 +11,9 @@ export const metadata: Metadata = pageMetadata({
 });
 
 const faqs = [
-  { q: "What is carpal tunnel release?", a: "Carpal tunnel release is a procedure to cut the transverse carpal ligament — the tight band of tissue forming the roof of the carpal tunnel. This relieves pressure on the median nerve running beneath it. It is a common hand and wrist procedure." },
+  { q: "What is carpal tunnel release?", a: "Carpal tunnel release is a procedure to cut the transverse carpal ligament, the tight band of tissue forming the roof of the carpal tunnel. This relieves pressure on the median nerve running beneath it. It is a common hand and wrist procedure." },
   { q: "Is the surgery painful?", a: "The procedure is typically well tolerated. It is performed under local anaesthesia (with or without sedation) or general anaesthesia. Post-operative discomfort is usually mild and managed with simple analgesia. People typically resume light hand activities within a few days, though recovery varies between people." },
-  { q: "How long until the numbness and tingling resolve?", a: "Symptoms of numbness and tingling often improve quickly after surgery. However, complete nerve recovery — particularly in cases of prolonged or severe compression — can take weeks to months. Weakness and muscle wasting may take longer to recover." },
+  { q: "How long until the numbness and tingling resolve?", a: "Symptoms of numbness and tingling often improve quickly after surgery. However, complete nerve recovery, particularly in cases of prolonged or severe compression, can take weeks to months. Weakness and muscle wasting may take longer to recover." },
 ];
 
 export default function CarpalTunnelPage() {
@@ -21,7 +21,7 @@ export default function CarpalTunnelPage() {
     <PageLayout crumbs={[{ label: "Home", href: "/" }, { label: "Shoulder & Upper Limb", href: "/shoulder-upper-limb" }, { label: "Carpal Tunnel Syndrome" }]}>
       <h1>Carpal tunnel syndrome</h1>
       <p>
-        Carpal tunnel syndrome is the most common peripheral nerve compression condition. It occurs when the median nerve is compressed as it passes through the carpal tunnel — a narrow channel at the base of the wrist bounded by small wrist bones and a strong band of connective tissue (the transverse carpal ligament).
+        Carpal tunnel syndrome is the most common peripheral nerve compression condition. It occurs when the median nerve is compressed as it passes through the carpal tunnel, a narrow channel at the base of the wrist bounded by small wrist bones and a strong band of connective tissue (the transverse carpal ligament).
       </p>
 
       <h2>Who is affected?</h2>

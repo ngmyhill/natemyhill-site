@@ -11,8 +11,8 @@ export const metadata: Metadata = pageMetadata({
 });
 
 const faqs = [
-  { q: "Do hip fractures always require surgery?", a: "The vast majority of hip fractures in adults require surgical treatment — either fixation with screws or a nail, or hip replacement (hemiarthroplasty or total hip replacement). Non-surgical management carries significant risks in most patients and is reserved for exceptional circumstances." },
-  { q: "How soon after a hip fracture is surgery performed?", a: "Current evidence strongly supports early surgery — ideally within 24–48 hours of injury. Delays increase the risk of complications. Dr Myhill and the hospital trauma team work to facilitate prompt surgical management." },
+  { q: "Do hip fractures always require surgery?", a: "The vast majority of hip fractures in adults require surgical treatment, either fixation with screws or a nail, or hip replacement (hemiarthroplasty or total hip replacement). Non-surgical management carries significant risks in most patients and is reserved for exceptional circumstances." },
+  { q: "How soon after a hip fracture is surgery performed?", a: "Current evidence strongly supports early surgery, ideally within 24–48 hours of injury. Delays increase the risk of complications. Dr Myhill and the hospital trauma team work to facilitate prompt surgical management." },
 ];
 
 export default function HipTraumaPage() {

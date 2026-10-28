@@ -5,7 +5,7 @@ import { DOCTOR, hasRealValue } from "@/lib/data";
 
 export const metadata: Metadata = pageMetadata({
   title: "Privacy Policy and Your Information",
-  description: "Privacy policy for drnatemyhill.com.au — how we collect, use and protect your personal information in accordance with the Privacy Act 1988 (Cth).",
+  description: "Privacy policy for drnatemyhill.com.au: how we collect, use and protect your personal information in accordance with the Privacy Act 1988 (Cth).",
   path: "/privacy-policy",
 });
 
@@ -27,10 +27,10 @@ export default function PrivacyPolicyPage() {
         When you contact the practice or use this website, we may collect:
       </p>
       <ul>
-        <li>Contact information — name, phone number, email address, postal address</li>
-        <li>Referral information — referring practitioner details</li>
-        <li>Health information — where you have provided it directly to us as part of booking or clinical communication (this is treated as sensitive information under the Privacy Act)</li>
-        <li>Website usage data — such as IP address, browser type and pages requested, which our website host may record in standard server logs</li>
+        <li>Contact information: name, phone number, email address, postal address</li>
+        <li>Referral information: referring practitioner details</li>
+        <li>Health information: where you have provided it directly to us as part of booking or clinical communication (this is treated as sensitive information under the Privacy Act)</li>
+        <li>Website usage data: such as IP address, browser type and pages requested, which our website host may record in standard server logs</li>
       </ul>
 
       <h2>2. How we collect personal information</h2>
@@ -75,7 +75,7 @@ export default function PrivacyPolicyPage() {
         Health information is sensitive information under the Privacy Act and is handled with additional care. We collect health information only where necessary for providing care, and we take reasonable steps to protect it from misuse, interference, loss, and unauthorised access or disclosure.
       </p>
       <p>
-        <strong>This website does not collect detailed clinical health information.</strong> Clinical communication is handled through secure channels — by phone, fax or secure email, or through secure messaging services such as HealthLink and Medical Objects.
+        <strong>This website does not collect detailed clinical health information.</strong> Clinical communication is handled through secure channels, by phone, fax or secure email, or through secure messaging services such as HealthLink and Medical Objects.
       </p>
 
       <h2>6. Storage and security</h2>

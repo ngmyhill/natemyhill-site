@@ -20,7 +20,7 @@ export default function MeniscalRepairPage() {
     <PageLayout crumbs={[{ label: "Home", href: "/" }, { label: "Hip & Knee", href: "/hip-knee" }, { label: "Meniscal Repair" }]}>
       <h1>Meniscal repair</h1>
       <p>
-        The menisci are two C-shaped pads of fibrocartilage inside the knee joint that act as shock absorbers, load distributors and joint stabilisers. Meniscal tears are among the most common knee injuries — occurring both in sport (often alongside ACL injury) and as degenerative tears in older patients.
+        The menisci are two C-shaped pads of fibrocartilage inside the knee joint that act as shock absorbers, load distributors and joint stabilisers. Meniscal tears are among the most common knee injuries, occurring both in sport (often alongside ACL injury) and as degenerative tears in older patients.
       </p>
 
       <h2>Symptoms</h2>

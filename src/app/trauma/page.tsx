@@ -33,7 +33,7 @@ export default function TraumaPage() {
         <li>Soft tissue injuries — rotator cuff tears, ligament injuries</li>
       </ul>
       <p>
-        <Link href="/trauma/upper-limb">Upper limb trauma — more detail →</Link>
+        <Link href="/trauma/upper-limb">Upper limb trauma: more detail →</Link>
       </p>
 
       <h2>Lower limb trauma</h2>
@@ -48,7 +48,7 @@ export default function TraumaPage() {
         <li>Ankle fractures</li>
       </ul>
       <p>
-        <Link href="/trauma/lower-limb">Lower limb trauma — more detail →</Link>
+        <Link href="/trauma/lower-limb">Lower limb trauma: more detail →</Link>
       </p>
 
       <h2>Referring for trauma</h2>

@@ -32,12 +32,12 @@ export default function ShoulderReplacementPage() {
 
       <h3>Reverse total shoulder replacement</h3>
       <p>
-        A reverse total shoulder replacement switches the positions of the ball and socket — placing the ball on the glenoid side and the socket on the humeral side. This design allows the deltoid muscle to power arm movement when the rotator cuff is severely torn or non-functional. It is a widely used shoulder replacement design.
+        A reverse total shoulder replacement switches the positions of the ball and socket, placing the ball on the glenoid side and the socket on the humeral side. This design allows the deltoid muscle to power arm movement when the rotator cuff is severely torn or non-functional. It is a widely used shoulder replacement design.
       </p>
 
       <h3>Hemiarthroplasty</h3>
       <p>
-        In selected cases — including acute fractures — replacing only the humeral head without resurfacing the glenoid may be appropriate.
+        In selected cases, including acute fractures, replacing only the humeral head without resurfacing the glenoid may be appropriate.
       </p>
 
       <h2>Who may benefit?</h2>

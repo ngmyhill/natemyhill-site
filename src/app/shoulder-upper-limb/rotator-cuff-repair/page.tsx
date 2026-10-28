@@ -22,7 +22,7 @@ export default function RotatorCuffRepairPage() {
     <PageLayout crumbs={[{ label: "Home", href: "/" }, { label: "Shoulder & Upper Limb", href: "/shoulder-upper-limb" }, { label: "Rotator Cuff Repair" }]}>
       <h1>Rotator cuff repair</h1>
       <p>
-        The rotator cuff is a group of four muscles and their tendons that surround the shoulder joint, providing stability and enabling arm movement. Tears in the rotator cuff — ranging from partial-thickness to full-thickness — are among the most common shoulder injuries, affecting both active individuals and older adults.
+        The rotator cuff is a group of four muscles and their tendons that surround the shoulder joint, providing stability and enabling arm movement. Tears in the rotator cuff, ranging from partial-thickness to full-thickness, are among the most common shoulder injuries, affecting both active individuals and older adults.
       </p>
 
       <h2>Who is affected?</h2>
@@ -40,7 +40,7 @@ export default function RotatorCuffRepairPage() {
 
       <h2>Diagnosis</h2>
       <p>
-        Diagnosis involves a clinical examination and imaging — typically MRI, which shows the location and extent of the tear. An ultrasound may also be used. X-rays can identify bony changes or calcification.
+        Diagnosis involves a clinical examination and imaging, typically MRI, which shows the location and extent of the tear. An ultrasound may also be used. X-rays can identify bony changes or calcification.
       </p>
 
       <h2>Non-surgical treatment</h2>

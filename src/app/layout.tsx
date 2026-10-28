@@ -24,7 +24,7 @@ export const viewport: Viewport = { viewportFit: "cover" };
 
 export const metadata: Metadata = {
   title: {
-    default: "Dr Nate Myhill — Orthopaedic Surgeon Melbourne",
+    default: "Dr Nate Myhill, Orthopaedic Surgeon Melbourne",
     template: "%s | Dr Nate Myhill",
   },
   description: "Melbourne orthopaedic surgeon with a special interest in shoulder, upper limb and sports surgery, and general orthopaedics.",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     shortcut: "/favicon.svg",
   },
   openGraph: {
-    siteName: "Dr Nate Myhill — Orthopaedic Surgeon",
+    siteName: "Dr Nate Myhill, Orthopaedic Surgeon",
     locale: "en_AU",
     type: "website",
     images: [OG_IMAGE],
