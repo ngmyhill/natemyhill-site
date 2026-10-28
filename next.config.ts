@@ -20,6 +20,22 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
+        // Basic browser protections for every page. No full Content Security
+        // Policy: the site collects nothing, and a strict CSP needs nonces on
+        // Next's inline scripts. frame-ancestors alone stops clickjacking.
+        source: "/:path*",
+        headers: [
+          { key: "X-Frame-Options", value: "SAMEORIGIN" },
+          { key: "Content-Security-Policy", value: "frame-ancestors 'self'" },
+          { key: "X-Content-Type-Options", value: "nosniff" },
+          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+          {
+            key: "Permissions-Policy",
+            value: "camera=(), microphone=(), geolocation=(), browsing-topics=()",
+          },
+        ],
+      },
+      {
         // Keep every deployment that is not the live domain (for example the
         // *.vercel.app address) out of search results.
         source: "/:path*",
