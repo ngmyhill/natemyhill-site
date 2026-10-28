@@ -84,3 +84,8 @@ summary:focus-visible {
 main:focus {
   outline: none;
 }
+
+/* The large decorative hero mark pushes the page wider than a phone screen */
+@media (max-width: 700px) {
+  .hero-mark { display: none !important; }
+}

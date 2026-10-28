@@ -155,7 +155,7 @@ export default function Navigation() {
       </div>
 
       <style>{`
-        @media (max-width: 900px) {
+        @media (max-width: 1140px) {
           .hidden-mobile { display: none !important; }
           .show-mobile { display: block !important; }
         }

@@ -87,7 +87,7 @@ export default function Home() {
             </div>
           </div>
           {/* Logo mark — large, reversed */}
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", opacity: 0.18 }} aria-hidden="true">
+          <div className="hero-mark" style={{ display: "flex", alignItems: "center", justifyContent: "center", opacity: 0.18 }} aria-hidden="true">
             <svg viewBox="0 0 100 100" width="200" height="200">
               <circle cx="50" cy="50" r="34" fill="none" stroke="#1d9e75" strokeWidth="7" strokeLinecap="round" strokeDasharray="148.3 65.3" transform="rotate(100 50 50)"/>
               <circle cx="83.5" cy="44.1" r="7" fill="#f8f8f6"/>
