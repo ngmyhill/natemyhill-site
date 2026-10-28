@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import PageLayout from "@/components/PageLayout";
-import { DOCTOR, hasRealValue } from "@/lib/data";
+import { DOCTOR, LOCATION_SENTENCE_LIST, hasRealValue } from "@/lib/data";
 
 export const metadata: Metadata = pageMetadata({
   title: "How to Refer a Patient for Surgery",
@@ -62,7 +62,7 @@ export default function HowToReferPage() {
 
       <h2>Consulting locations</h2>
       <p>
-        Dr Myhill consults at Knox Private Hospital (Wantirna), Mitcham Private Hospital, Warringal Private Hospital (Heidelberg), John Fawkner Private Hospital (Coburg) and The Gardens Specialist Centre (Albury). Please indicate if you have a preferred location.
+        Dr Myhill consults at {LOCATION_SENTENCE_LIST}.
       </p>
     </PageLayout>
   );

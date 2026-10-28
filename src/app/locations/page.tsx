@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import PageLayout from "@/components/PageLayout";
-import { LOCATIONS, hasRealValue } from "@/lib/data";
+import { LOCATIONS, LOCATION_COUNT_WORD, hasRealValue, joinList } from "@/lib/data";
 
 export const metadata: Metadata = pageMetadata({
   title: "Locations in Melbourne and Albury",
-  description: "Dr Nate Myhill consults and operates at seven locations across Melbourne and Albury including Knox, Mitcham, Warringal, John Fawkner and Northern Health.",
+  description: `Dr Nate Myhill consults and operates at ${LOCATION_COUNT_WORD} locations across Melbourne and Albury, including ${joinList(LOCATIONS.map((l) => l.suburb))}.`,
   path: "/locations",
 });
 
@@ -15,7 +15,7 @@ export default function LocationsPage() {
     <PageLayout crumbs={[{ label: "Home", href: "/" }, { label: "Locations" }]}>
       <h1>Consulting &amp; operating locations</h1>
       <p>
-        Dr Myhill is available across seven locations in metropolitan Melbourne, regional Victoria, and Albury (NSW). Consulting schedules vary. Contact the practice for current availability at each location.
+        Dr Myhill is available across {LOCATION_COUNT_WORD} locations in metropolitan Melbourne and Albury (NSW). Consulting schedules vary. Contact the practice for current availability at each location.
       </p>
 
       <div style={{ display: "grid", gap: "1.5rem", marginTop: "2rem" }}>

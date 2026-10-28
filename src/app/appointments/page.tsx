@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import PageLayout from "@/components/PageLayout";
-import { DOCTOR, hasRealValue } from "@/lib/data";
+import { DOCTOR, LOCATIONS, LOCATION_SENTENCE_LIST, hasRealValue, joinList } from "@/lib/data";
 
 export const metadata: Metadata = pageMetadata({
   title: "Book an Orthopaedic Appointment",
-  description: "Book an appointment with Dr Nate Myhill, specialist orthopaedic surgeon. Consult at Knox, Mitcham, Warringal, John Fawkner or Albury.",
+  description: "Book an appointment with Dr Nate Myhill, specialist orthopaedic surgeon. Consult in " + joinList(LOCATIONS.map((l) => l.suburb)) + ".",
   path: "/appointments",
 });
 
@@ -78,7 +78,7 @@ export default function AppointmentsPage() {
 
       <h2>Consulting locations</h2>
       <p>
-        Dr Myhill consults at Knox Private Hospital (Wantirna), Mitcham Private Hospital, Warringal Private Hospital (Heidelberg), John Fawkner Private Hospital (Coburg) and The Gardens Specialist Centre (Albury).
+        Dr Myhill consults at {LOCATION_SENTENCE_LIST}.
       </p>
       <p>
         <a href="/locations">View all locations with maps →</a>

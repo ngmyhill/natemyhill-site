@@ -103,6 +103,27 @@ export const LOCATIONS = [
   },
 ];
 
+type Location = (typeof LOCATIONS)[number];
+
+// Albury is in NSW. Every other location is in metropolitan Melbourne.
+export function regionOf(loc: Location): "Melbourne" | "Albury" {
+  return loc.state === "NSW" ? "Albury" : "Melbourne";
+}
+
+export function joinList(items: string[]): string {
+  if (items.length <= 1) return items.join("");
+  return `${items.slice(0, -1).join(", ")} and ${items[items.length - 1]}`;
+}
+
+// "Knox Private Hospital (Wantirna)"; the suburb is dropped when the name already contains it.
+export function locationLabel(loc: Location): string {
+  return loc.name.includes(loc.suburb) ? loc.name : `${loc.name} (${loc.suburb})`;
+}
+
+// Single place the location list comes from, so every page agrees.
+export const LOCATION_SENTENCE_LIST = joinList(LOCATIONS.map(locationLabel));
+export const LOCATION_COUNT_WORD = ["no", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"][LOCATIONS.length];
+
 export const NAV_ITEMS = [
   { label: "About", href: "/about" },
   {
