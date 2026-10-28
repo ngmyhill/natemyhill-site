@@ -3,7 +3,7 @@ import { pageMetadata } from "@/lib/seo";
 import Image from "next/image";
 import Link from "next/link";
 import ReferrerPanel from "@/components/ReferrerPanel";
-import { LOCATIONS, LOCATION_COUNT_WORD, locationLabel, regionOf } from "@/lib/data";
+import { LOCATIONS, LOCATION_COUNT_WORD, NAV_ITEMS, locationLabel, regionOf } from "@/lib/data";
 
 export const metadata: Metadata = pageMetadata({
   description: "Melbourne orthopaedic surgeon with a special interest in shoulder, upper limb and sports surgery, and general orthopaedics.",
@@ -50,7 +50,10 @@ const regions = ["Melbourne", "Albury"] as const;
 const buttonBase = { padding: "0.75rem 1.75rem", borderRadius: "4px", textDecoration: "none", fontSize: "15px" } as const;
 
 export default function Home() {
-  const [shoulder, ...others] = specialties;
+  const [shoulderBase, ...others] = specialties;
+  // The feature panel lists every shoulder and upper limb procedure, taken from the navigation data.
+  const shoulderChildren = NAV_ITEMS.find((i) => i.href === shoulderBase.href)?.children ?? shoulderBase.links;
+  const shoulder = { ...shoulderBase, links: shoulderChildren };
   return (
     <>
       {/* Hero */}
