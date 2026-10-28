@@ -13,7 +13,7 @@ export default function Navigation() {
       <div style={{ background: "#1a2744", color: "#ffffff", fontSize: "13px", padding: "6px 0" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
           <span>{DOCTOR.phone}</span>
-          <Link href="/for-referrers" style={{ color: "#1d9e75", fontWeight: 500 }}>For Referrers</Link>
+          <Link href="/for-referrers" style={{ color: "#34b889", fontWeight: 500 }}>For Referrers</Link>
         </div>
       </div>
 
@@ -97,7 +97,7 @@ export default function Navigation() {
             href="/appointments"
             style={{
               marginLeft: "0.75rem",
-              background: "#1d9e75",
+              background: "#0f7a59",
               color: "#ffffff",
               padding: "0.5rem 1.25rem",
               borderRadius: "4px",

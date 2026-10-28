@@ -29,7 +29,7 @@ export default function AppointmentsPage() {
           href={DOCTOR.gentuUrl}
           target="_blank"
           rel="noopener noreferrer"
-          style={{ background: "#1d9e75", color: "#ffffff", padding: "0.75rem 1.75rem", borderRadius: "4px", fontWeight: 500, textDecoration: "none", fontSize: "15px", display: "inline-block" }}
+          style={{ background: "#0f7a59", color: "#ffffff", padding: "0.75rem 1.75rem", borderRadius: "4px", fontWeight: 500, textDecoration: "none", fontSize: "15px", display: "inline-block" }}
         >
           Book online via Gentu →
         </a>

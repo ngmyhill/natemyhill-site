@@ -2,7 +2,9 @@
 
 @theme inline {
   --color-navy: #1a2744;
-  --color-teal: #1d9e75;
+  --color-teal: #1d9e75; /* logo mark and decorative borders only */
+  --color-teal-text: #0f7a59; /* text and buttons on light surfaces */
+  --color-teal-on-navy: #34b889; /* text and buttons on navy */
   --color-slate: #5f5e5a;
   --color-warm-grey: #d3d1c7;
   --color-off-white: #f8f8f6;
@@ -31,7 +33,7 @@ h1 { font-size: clamp(1.75rem, 4vw, 2.75rem); }
 h2 { font-size: clamp(1.4rem, 3vw, 2rem); }
 h3 { font-size: 1.25rem; }
 
-a { color: #1d9e75; text-decoration: none; }
+a { color: #0f7a59; text-decoration: none; }
 a:hover { text-decoration: underline; }
 
 .prose p { margin-bottom: 1rem; }

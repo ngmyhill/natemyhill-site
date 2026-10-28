@@ -16,7 +16,7 @@ export default function PrivacyPolicyPage() {
       showCTA={false}
     >
       <h1>Privacy Policy</h1>
-      <p style={{ color: "#888780", fontSize: "14px" }}>Last updated: August 2026</p>
+      <p style={{ color: "#5f5e5a", fontSize: "14px" }}>Last updated: August 2026</p>
 
       <p>
         Dr Nate Myhill ("<strong>we</strong>", "<strong>us</strong>", "<strong>our</strong>") is committed to protecting the privacy of individuals who interact with this website and our practice. This policy explains how we collect, use, disclose and protect personal information in accordance with the <em>Privacy Act 1988</em> (Cth) and the Australian Privacy Principles (APPs).

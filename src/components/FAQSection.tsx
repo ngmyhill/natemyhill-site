@@ -17,7 +17,7 @@ export default function FAQSection({ faqs }: { faqs: FAQ[] }) {
               aria-expanded={open === i}
             >
               <span style={{ fontFamily: "EB Garamond, Georgia, serif", fontSize: "1.05rem", color: "#1a2744" }}>{faq.q}</span>
-              <span style={{ color: "#1d9e75", fontSize: "1.25rem", flexShrink: 0 }}>{open === i ? "−" : "+"}</span>
+              <span style={{ color: "#0f7a59", fontSize: "1.25rem", flexShrink: 0 }}>{open === i ? "−" : "+"}</span>
             </button>
             {open === i && (
               <div style={{ paddingBottom: "1rem", color: "#5f5e5a", fontSize: "15px", lineHeight: 1.7 }}>

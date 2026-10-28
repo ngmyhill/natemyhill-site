@@ -11,10 +11,10 @@ export default function CTABox({ referrer = false }: { referrer?: boolean }) {
             Dr Myhill accepts referrals from GPs, physiotherapists and emergency departments. Secure eReferral via HealthLink preferred.
           </p>
           <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-            <Link href="/for-referrers/how-to-refer" style={{ background: "#1d9e75", color: "#ffffff", padding: "0.6rem 1.25rem", borderRadius: "4px", fontWeight: 500, fontSize: "14px", textDecoration: "none" }}>
+            <Link href="/for-referrers/how-to-refer" style={{ background: "#0f7a59", color: "#ffffff", padding: "0.6rem 1.25rem", borderRadius: "4px", fontWeight: 500, fontSize: "14px", textDecoration: "none" }}>
               How to refer →
             </Link>
-            <Link href="/for-referrers/referral-resources" style={{ border: "1px solid #1d9e75", color: "#1d9e75", padding: "0.6rem 1.25rem", borderRadius: "4px", fontWeight: 500, fontSize: "14px", textDecoration: "none" }}>
+            <Link href="/for-referrers/referral-resources" style={{ border: "1px solid #0f7a59", color: "#0f7a59", padding: "0.6rem 1.25rem", borderRadius: "4px", fontWeight: 500, fontSize: "14px", textDecoration: "none" }}>
               Referral template →
             </Link>
           </div>
@@ -26,7 +26,7 @@ export default function CTABox({ referrer = false }: { referrer?: boolean }) {
             Consult with Dr Nate Myhill at Knox Private (Wantirna), Mitcham Private, Warringal Private (Heidelberg), John Fawkner Private (Coburg) or The Gardens Specialist Centre (Albury).
           </p>
           <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-            <Link href="/appointments" style={{ background: "#1d9e75", color: "#ffffff", padding: "0.6rem 1.25rem", borderRadius: "4px", fontWeight: 500, fontSize: "14px", textDecoration: "none" }}>
+            <Link href="/appointments" style={{ background: "#0f7a59", color: "#ffffff", padding: "0.6rem 1.25rem", borderRadius: "4px", fontWeight: 500, fontSize: "14px", textDecoration: "none" }}>
               Book online →
             </Link>
             <a href={`tel:${DOCTOR.phone}`} style={{ border: "1px solid #1a2744", color: "#1a2744", padding: "0.6rem 1.25rem", borderRadius: "4px", fontWeight: 500, fontSize: "14px", textDecoration: "none" }}>

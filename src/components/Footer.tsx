@@ -16,7 +16,7 @@ export default function Footer() {
               <div style={{ fontFamily: "EB Garamond, Georgia, serif", fontSize: "1.15rem", color: "#ffffff", lineHeight: 1.1 }}>
                 Dr Nate Myhill
               </div>
-              <div style={{ fontSize: "10px", letterSpacing: "0.18em", textTransform: "uppercase", color: "#1d9e75" }}>
+              <div style={{ fontSize: "10px", letterSpacing: "0.18em", textTransform: "uppercase", color: "#34b889" }}>
                 Orthopaedic Surgeon
               </div>
             </div>
@@ -80,10 +80,10 @@ export default function Footer() {
         </div>
       </div>
 
-      <div style={{ borderTop: "1px solid rgba(255,255,255,0.1)", padding: "1.25rem 1.5rem", maxWidth: "1200px", margin: "0 auto", display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: "0.5rem", fontSize: "12px", color: "#888780" }}>
+      <div style={{ borderTop: "1px solid rgba(255,255,255,0.1)", padding: "1.25rem 1.5rem", maxWidth: "1200px", margin: "0 auto", display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: "0.5rem", fontSize: "12px", color: "#a9a7a0" }}>
         <span>© {new Date().getFullYear()} Dr Nate Myhill. All rights reserved.</span>
         <span>
-          <Link href="/privacy-policy" style={{ color: "#888780" }}>Privacy Policy</Link>
+          <Link href="/privacy-policy" style={{ color: "#a9a7a0" }}>Privacy Policy</Link>
           {" · "}
           <span>drnatemyhill.com.au</span>
         </span>

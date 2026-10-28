@@ -25,7 +25,7 @@ export default function ReferralResourcesPage() {
       </p>
       <div style={{ background: "#f8f8f6", border: "1px solid #d3d1c7", borderLeft: "3px solid #1d9e75", borderRadius: "4px", padding: "1rem 1.25rem", marginBottom: "1rem" }}>
         <div style={{ fontFamily: "EB Garamond, Georgia, serif", fontSize: "1.05rem", color: "#1a2744", marginBottom: "0.5rem" }}>Orthopaedic Referral Template</div>
-        <a href="/downloads/referral-template.pdf" style={{ background: "#1d9e75", color: "#ffffff", padding: "0.5rem 1rem", borderRadius: "4px", fontWeight: 500, fontSize: "13px", textDecoration: "none", display: "inline-block" }}>
+        <a href="/downloads/referral-template.pdf" style={{ background: "#0f7a59", color: "#ffffff", padding: "0.5rem 1rem", borderRadius: "4px", fontWeight: 500, fontSize: "13px", textDecoration: "none", display: "inline-block" }}>
           Download PDF →
         </a>
       </div>
@@ -47,7 +47,7 @@ export default function ReferralResourcesPage() {
         ].map((item) => (
           <div key={item.file} style={{ background: "#f8f8f6", border: "1px solid #d3d1c7", borderRadius: "4px", padding: "0.75rem 1rem", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "0.5rem" }}>
             <span style={{ fontSize: "14px", color: "#1a2744" }}>{item.label}</span>
-            <a href={`/downloads/${item.file}`} style={{ color: "#1d9e75", fontSize: "13px", fontWeight: 500 }}>Download →</a>
+            <a href={`/downloads/${item.file}`} style={{ color: "#0f7a59", fontSize: "13px", fontWeight: 500 }}>Download →</a>
           </div>
         ))}
       </div>
@@ -66,12 +66,12 @@ export default function ReferralResourcesPage() {
         ].map((item) => (
           <div key={item.file} style={{ background: "#f8f8f6", border: "1px solid #d3d1c7", borderRadius: "4px", padding: "0.75rem 1rem", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "0.5rem" }}>
             <span style={{ fontSize: "14px", color: "#1a2744" }}>{item.label}</span>
-            <a href={`/downloads/${item.file}`} style={{ color: "#1d9e75", fontSize: "13px", fontWeight: 500 }}>Download →</a>
+            <a href={`/downloads/${item.file}`} style={{ color: "#0f7a59", fontSize: "13px", fontWeight: 500 }}>Download →</a>
           </div>
         ))}
       </div>
 
-      <p style={{ marginTop: "1.5rem", fontSize: "14px", color: "#888780" }}>
+      <p style={{ marginTop: "1.5rem", fontSize: "14px", color: "#5f5e5a" }}>
         <em>PDF documents will be available at site launch. If you require a resource urgently, please contact the practice directly.</em>
       </p>
     </PageLayout>
