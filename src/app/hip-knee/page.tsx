@@ -21,7 +21,7 @@ export default function HipKneePage() {
     <PageLayout crumbs={[{ label: "Home", href: "/" }, { label: "Hip & Knee" }]}>
       <h1>Hip &amp; knee surgery</h1>
       <p>
-        Dr Myhill performs a broad range of hip and knee procedures, including joint replacement for arthritis and knee reconstruction for sporting injuries. This is an area he actively markets — both for elective arthroplasty and for ACL and knee arthroscopy work in younger, active patients.
+        Dr Myhill performs a broad range of hip and knee procedures, including joint replacement for arthritis and knee reconstruction for sporting injuries.
       </p>
       <p>
         Hip work includes total hip arthroplasty and the management of hip fractures in the trauma setting. Knee work spans arthroplasty, arthroscopy including meniscal repair, and ACL reconstruction.
