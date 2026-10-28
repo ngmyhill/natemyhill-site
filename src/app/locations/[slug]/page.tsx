@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import { notFound } from "next/navigation";
 import PageLayout from "@/components/PageLayout";
+import LocationLogo from "@/components/LocationLogo";
 import { DOCTOR, LOCATIONS, hasRealValue } from "@/lib/data";
 
 export function generateStaticParams() {
@@ -26,9 +27,9 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
 
   return (
     <PageLayout crumbs={[{ label: "Home", href: "/" }, { label: "Locations", href: "/locations" }, { label: loc.name }]}>
-      <div style={{ fontSize: "12px", color: "#0f7a59", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: "0.5rem" }}>{loc.type}</div>
+      <LocationLogo slug={loc.slug} name={loc.name} />
       <h1>{loc.name}</h1>
-      <p style={{ color: "#5f5e5a", marginTop: "0.25rem" }}>{loc.suburb}, {loc.state}</p>
+      <p style={{ color: "#5f5e5a", marginTop: "0.25rem" }}>{loc.type}, {loc.suburb}</p>
 
       {hasRealValue(loc.address) && (
         <>
