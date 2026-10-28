@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PageLayout from "@/components/PageLayout";
+import RisksSection from "@/components/RisksSection";
 
 export const metadata: Metadata = {
   title: "Upper Limb Trauma Melbourne — Dr Nate Myhill",
@@ -11,7 +12,7 @@ export default function UpperLimbTraumaPage() {
     <PageLayout crumbs={[{ label: "Home", href: "/" }, { label: "Trauma", href: "/trauma" }, { label: "Upper Limb Trauma" }]} ctaReferrer>
       <h1>Upper limb trauma</h1>
       <p>
-        Dr Myhill manages a broad range of upper limb traumatic injuries, encompassing fractures, dislocations and soft tissue injuries of the shoulder, arm, elbow and wrist. His training in upper limb trauma was deepened during an IBRA Scholarship at Erasmus MC, Rotterdam — one of Europe's leading trauma centres.
+        Dr Myhill manages a broad range of upper limb traumatic injuries, encompassing fractures, dislocations and soft tissue injuries of the shoulder, arm, elbow and wrist. His training in upper limb trauma was deepened during an IBRA Scholarship at Erasmus MC, Rotterdam — a trauma centre in Europe.
       </p>
 
       <h2>Shoulder injuries</h2>
@@ -38,6 +39,18 @@ export default function UpperLimbTraumaPage() {
       <p>
         See the <a href="/shoulder-upper-limb/wrist-fractures">wrist fractures page</a> for more detail on the management of distal radius and scaphoid fractures.
       </p>
+
+      {/* DRAFT: clinical review by Dr Myhill required */}
+      <RisksSection
+        items={[
+          "infection",
+          "nerve or blood vessel injury",
+          "stiffness",
+          "the fracture healing slowly or in a different position than intended",
+          "irritation from plates or screws, which may need removal",
+          "risks related to the anaesthetic",
+        ]}
+      />
 
       <h2>Referring for upper limb trauma</h2>
       <p>

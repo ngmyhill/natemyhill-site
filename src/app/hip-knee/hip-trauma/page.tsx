@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PageLayout from "@/components/PageLayout";
+import RisksSection from "@/components/RisksSection";
 import FAQSection from "@/components/FAQSection";
 
 export const metadata: Metadata = {
@@ -39,6 +40,18 @@ export default function HipTraumaPage() {
       <p>
         Urgent trauma referrals may be directed to the practice by phone. Dr Myhill has an interest in trauma and is committed to long-term follow-up for injured patients. See the <a href="/for-referrers/how-to-refer">referrer information page</a> for contact details.
       </p>
+
+      {/* DRAFT: clinical review by Dr Myhill required */}
+      <RisksSection
+        items={[
+          "infection",
+          "blood clots in the legs or lungs",
+          "nerve or blood vessel injury",
+          "the fracture healing slowly or the implant failing, which may mean further surgery",
+          "medical complications after injury and surgery, such as chest infections or confusion, particularly in older people",
+          "risks related to the anaesthetic",
+        ]}
+      />
 
       <FAQSection faqs={faqs} />
     </PageLayout>

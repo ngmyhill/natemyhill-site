@@ -12,7 +12,7 @@ export default function FirstAppointmentPage() {
     <PageLayout crumbs={[{ label: "Home", href: "/" }, { label: "For Patients", href: "/for-patients" }, { label: "Your First Appointment" }]}>
       <h1>Your first appointment</h1>
       <p>
-        Your consultation with Dr Myhill is an opportunity to discuss your condition in detail, ask questions, and begin working out what the best path forward looks like for you. Consultations typically take 20–40 minutes depending on your situation.
+        Your consultation with Dr Myhill is an opportunity to discuss your condition in detail, ask questions, and begin working out what the right path forward looks like for you. Consultations typically take 20–40 minutes depending on your situation.
       </p>
 
       <h2>What to bring</h2>

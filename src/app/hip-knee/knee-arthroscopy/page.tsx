@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PageLayout from "@/components/PageLayout";
+import RisksSection from "@/components/RisksSection";
 import FAQSection from "@/components/FAQSection";
 
 export const metadata: Metadata = {
@@ -36,8 +37,20 @@ export default function KneeArthroscopyPage() {
 
       <h2>Recovery</h2>
       <p>
-        Recovery depends on the specific procedure performed. After diagnostic arthroscopy or minor meniscal trimming, many patients return to light activity within 1–2 weeks. After meniscal repair or cartilage procedures, a more protective rehabilitation programme is required.
+        Recovery depends on the specific procedure performed. After diagnostic arthroscopy or minor meniscal trimming, people typically return to light activity within 1–2 weeks, though recovery varies between people. After meniscal repair or cartilage procedures, a more protective rehabilitation programme is required.
       </p>
+
+      {/* DRAFT: clinical review by Dr Myhill required */}
+      <RisksSection
+        items={[
+          "infection",
+          "blood clots in the legs or lungs",
+          "knee swelling or stiffness",
+          "nerve or blood vessel injury",
+          "ongoing pain or symptoms",
+          "risks related to the anaesthetic",
+        ]}
+      />
 
       <FAQSection faqs={faqs} />
     </PageLayout>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PageLayout from "@/components/PageLayout";
+import RisksSection from "@/components/RisksSection";
 import FAQSection from "@/components/FAQSection";
 
 export const metadata: Metadata = {
@@ -8,8 +9,8 @@ export const metadata: Metadata = {
 };
 
 const faqs = [
-  { q: "What is carpal tunnel release?", a: "Carpal tunnel release is a procedure to cut the transverse carpal ligament — the tight band of tissue forming the roof of the carpal tunnel. This relieves pressure on the median nerve running beneath it. It is one of the most commonly performed hand and wrist procedures." },
-  { q: "Is the surgery painful?", a: "The procedure is typically well tolerated. It is performed under local anaesthesia (with or without sedation) or general anaesthesia. Post-operative discomfort is usually mild and managed with simple analgesia. Most patients resume light hand activities within a few days." },
+  { q: "What is carpal tunnel release?", a: "Carpal tunnel release is a procedure to cut the transverse carpal ligament — the tight band of tissue forming the roof of the carpal tunnel. This relieves pressure on the median nerve running beneath it. It is a common hand and wrist procedure." },
+  { q: "Is the surgery painful?", a: "The procedure is typically well tolerated. It is performed under local anaesthesia (with or without sedation) or general anaesthesia. Post-operative discomfort is usually mild and managed with simple analgesia. People typically resume light hand activities within a few days, though recovery varies between people." },
   { q: "How long until the numbness and tingling resolve?", a: "Symptoms of numbness and tingling often improve quickly after surgery. However, complete nerve recovery — particularly in cases of prolonged or severe compression — can take weeks to months. Weakness and muscle wasting may take longer to recover." },
 ];
 
@@ -50,8 +51,20 @@ export default function CarpalTunnelPage() {
         When conservative measures fail or nerve dysfunction is moderate to severe, carpal tunnel release is indicated. The procedure divides the transverse carpal ligament to decompress the median nerve. It is performed through a small incision in the palm (open release) or endoscopically and is usually a day procedure under local anaesthesia.
       </p>
       <p>
-        Recovery is generally quick — most patients return to light activities within a few days, though full hand strength may take several weeks.
+        People typically return to light activities within a few days, though full hand strength may take several weeks. Recovery varies between people.
       </p>
+
+      {/* DRAFT: clinical review by Dr Myhill required */}
+      <RisksSection
+        items={[
+          "infection",
+          "nerve or blood vessel injury",
+          "symptoms that persist or return",
+          "scar tenderness",
+          "hand stiffness or weakness",
+          "risks related to the anaesthetic",
+        ]}
+      />
 
       <FAQSection faqs={faqs} />
     </PageLayout>

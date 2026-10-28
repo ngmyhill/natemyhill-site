@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 const procedures = [
   { label: "Total Hip Replacement", href: "/hip-knee/total-hip-replacement", desc: "Total hip arthroplasty for hip arthritis and selected hip fractures." },
   { label: "Total Knee Replacement", href: "/hip-knee/total-knee-replacement", desc: "Total knee arthroplasty for end-stage knee arthritis." },
-  { label: "ACL Reconstruction", href: "/hip-knee/acl-reconstruction", desc: "Anterior cruciate ligament reconstruction to restore knee stability after rupture." },
+  { label: "ACL Reconstruction", href: "/hip-knee/acl-reconstruction", desc: "Anterior cruciate ligament reconstruction to help restore knee stability after rupture." },
   { label: "Meniscal Repair", href: "/hip-knee/meniscal-repair", desc: "Arthroscopic repair of meniscal tears to preserve the knee's natural cushioning." },
   { label: "Knee Arthroscopy", href: "/hip-knee/knee-arthroscopy", desc: "Diagnostic and therapeutic keyhole surgery of the knee." },
   { label: "Hip Fracture & Trauma", href: "/hip-knee/hip-trauma", desc: "Surgical management of hip fractures and lower limb trauma." },

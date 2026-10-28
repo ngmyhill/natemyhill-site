@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PageLayout from "@/components/PageLayout";
+import RisksSection from "@/components/RisksSection";
 import FAQSection from "@/components/FAQSection";
 
 export const metadata: Metadata = {
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
 const faqs = [
   { q: "Do I need surgery after ACL rupture?", a: "Not everyone with an ACL rupture requires surgery. Non-surgical management with physiotherapy can be appropriate for less active patients or those with low functional demands. Surgery is generally recommended for patients wishing to return to pivoting and cutting sports, or those with significant instability in daily life." },
   { q: "What graft is used for ACL reconstruction?", a: "The most commonly used graft is the hamstring tendon (taken from the inner knee). Patellar tendon and quadriceps tendon grafts are also used. Allograft (cadaveric) tendon is an option in some patients. Dr Myhill will discuss graft choice with you based on your anatomy, activity level and goals." },
-  { q: "When can I return to sport after ACL reconstruction?", a: "Return to sport is guided by objective criteria — not a fixed time period. Most patients are cleared for return to unrestricted sport at 9–12 months when strength tests and functional assessments confirm readiness." },
+  { q: "When can I return to sport after ACL reconstruction?", a: "Return to sport is guided by objective criteria — not a fixed time period. People are typically cleared for return to unrestricted sport at around 9–12 months, once strength tests and functional assessments confirm readiness. Recovery varies between people." },
 ];
 
 export default function ACLReconstructionPage() {
@@ -40,6 +41,18 @@ export default function ACLReconstructionPage() {
       <p>
         Rehabilitation after ACL reconstruction is a graded process taking 9–12 months for return to unrestricted sport. Criteria-based rehabilitation — rather than time alone — guides progression through each phase. Full participation in contact and pivoting sports is not recommended until objective strength and functional testing criteria are met.
       </p>
+
+      {/* DRAFT: clinical review by Dr Myhill required */}
+      <RisksSection
+        items={[
+          "infection",
+          "blood clots in the legs or lungs",
+          "knee stiffness",
+          "the graft failing or the ligament tearing again",
+          "nerve or blood vessel injury",
+          "risks related to the anaesthetic",
+        ]}
+      />
 
       <FAQSection faqs={faqs} />
     </PageLayout>

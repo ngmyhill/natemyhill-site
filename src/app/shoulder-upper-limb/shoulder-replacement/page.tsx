@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PageLayout from "@/components/PageLayout";
+import RisksSection from "@/components/RisksSection";
 import FAQSection from "@/components/FAQSection";
 
 export const metadata: Metadata = {
@@ -9,8 +10,8 @@ export const metadata: Metadata = {
 
 const faqs = [
   { q: "What is the difference between anatomic and reverse shoulder replacement?", a: "An anatomic total shoulder replacement replicates the natural ball-and-socket anatomy and is used when the rotator cuff is intact. A reverse shoulder replacement switches the positions of the ball and socket, allowing the deltoid muscle to power the arm when the rotator cuff is severely damaged or absent. Dr Myhill will recommend the most appropriate design based on your anatomy and function." },
-  { q: "How long do shoulder replacements last?", a: "Modern shoulder implants are designed to be durable. Many patients experience good function for 15–20 years or longer. Outcomes depend on implant design, surgical technique, bone quality and activity level." },
-  { q: "What is recovery like after shoulder replacement?", a: "You will typically stay in hospital for 1–2 nights. A sling is worn for 4–6 weeks. Physiotherapy begins soon after surgery. Most patients regain comfortable function by 3–6 months, with ongoing improvement over 12 months." },
+  { q: "How long do shoulder replacements last?", a: "Modern shoulder implants are designed for long-term use, and some last 15–20 years or longer. This varies from person to person. Outcomes depend on implant design, surgical technique, bone quality and activity level." },
+  { q: "What is recovery like after shoulder replacement?", a: "You will typically stay in hospital for 1–2 nights. A sling is worn for 4–6 weeks. Physiotherapy begins soon after surgery. People typically regain comfortable function by around 3–6 months, with ongoing improvement over 12 months. Recovery varies between people." },
 ];
 
 export default function ShoulderReplacementPage() {
@@ -29,7 +30,7 @@ export default function ShoulderReplacementPage() {
 
       <h3>Reverse total shoulder replacement</h3>
       <p>
-        A reverse total shoulder replacement switches the positions of the ball and socket — placing the ball on the glenoid side and the socket on the humeral side. This design allows the deltoid muscle to power arm movement when the rotator cuff is severely torn or non-functional. It is now the most commonly performed shoulder replacement design globally.
+        A reverse total shoulder replacement switches the positions of the ball and socket — placing the ball on the glenoid side and the socket on the humeral side. This design allows the deltoid muscle to power arm movement when the rotator cuff is severely torn or non-functional. It is a widely used shoulder replacement design.
       </p>
 
       <h3>Hemiarthroplasty</h3>
@@ -48,13 +49,25 @@ export default function ShoulderReplacementPage() {
 
       <h2>The operation</h2>
       <p>
-        Shoulder replacement is performed under general anaesthesia (usually with a nerve block for pain control) through a deltopectoral incision. The procedure typically takes 90–120 minutes. Most patients stay in hospital for 1–2 nights.
+        Shoulder replacement is performed under general anaesthesia (usually with a nerve block for pain control) through a deltopectoral incision. The procedure typically takes 90–120 minutes. Hospital stay is typically 1–2 nights.
       </p>
 
       <h2>Recovery</h2>
       <p>
-        A sling is worn for approximately 4–6 weeks after surgery. Physiotherapy begins early to restore movement before progressing to strengthening. Most patients achieve comfortable, functional use of the arm by 3–6 months, with continued improvement over 12 months.
+        A sling is worn for approximately 4–6 weeks after surgery. Physiotherapy begins early to restore movement before progressing to strengthening. People typically reach comfortable, functional use of the arm by around 3–6 months, with continued improvement over 12 months. Recovery varies between people.
       </p>
+
+      {/* DRAFT: clinical review by Dr Myhill required */}
+      <RisksSection
+        items={[
+          "infection",
+          "blood clots in the legs or lungs",
+          "nerve or blood vessel injury",
+          "implant wear or loosening, which may mean further surgery in future",
+          "stiffness or ongoing pain",
+          "risks related to the anaesthetic",
+        ]}
+      />
 
       <FAQSection faqs={faqs} />
     </PageLayout>

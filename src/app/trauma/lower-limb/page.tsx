@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PageLayout from "@/components/PageLayout";
+import RisksSection from "@/components/RisksSection";
 
 export const metadata: Metadata = {
   title: "Lower Limb Trauma Melbourne — Dr Nate Myhill",
@@ -21,7 +22,7 @@ export default function LowerLimbTraumaPage() {
 
       <h2>Femoral shaft fractures</h2>
       <p>
-        Fractures of the femoral shaft (thigh bone) are managed surgically in almost all cases using intramedullary nail fixation — a metal rod passed down the centre of the femur. This restores alignment, allows early mobilisation and has excellent healing rates.
+        Fractures of the femoral shaft (thigh bone) are managed surgically in almost all cases using intramedullary nail fixation — a metal rod passed down the centre of the femur. This aims to restore alignment and allows early mobilisation.
       </p>
 
       <h2>Tibial fractures</h2>
@@ -38,6 +39,18 @@ export default function LowerLimbTraumaPage() {
       <p>
         Many ankle fractures can be managed in a boot or cast. Displaced, unstable or bimalleolar (involving both sides of the ankle) fractures typically require surgical fixation with plates and screws.
       </p>
+
+      {/* DRAFT: clinical review by Dr Myhill required */}
+      <RisksSection
+        items={[
+          "infection",
+          "blood clots in the legs or lungs",
+          "nerve or blood vessel injury",
+          "stiffness",
+          "the fracture healing slowly or in a different position than intended, or irritation from plates, screws or rods",
+          "risks related to the anaesthetic",
+        ]}
+      />
 
       <h2>Referring for lower limb trauma</h2>
       <p>

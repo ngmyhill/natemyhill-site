@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PageLayout from "@/components/PageLayout";
+import RisksSection from "@/components/RisksSection";
 import FAQSection from "@/components/FAQSection";
 
 export const metadata: Metadata = {
@@ -34,6 +35,18 @@ export default function ACJointSurgeryPage() {
       <p>
         AC joint stabilisation for higher-grade separations typically involves reconstructing the coracoclavicular ligaments, sometimes with augmentation. Distal clavicle resection for arthritis is performed arthroscopically as a day procedure. Dr Myhill will discuss the most appropriate procedure for your situation.
       </p>
+
+      {/* DRAFT: clinical review by Dr Myhill required */}
+      <RisksSection
+        items={[
+          "infection",
+          "stiffness or ongoing pain",
+          "the joint becoming unstable or prominent again",
+          "nerve or blood vessel injury",
+          "risks related to the anaesthetic",
+          "the need for further surgery",
+        ]}
+      />
 
       <FAQSection faqs={faqs} />
     </PageLayout>

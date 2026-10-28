@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PageLayout from "@/components/PageLayout";
+import RisksSection from "@/components/RisksSection";
 import FAQSection from "@/components/FAQSection";
 
 export const metadata: Metadata = {
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 const faqs = [
-  { q: "What is UCL reconstruction of the elbow?", a: "UCL reconstruction (sometimes called Tommy John surgery) involves replacing the torn or stretched ulnar collateral ligament on the inner side of the elbow with a graft tendon, typically taken from the forearm or lower limb. It restores medial stability to the elbow." },
+  { q: "What is UCL reconstruction of the elbow?", a: "UCL reconstruction (sometimes called Tommy John surgery) involves replacing the torn or stretched ulnar collateral ligament on the inner side of the elbow with a graft tendon, typically taken from the forearm or lower limb. It aims to restore medial stability to the elbow." },
   { q: "How long is recovery after UCL reconstruction?", a: "Recovery is gradual. A brace is worn for approximately 6 weeks. Physiotherapy progresses over 4–6 months. Return to overhead throwing activities typically takes 12–18 months." },
 ];
 
@@ -48,6 +49,18 @@ export default function UCLReconstructionPage() {
       <p>
         A splint or brace is worn for approximately 6 weeks. Physiotherapy progresses from range of motion to strengthening and finally sport-specific rehabilitation. Return to overhead throwing typically takes 12–18 months.
       </p>
+
+      {/* DRAFT: clinical review by Dr Myhill required */}
+      <RisksSection
+        items={[
+          "infection",
+          "nerve injury, including the ulnar nerve",
+          "stiffness",
+          "the graft stretching or failing, with ongoing instability",
+          "risks related to the anaesthetic",
+          "the need for further surgery",
+        ]}
+      />
 
       <FAQSection faqs={faqs} />
     </PageLayout>

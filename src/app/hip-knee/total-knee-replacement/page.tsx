@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PageLayout from "@/components/PageLayout";
+import RisksSection from "@/components/RisksSection";
 import FAQSection from "@/components/FAQSection";
 
 export const metadata: Metadata = {
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
 
 const faqs = [
   { q: "Am I too young for a knee replacement?", a: "Age alone does not determine suitability. Dr Myhill considers the severity of arthritis, symptom burden, functional limitation and activity goals. Younger patients do have a higher lifetime risk of requiring a revision (repeat) procedure." },
-  { q: "What is the recovery like?", a: "Most patients stay in hospital for 2–4 nights. Walking begins on the day of surgery with a physiotherapist. Knee bends improve progressively with physiotherapy. Most patients return to everyday activities within 6–12 weeks, with continued improvement over 12 months." },
+  { q: "What is the recovery like?", a: "Hospital stay is typically 2–4 nights. Walking begins on the day of surgery with a physiotherapist. Knee bends improve progressively with physiotherapy. People typically return to everyday activities within about 6–12 weeks, with continued improvement over 12 months. Recovery varies between people." },
   { q: "Can I kneel after a knee replacement?", a: "Many patients can kneel after knee replacement, though it may feel uncomfortable. There is no clinical evidence that kneeling harms the implant. Discuss your specific goals with Dr Myhill." },
 ];
 
@@ -18,12 +19,12 @@ export default function TotalKneeReplacementPage() {
     <PageLayout crumbs={[{ label: "Home", href: "/" }, { label: "Hip & Knee", href: "/hip-knee" }, { label: "Total Knee Replacement" }]}>
       <h1>Total knee replacement</h1>
       <p>
-        Total knee replacement (total knee arthroplasty) is one of the most commonly performed orthopaedic procedures. It involves replacing the worn articular surfaces of the knee joint — the femur (thigh bone), tibia (shin bone) and sometimes the undersurface of the patella (kneecap) — with prosthetic components.
+        Total knee replacement (total knee arthroplasty) is a common orthopaedic procedure. It involves replacing the worn articular surfaces of the knee joint — the femur (thigh bone), tibia (shin bone) and sometimes the undersurface of the patella (kneecap) — with prosthetic components.
       </p>
 
       <h2>Why knee replacement?</h2>
       <p>
-        End-stage knee arthritis causes persistent pain, stiffness and functional limitation that can significantly impact quality of life. When conservative measures — including physiotherapy, weight management, bracing and injections — no longer provide adequate relief, total knee replacement offers a predictable and durable solution.
+        End-stage knee arthritis causes persistent pain, stiffness and functional limitation that can significantly impact quality of life. When conservative measures — including physiotherapy, weight management, bracing and injections — no longer provide adequate relief, total knee replacement can reduce pain and improve function. Results vary from person to person.
       </p>
 
       <h2>The procedure</h2>
@@ -33,8 +34,20 @@ export default function TotalKneeReplacementPage() {
 
       <h2>Recovery</h2>
       <p>
-        An enhanced recovery pathway begins on the day of surgery, with physiotherapy-assisted walking within hours of the operation. Hospital stay is typically 2–4 nights. Physiotherapy at home or in a rehabilitation facility continues for 6–12 weeks. Most patients reach a plateau of recovery by 12 months.
+        An enhanced recovery pathway begins on the day of surgery, with physiotherapy-assisted walking within hours of the operation. Hospital stay is typically 2–4 nights. Physiotherapy at home or in a rehabilitation facility continues for 6–12 weeks. Recovery typically plateaus by around 12 months, though it varies between people.
       </p>
+
+      {/* DRAFT: clinical review by Dr Myhill required */}
+      <RisksSection
+        items={[
+          "infection",
+          "blood clots in the legs or lungs",
+          "nerve or blood vessel injury",
+          "stiffness or ongoing pain",
+          "implant wear or loosening, which may mean further surgery in future",
+          "risks related to the anaesthetic",
+        ]}
+      />
 
       <FAQSection faqs={faqs} />
     </PageLayout>

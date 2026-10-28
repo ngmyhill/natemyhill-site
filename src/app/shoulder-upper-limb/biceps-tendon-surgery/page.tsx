@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PageLayout from "@/components/PageLayout";
+import RisksSection from "@/components/RisksSection";
 import FAQSection from "@/components/FAQSection";
 
 export const metadata: Metadata = {
@@ -40,6 +41,18 @@ export default function BiceptsTendonSurgeryPage() {
       <p>
         Both procedures are typically performed arthroscopically and are often carried out alongside treatment of coexisting rotator cuff or shoulder conditions.
       </p>
+
+      {/* DRAFT: clinical review by Dr Myhill required */}
+      <RisksSection
+        items={[
+          "infection",
+          "shoulder or elbow stiffness",
+          "a change in the shape of the upper arm, or cramping in the biceps muscle",
+          "nerve or blood vessel injury",
+          "risks related to the anaesthetic",
+          "the need for further surgery",
+        ]}
+      />
 
       <FAQSection faqs={faqs} />
     </PageLayout>

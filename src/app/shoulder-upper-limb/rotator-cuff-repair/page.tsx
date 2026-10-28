@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PageLayout from "@/components/PageLayout";
+import RisksSection from "@/components/RisksSection";
 import FAQSection from "@/components/FAQSection";
 
 export const metadata: Metadata = {
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 const faqs = [
-  { q: "How long is recovery after rotator cuff repair?", a: "Recovery depends on tear size and repair complexity. Most patients wear a sling for 4–6 weeks, begin physiotherapy early, and return to light activities by 3 months. Full recovery typically takes 6–12 months." },
+  { q: "How long is recovery after rotator cuff repair?", a: "Recovery depends on tear size and repair complexity. A sling is typically worn for 4–6 weeks, physiotherapy begins early, and light activities usually resume by around 3 months. Full recovery typically takes 6–12 months, and recovery varies between people." },
   { q: "Can a rotator cuff tear heal without surgery?", a: "Some partial-thickness tears and smaller full-thickness tears may settle with physiotherapy, activity modification and injection therapy. Dr Myhill will discuss all options at your consultation so you can make an informed choice." },
   { q: "Will I need a general anaesthetic?", a: "Most rotator cuff repairs are performed under general anaesthesia, often combined with a nerve block (interscalene block) to reduce post-operative pain. Dr Myhill will discuss your anaesthetic options with you." },
   { q: "Is the surgery done arthroscopically?", a: "Most repairs are performed arthroscopically (keyhole surgery), which is associated with smaller incisions and faster recovery. Occasionally, larger or more complex repairs require a mini-open or open approach." },
@@ -55,8 +56,20 @@ export default function RotatorCuffRepairPage() {
 
       <h2>Recovery</h2>
       <p>
-        Following surgery, your arm will be placed in a sling for approximately 4–6 weeks. Physiotherapy begins early to maintain range of motion before progressing to strengthening exercises. Most patients return to light activities by 3 months; full recovery typically takes 6–12 months depending on tear size and repair complexity.
+        Following surgery, your arm will be placed in a sling for approximately 4–6 weeks. Physiotherapy begins early to maintain range of motion before progressing to strengthening exercises. People typically return to light activities by around 3 months; full recovery typically takes 6–12 months depending on tear size and repair complexity. Recovery varies between people.
       </p>
+
+      {/* DRAFT: clinical review by Dr Myhill required */}
+      <RisksSection
+        items={[
+          "infection",
+          "shoulder stiffness",
+          "the repaired tendon tearing again (re-tear)",
+          "nerve or blood vessel injury",
+          "risks related to the anaesthetic",
+          "the need for further surgery",
+        ]}
+      />
 
       <FAQSection faqs={faqs} />
     </PageLayout>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PageLayout from "@/components/PageLayout";
+import RisksSection from "@/components/RisksSection";
 import FAQSection from "@/components/FAQSection";
 
 export const metadata: Metadata = {
@@ -42,7 +43,7 @@ export default function ShoulderInstabilityPage() {
       <h2>Surgical options</h2>
       <h3>Arthroscopic Bankart repair</h3>
       <p>
-        This keyhole procedure reattaches the torn labrum back to the glenoid (socket) rim using suture anchors. It restores the normal anatomy of the shoulder with minimal tissue disruption. Best results are achieved when the glenoid bone stock is intact.
+        This keyhole procedure reattaches the torn labrum back to the glenoid (socket) rim using suture anchors. It aims to restore the normal anatomy of the shoulder with minimal tissue disruption. Results depend on factors including whether the glenoid bone is intact.
       </p>
       <h3>Latarjet procedure</h3>
       <p>
@@ -51,8 +52,20 @@ export default function ShoulderInstabilityPage() {
 
       <h2>Recovery</h2>
       <p>
-        Following surgery, a sling is worn for 4–6 weeks. Physiotherapy commences early to restore movement and strength. Return to contact sports typically occurs at 6–9 months for arthroscopic repair.
+        Following surgery, a sling is worn for 4–6 weeks. Physiotherapy commences early to restore movement and strength. Return to contact sports typically occurs at 6–9 months for arthroscopic repair, though recovery varies between people.
       </p>
+
+      {/* DRAFT: clinical review by Dr Myhill required */}
+      <RisksSection
+        items={[
+          "infection",
+          "shoulder stiffness",
+          "the shoulder becoming unstable or dislocating again",
+          "nerve or blood vessel injury",
+          "risks related to the anaesthetic",
+          "the need for further surgery",
+        ]}
+      />
 
       <FAQSection faqs={faqs} />
     </PageLayout>

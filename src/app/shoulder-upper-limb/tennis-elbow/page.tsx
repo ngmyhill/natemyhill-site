@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PageLayout from "@/components/PageLayout";
+import RisksSection from "@/components/RisksSection";
 import FAQSection from "@/components/FAQSection";
 
 export const metadata: Metadata = {
@@ -47,6 +48,18 @@ export default function TennisElbowPage() {
       <p>
         Recovery after surgery involves a period of rest followed by a progressive physiotherapy programme over several months.
       </p>
+
+      {/* DRAFT: clinical review by Dr Myhill required */}
+      <RisksSection
+        items={[
+          "infection",
+          "numbness or tenderness around the scar",
+          "pain that persists or returns",
+          "elbow stiffness or weakness",
+          "risks related to the anaesthetic",
+          "the need for further surgery",
+        ]}
+      />
 
       <FAQSection faqs={faqs} />
     </PageLayout>

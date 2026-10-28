@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PageLayout from "@/components/PageLayout";
+import RisksSection from "@/components/RisksSection";
 import FAQSection from "@/components/FAQSection";
 
 export const metadata: Metadata = {
@@ -8,8 +9,8 @@ export const metadata: Metadata = {
 };
 
 const faqs = [
-  { q: "Can all meniscal tears be repaired?", a: "No. Tear location, pattern, tissue quality and patient factors all determine whether repair is feasible. Tears in the outer (red) zone of the meniscus with a good blood supply have the best potential for healing. Tears in the inner zone with poor blood supply are more commonly treated by trimming (partial meniscectomy)." },
-  { q: "What is the recovery after meniscal repair?", a: "Meniscal repair requires a more protective recovery than trimming to allow the repaired tissue to heal. Weight-bearing and return to sport are restricted for several weeks. Full return to sport typically takes 4–6 months following repair, compared to 4–6 weeks after trimming." },
+  { q: "Can all meniscal tears be repaired?", a: "No. Tear location, pattern, tissue quality and patient factors all determine whether repair is feasible. Tears in the outer (red) zone of the meniscus with a good blood supply have a better chance of healing. Tears in the inner zone with poor blood supply are more commonly treated by trimming (partial meniscectomy)." },
+  { q: "What is the recovery after meniscal repair?", a: "Meniscal repair requires a more protective recovery than trimming to allow the repaired tissue to heal. Weight-bearing and return to sport are restricted for several weeks. Full return to sport typically takes 4–6 months following repair, compared to 4–6 weeks after trimming, and recovery varies between people." },
 ];
 
 export default function MeniscalRepairPage() {
@@ -42,6 +43,18 @@ export default function MeniscalRepairPage() {
       <p>
         When a tear cannot be repaired, the unstable torn portion is trimmed back to a stable rim. This is a common, effective procedure for symptomatic tears that cause locking, catching or functional limitation.
       </p>
+
+      {/* DRAFT: clinical review by Dr Myhill required */}
+      <RisksSection
+        items={[
+          "infection",
+          "blood clots in the legs or lungs",
+          "knee stiffness",
+          "the repair not healing, which may mean further surgery",
+          "nerve or blood vessel injury",
+          "risks related to the anaesthetic",
+        ]}
+      />
 
       <FAQSection faqs={faqs} />
     </PageLayout>

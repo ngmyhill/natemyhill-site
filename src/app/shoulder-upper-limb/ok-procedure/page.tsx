@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PageLayout from "@/components/PageLayout";
+import RisksSection from "@/components/RisksSection";
 import FAQSection from "@/components/FAQSection";
 
 export const metadata: Metadata = {
@@ -37,8 +38,20 @@ export default function OKProcedurePage() {
 
       <h2>Recovery</h2>
       <p>
-        Recovery following the OK procedure involves a supervised physiotherapy programme to regain elbow range of motion and strength. Most patients notice an improvement in extension and a reduction in pain with movement, though the joint will remain arthritic.
+        Recovery following the OK procedure involves a supervised physiotherapy programme to regain elbow range of motion and strength. Many people notice improved extension and less pain with movement, though results vary from person to person and the joint will remain arthritic.
       </p>
+
+      {/* DRAFT: clinical review by Dr Myhill required */}
+      <RisksSection
+        items={[
+          "infection",
+          "nerve injury",
+          "elbow stiffness returning over time",
+          "ongoing pain, as the joint remains arthritic",
+          "risks related to the anaesthetic",
+          "the need for further surgery",
+        ]}
+      />
 
       <FAQSection faqs={faqs} />
     </PageLayout>

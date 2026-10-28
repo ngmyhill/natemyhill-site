@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PageLayout from "@/components/PageLayout";
+import RisksSection from "@/components/RisksSection";
 import FAQSection from "@/components/FAQSection";
 
 export const metadata: Metadata = {
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
 
 const faqs = [
   { q: "Do all wrist fractures need surgery?", a: "Not all wrist fractures require surgery. Many distal radius fractures — particularly in older patients with lower functional demands — can be managed in a cast or splint. Surgery is considered when the fracture is significantly displaced, unstable or when anatomical alignment is important for return to function." },
-  { q: "What is involved in surgery for a distal radius fracture?", a: "Most surgically treated distal radius fractures are fixed with a volar locking plate — a metal plate screwed to the front of the radius through a small incision. This holds the bones in alignment while healing occurs. The plate is usually left in place permanently, though it can be removed if it causes symptoms." },
+  { q: "What is involved in surgery for a distal radius fracture?", a: "Most surgically treated distal radius fractures are fixed with a volar locking plate — a metal plate screwed to the front of the radius through a small incision. This holds the bones in alignment while healing occurs. The plate is usually left in place long term, though it can be removed if it causes symptoms." },
   { q: "Why are scaphoid fractures sometimes missed?", a: "The scaphoid bone has a precarious blood supply, and fractures can appear subtle on initial X-ray. An MRI or CT scan is often required for definitive diagnosis. Missed or untreated scaphoid fractures can progress to non-union and long-term wrist arthritis." },
 ];
 
@@ -40,6 +41,18 @@ export default function WristFracturesPage() {
       <p>
         Undisplaced scaphoid fractures may be treated in a cast, though surgery with a headless compression screw offers a faster return to function in younger, active patients. Displaced fractures and non-unions generally require surgical intervention. Dr Myhill will discuss the most appropriate approach for your fracture pattern and circumstances.
       </p>
+
+      {/* DRAFT: clinical review by Dr Myhill required */}
+      <RisksSection
+        items={[
+          "infection",
+          "nerve or blood vessel injury",
+          "stiffness",
+          "the fracture healing slowly or in a different position than intended",
+          "irritation from the plate or screws, which may need removal",
+          "risks related to the anaesthetic",
+        ]}
+      />
 
       <FAQSection faqs={faqs} />
     </PageLayout>
