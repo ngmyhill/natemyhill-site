@@ -30,7 +30,7 @@ export default function PrivacyPolicyPage() {
         <li>Contact information — name, phone number, email address, postal address</li>
         <li>Referral information — referring practitioner details</li>
         <li>Health information — where you have provided it directly to us as part of booking or clinical communication (this is treated as sensitive information under the Privacy Act)</li>
-        <li>Website usage data — IP address, browser type, pages visited (collected via analytics tools)</li>
+        <li>Website usage data — such as IP address, browser type and pages requested, which our website host may record in standard server logs</li>
       </ul>
 
       <h2>2. How we collect personal information</h2>
@@ -60,10 +60,12 @@ export default function PrivacyPolicyPage() {
         <li>Hospitals and anaesthetists involved in your procedure</li>
         <li>Medicare Australia and your health fund for billing purposes</li>
         <li>WorkCover or TAC, where applicable</li>
-        {/* DRAFT: confirm Xestro's overseas technology partners with Xestro before launch (APP 8) */}
-        <li>Our practice management software provider (Xestro), which stores clinical and appointment records in Australia</li>
-        <li>IT service providers who assist in operating our systems, under confidentiality obligations</li>
+        <li>Our practice management software provider (Xestro)</li>
+        <li>IT service providers who assist in operating our systems, including email and website hosting, under confidentiality obligations</li>
       </ul>
+      <p>
+        Our practice management software provider (Xestro) stores clinical and appointment records in Australia. Some of our service providers, including our email and website hosting providers, may store or process information outside Australia. You can contact us for more information about how we handle your information.
+      </p>
       <p>
         We will not sell, rent or otherwise disclose your personal information to third parties for marketing purposes without your consent.
       </p>
@@ -94,9 +96,9 @@ export default function PrivacyPolicyPage() {
         If you have a concern about how we have handled your personal information, please contact us in the first instance. If you remain dissatisfied, you may lodge a complaint with the Office of the Australian Information Commissioner (OAIC) at <a href="https://www.oaic.gov.au" target="_blank" rel="noopener noreferrer">oaic.gov.au</a>.
       </p>
 
-      <h2>9. Website analytics</h2>
+      <h2>9. Website usage</h2>
       <p>
-        This website may use analytics tools (such as Google Analytics) that collect anonymised usage data to help us understand how the site is used. This data does not identify you personally. You can opt out of analytics tracking by adjusting your browser settings or using a browser extension.
+        This website does not use analytics or advertising tools. Our website hosting provider may keep standard server logs (such as IP address, browser type and the pages requested) to keep the site secure and running.
       </p>
 
       <h2>10. Contact</h2>

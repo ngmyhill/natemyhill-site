@@ -14,9 +14,6 @@ export default function CTABox({ referrer = false }: { referrer?: boolean }) {
             <Link href="/for-referrers/how-to-refer" style={{ background: "#0f7a59", color: "#ffffff", padding: "0.6rem 1.25rem", borderRadius: "4px", fontWeight: 500, fontSize: "14px", textDecoration: "none" }}>
               How to refer →
             </Link>
-            <Link href="/for-referrers/referral-resources" style={{ border: "1px solid #0f7a59", color: "#0f7a59", padding: "0.6rem 1.25rem", borderRadius: "4px", fontWeight: 500, fontSize: "14px", textDecoration: "none" }}>
-              Referral template →
-            </Link>
           </div>
         </>
       ) : (

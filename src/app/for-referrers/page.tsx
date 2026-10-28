@@ -32,7 +32,7 @@ export default function ForReferrersPage() {
         </Link>
         <Link href="/for-referrers/referral-resources" style={{ display: "block", background: "#f8f8f6", border: "1px solid #d3d1c7", borderLeft: "3px solid #1d9e75", borderRadius: "4px", padding: "1rem 1.25rem", textDecoration: "none" }}>
           <div style={{ fontFamily: "EB Garamond, Georgia, serif", fontSize: "1.05rem", color: "#1a2744", marginBottom: "0.25rem" }}>Referral resources</div>
-          <div style={{ fontSize: "13px", color: "#5f5e5a" }}>Downloadable referral template and patient information sheets.</div>
+          <div style={{ fontSize: "13px", color: "#5f5e5a" }}>Ways to refer and patient information sheets.</div>
         </Link>
       </div>
 

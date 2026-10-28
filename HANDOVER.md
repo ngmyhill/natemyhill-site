@@ -195,7 +195,6 @@ For each location in `LOCATIONS`, fill:
 |-------|----------------|-------|
 | Headshots | Done: `public/images/nate-myhill-navy.jpg` (home hero), `public/images/nate-myhill-light.jpg` (About page), 1068x1600, about 100-150 KB each. Originals are 7200x10786 and are not in the repo | Re-export at 1600px long edge, JPEG ~82, metadata stripped, if they are ever replaced |
 | Share image | Done: `public/og-image.jpg` (1200x630, navy, headshot right, name left) | Used for Open Graph and Twitter large cards |
-| Referral template PDF | `public/downloads/referral-template.pdf` | Linked from For Referrers pages |
 | Exercise sheets (PDF) | `public/downloads/` | Post-op patient resources |
 
 ---
@@ -286,7 +285,7 @@ The site is designed to be compliant. Keep these in mind for any new content:
 2. ~~**Add headshot**~~ — done, see the assets table
 3. **Register domain** — `drnatemyhill.com.au` (and `natemyhill.com.au` as redirect)
 4. **Connect domain** in Vercel Dashboard
-5. **Add PDF downloads** — referral template + exercise sheets → `public/downloads/`
+5. **Add PDF downloads** — patient information and exercise sheets → `public/downloads/` (the Referral resources page links to them and they do not exist yet; there is no referral template, referrers use any standard letter)
 6. **Legal review** — indemnity insurer or health law adviser before publicising
 7. **Phase 7** — Formal handover doc and launch checklist
 

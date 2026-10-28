@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import PageLayout from "@/components/PageLayout";
+import { DOCTOR } from "@/lib/data";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Referral Resources and Template",
-  description: "Downloadable referral template and patient information sheets for referring practitioners.",
+  title: "Referral Resources for Clinicians",
+  description: "Ways to refer, plus patient information sheets for referring practitioners.",
   path: "/for-referrers/referral-resources",
 });
 
@@ -19,16 +20,10 @@ export default function ReferralResourcesPage() {
         The following resources are available to assist referring practitioners. All documents are provided in PDF format and can be printed or forwarded to patients.
       </p>
 
-      <h2>Referral template</h2>
+      <h2>Making a referral</h2>
       <p>
-        A structured referral template for orthopaedic referrals to Dr Myhill. Using this template ensures that all clinically relevant information is included and helps to avoid delays in triage.
+        GPs can refer by fax to <strong>{DOCTOR.fax}</strong>, by email to <a href={`mailto:${DOCTOR.email}`}>{DOCTOR.email}</a>, or by phone on <a href={`tel:${DOCTOR.phoneTel}`}>{DOCTOR.phone}</a>. Any standard referral letter is accepted.
       </p>
-      <div style={{ background: "#f8f8f6", border: "1px solid #d3d1c7", borderLeft: "3px solid #1d9e75", borderRadius: "4px", padding: "1rem 1.25rem", marginBottom: "1rem" }}>
-        <div style={{ fontFamily: "EB Garamond, Georgia, serif", fontSize: "1.05rem", color: "#1a2744", marginBottom: "0.5rem" }}>Orthopaedic Referral Template</div>
-        <a href="/downloads/referral-template.pdf" style={{ background: "#0f7a59", color: "#ffffff", padding: "0.5rem 1rem", borderRadius: "4px", fontWeight: 500, fontSize: "13px", textDecoration: "none", display: "inline-block" }}>
-          Download PDF →
-        </a>
-      </div>
 
       <h2>Patient information sheets</h2>
       <p>

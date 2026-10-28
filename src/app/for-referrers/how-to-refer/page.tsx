@@ -34,21 +34,10 @@ export default function HowToReferPage() {
         {!hasRealValue(DOCTOR.healthlinkId) && !hasRealValue(DOCTOR.medicalObjectsId) && <> Please contact the practice for the details you need to send a referral.</>}
       </p>
 
-      {hasRealValue(DOCTOR.fax) ? (
-        <>
-          <h2>Fax referrals</h2>
-          <p>
-            Referrals may also be faxed to <strong>{DOCTOR.fax}</strong>. A downloadable referral template is available on the <a href="/for-referrers/referral-resources">resources page</a>.
-          </p>
-        </>
-      ) : (
-        <>
-          <h2>Referral template</h2>
-          <p>
-            A downloadable referral template is available on the <a href="/for-referrers/referral-resources">resources page</a>.
-          </p>
-        </>
-      )}
+      <h2>Other ways to refer</h2>
+      <p>
+        Referrals can be sent {hasRealValue(DOCTOR.fax) && <>by fax to <strong>{DOCTOR.fax}</strong>, </>}by email to <a href={`mailto:${DOCTOR.email}`}>{DOCTOR.email}</a>, or by phone on <a href={`tel:${DOCTOR.phoneTel}`}>{DOCTOR.phone}</a>. Any standard referral letter is accepted.
+      </p>
 
       <h2>Urgent referrals</h2>
       <p>

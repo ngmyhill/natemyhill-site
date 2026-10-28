@@ -211,9 +211,6 @@ export default function Home() {
             <Link href="/for-referrers/how-to-refer" style={{ background: "#34b889", color: "#1a2744", padding: "0.65rem 1.25rem", borderRadius: "4px", fontWeight: 500, textDecoration: "none", fontSize: "14px" }}>
               How to refer →
             </Link>
-            <Link href="/for-referrers/referral-resources" style={{ border: "1px solid rgba(255,255,255,0.3)", color: "#ffffff", padding: "0.65rem 1.25rem", borderRadius: "4px", fontWeight: 400, textDecoration: "none", fontSize: "14px" }}>
-              Referral template →
-            </Link>
           </div>
         </div>
       </section>

@@ -81,7 +81,7 @@ export default function AppointmentsPage() {
         Dr Myhill consults at Knox Private Hospital (Wantirna), Mitcham Private Hospital, Warringal Private Hospital (Heidelberg), John Fawkner Private Hospital (Coburg) and The Gardens Specialist Centre (Albury).
       </p>
       <p>
-        <a href="/locations">View all locations with maps and addresses →</a>
+        <a href="/locations">View all locations with maps →</a>
       </p>
 
       <h2>Urgent or trauma referrals</h2>
