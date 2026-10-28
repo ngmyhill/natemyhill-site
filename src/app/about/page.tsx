@@ -41,7 +41,7 @@ export default function AboutPage() {
 
       <h2>Fellowship</h2>
       <p>
-        Dr Myhill completed an <strong>IBRA Scholarship</strong> at Erasmus MC, Rotterdam, Netherlands — an academic medical centre in Europe. The scholarship focused on upper limb elective and trauma surgery, encompassing shoulder, elbow and wrist procedures at an international centre of excellence.
+        Dr Myhill completed an <strong>IBRA Scholarship</strong> at Erasmus MC, Rotterdam, Netherlands — an academic medical centre in Europe. The scholarship focused on upper limb elective and trauma surgery, encompassing shoulder, elbow and wrist procedures at an international centre.
       </p>
 
       <h2>Professional memberships</h2>

@@ -127,7 +127,7 @@ export default function Home() {
       <section style={{ padding: "4rem 1.5rem", background: "#f8f8f6", borderTop: "1px solid #d3d1c7" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
           <p style={{ textAlign: "center", color: "#5f5e5a", fontSize: "12px", letterSpacing: "0.2em", textTransform: "uppercase", marginBottom: "0.5rem" }}>
-            Areas of expertise
+            Areas of focus
           </p>
           <h2 style={{ textAlign: "center", marginBottom: "3rem" }}>One surgeon for the whole limb</h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.5rem" }}>
