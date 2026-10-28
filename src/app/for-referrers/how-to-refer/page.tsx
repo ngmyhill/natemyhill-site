@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import PageLayout from "@/components/PageLayout";
-import { DOCTOR, LOCATION_SENTENCE_LIST, hasRealValue } from "@/lib/data";
+import { DOCTOR, LOCATION_SENTENCE_LIST, REFERRAL_INCLUDES, hasRealValue } from "@/lib/data";
 
 export const metadata: Metadata = pageMetadata({
   title: "How to Refer a Patient for Surgery",
@@ -49,15 +49,9 @@ export default function HowToReferPage() {
 
       <h2>What to include in a referral</h2>
       <ul>
-        <li>Patient's full name, date of birth and contact details</li>
-        <li>Presenting complaint and history</li>
-        <li>Relevant examination findings</li>
-        <li>Imaging results and reports (X-ray, MRI, CT)</li>
-        <li>Current medications and relevant past medical and surgical history</li>
-        <li>Relevant allied health reports</li>
-        <li>Urgency: routine, semi-urgent or urgent</li>
-        <li>WorkCover or TAC details, if applicable</li>
-        <li>Health fund details (if known)</li>
+        {REFERRAL_INCLUDES.map((item) => (
+          <li key={item}>{item}</li>
+        ))}
       </ul>
 
       <h2>Consulting locations</h2>

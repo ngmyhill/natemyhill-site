@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
+import { LOCATIONS, LOCATION_SENTENCE_LIST } from "@/lib/data";
 import Image from "next/image";
+import Link from "next/link";
 import PageLayout from "@/components/PageLayout";
 
 export const metadata: Metadata = pageMetadata({
@@ -9,63 +11,102 @@ export const metadata: Metadata = pageMetadata({
   path: "/about",
 });
 
+const credentials = [
+  { abbr: "MBBS", full: "Bachelor of Medicine, Bachelor of Surgery" },
+  { abbr: "FRACS (Ortho)", full: "Fellow of the Royal Australasian College of Surgeons (Orthopaedic Surgery)" },
+  { abbr: "MPH", full: "Master of Public Health" },
+  { abbr: "BSc", full: "Bachelor of Science" },
+];
+
+const memberships = [
+  { abbr: "AOA", full: "Australian Orthopaedic Association" },
+  { abbr: "IBRA", full: "International Bone Research Association" },
+];
+
+// Training, led by the scholarship. The old page gave no dates, so none are shown.
+const training = [
+  {
+    title: "IBRA Scholarship, Erasmus MC, Rotterdam",
+    body: "The scholarship focused on upper limb surgery, both elective and trauma, covering the shoulder, elbow and wrist.",
+  },
+  {
+    title: "FRACS (Ortho)",
+    body: "Specialist orthopaedic qualification.",
+  },
+  { title: "MBBS, MPH and BSc", body: "Degrees in medicine and surgery, public health, and science." },
+];
+
+const focus = [
+  "Rotator cuff pathology and shoulder replacement (anatomic and reverse total shoulder)",
+  "Shoulder instability: labral repair and Latarjet procedure",
+  "Elbow conditions, including tennis elbow, the OK (Outerbridge-Kashiwagi) procedure, UCL reconstruction and cubital tunnel syndrome",
+  "Wrist pathology: carpal tunnel syndrome and distal radius fractures",
+  "Hip and knee reconstruction: total hip and knee replacement, ACL reconstruction and meniscal surgery",
+  "Upper and lower limb trauma",
+];
+
 export default function AboutPage() {
   return (
     <PageLayout crumbs={[{ label: "Home", href: "/" }, { label: "About Dr Myhill" }]}>
-      <h1>About Dr Nate Myhill</h1>
-      <p style={{ fontFamily: "EB Garamond, Georgia, serif", fontSize: "1.15rem", color: "#1a2744", fontStyle: "italic" }}>
-        MBBS · FRACS(Ortho) · MPH · BSc
-      </p>
-      <Image
-        src="/images/nate-myhill-light.jpg"
-        alt="Dr Nate Myhill, orthopaedic surgeon"
-        width={1068}
-        height={1600}
-        sizes="(max-width: 700px) 40vw, 260px"
-        style={{ float: "right", width: "min(260px, 40%)", height: "auto", margin: "0 0 1rem 1.5rem", borderRadius: "4px", border: "1px solid #d3d1c7" }}
-      />
-      <p>
-        Dr Nate Myhill is a specialist orthopaedic surgeon practising across Melbourne and Albury. His clinical work spans shoulder and upper limb surgery, hip and knee reconstruction, and trauma — with a particular focus in rotator cuff pathology and shoulder replacement.
-      </p>
-      <p>
-        Dr Myhill makes treatment decisions together with his patients. He takes time to explain your condition and goes through the realistic options, including non-surgical ones. Together you settle on a plan that suits your goals and the way you live.
-      </p>
+      <div className="about-head">
+        <div className="about-portrait">
+          <Image
+            src="/images/nate-myhill-light.jpg"
+            alt="Dr Nate Myhill, orthopaedic surgeon"
+            fill
+            sizes="(max-width: 800px) 100vw, 300px"
+            preload
+            style={{ objectFit: "cover", objectPosition: "50% 22%" }}
+          />
+        </div>
+        <div>
+          <h1 style={{ marginTop: 0 }}>About Dr Nate Myhill</h1>
+          {/* NATE TO APPROVE: first-person intro */}
+          <p className="lead">
+            I&apos;m a specialist orthopaedic surgeon practising across Melbourne and Albury. My work spans shoulder and upper limb surgery, hip and knee reconstruction, and trauma, with a particular focus on rotator cuff pathology and shoulder replacement. I completed an IBRA Scholarship at Erasmus MC in Rotterdam.
+          </p>
+          <p>
+            I make treatment decisions together with my patients. I take time to explain your condition and go through the realistic options, including non-surgical ones, and together we settle on a plan that suits your goals and the way you live.
+          </p>
+        </div>
+      </div>
 
-      <h2>Qualifications</h2>
-      <ul>
-        <li><strong>MBBS</strong> — Bachelor of Medicine, Bachelor of Surgery</li>
-        <li><strong>FRACS(Ortho)</strong> — Fellow of the Royal Australasian College of Surgeons (Orthopaedic Surgery)</li>
-        <li><strong>MPH</strong> — Master of Public Health</li>
-        <li><strong>BSc</strong> — Bachelor of Science</li>
-      </ul>
+      <dl className="cred-strip" aria-label="Qualifications and memberships">
+        {credentials.map((c) => (
+          <div key={c.abbr}>
+            <dt>{c.abbr}</dt>
+            <dd>{c.full}</dd>
+          </div>
+        ))}
+        {memberships.map((m) => (
+          <div key={m.abbr}>
+            <dt>{m.abbr}</dt>
+            <dd>{m.full}</dd>
+          </div>
+        ))}
+      </dl>
 
-      <h2>Scholarship</h2>
-      <p>
-        Dr Myhill completed an <strong>IBRA Scholarship</strong> at Erasmus MC in Rotterdam. It focused on upper limb surgery, both elective and trauma, covering the shoulder, elbow and wrist.
-      </p>
-
-      <h2>Professional memberships</h2>
-      <ul>
-        <li><strong>AOA</strong> — Australian Orthopaedic Association</li>
-        <li><strong>IBRA</strong> — International Bone Research Association</li>
-      </ul>
+      <h2>Training</h2>
+      <ol className="timeline">
+        {training.map((t) => (
+          <li key={t.title}>
+            <h3>{t.title}</h3>
+            <p>{t.body}</p>
+          </li>
+        ))}
+      </ol>
 
       <h2>Clinical focus</h2>
-      <p>
-        While Dr Myhill practises broadly across orthopaedics, his primary clinical interests include:
-      </p>
+      <p>While Dr Myhill practises broadly across orthopaedics, his primary clinical interests include:</p>
       <ul>
-        <li>Rotator cuff pathology and shoulder replacement (anatomic and reverse total shoulder)</li>
-        <li>Shoulder instability — labral repair and Latarjet procedure</li>
-        <li>Elbow conditions — including tennis elbow, the OK (Outerbridge-Kashiwagi) procedure, UCL reconstruction and cubital tunnel syndrome</li>
-        <li>Wrist pathology — carpal tunnel syndrome and distal radius fractures</li>
-        <li>Hip and knee reconstruction — total hip and knee replacement, ACL reconstruction and meniscal surgery</li>
-        <li>Upper and lower limb trauma</li>
+        {focus.map((f) => (
+          <li key={f}>{f}</li>
+        ))}
       </ul>
 
-      <h2>Locations</h2>
+      <h2>Where Dr Myhill consults</h2>
       <p>
-        Dr Myhill consults and operates at Knox Private Hospital (Wantirna), Mitcham Private Hospital, Warringal Private Hospital (Heidelberg), John Fawkner Private Hospital (Coburg), The Gardens Specialist Centre (Albury), Northern Health (Epping) and Western Health (Footscray).
+        Dr Myhill consults and operates at {LOCATION_SENTENCE_LIST}. <Link href="/locations">See all {LOCATIONS.length} locations</Link>.
       </p>
     </PageLayout>
   );

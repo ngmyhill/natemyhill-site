@@ -124,6 +124,19 @@ export function locationLabel(loc: Location): string {
 export const LOCATION_SENTENCE_LIST = joinList(LOCATIONS.map(locationLabel));
 export const LOCATION_COUNT_WORD = ["no", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"][LOCATIONS.length];
 
+// What a referral should include. Used on the referrer pages and the home page panel.
+export const REFERRAL_INCLUDES = [
+  "Patient's full name, date of birth and contact details",
+  "Presenting complaint and history",
+  "Relevant examination findings",
+  "Imaging results and reports (X-ray, MRI, CT)",
+  "Current medications and relevant past medical and surgical history",
+  "Relevant allied health reports",
+  "Urgency: routine, semi-urgent or urgent",
+  "WorkCover or TAC details, if applicable",
+  "Health fund details (if known)",
+];
+
 export const NAV_ITEMS = [
   { label: "About", href: "/about" },
   {

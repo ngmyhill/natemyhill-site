@@ -98,17 +98,53 @@ main:focus {
   outline: none;
 }
 
-/* Home hero portrait: a card beside the text, stacked under it on phones */
-.hero-photo {
-  width: 380px;
-  height: 460px;
-  overflow: hidden;
-  border-radius: 4px;
-  border-bottom: 4px solid #1d9e75;
+/* Home hero: text left, portrait bleeding to the band edge on desktop, full width on phones */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  min-height: 34rem;
+  background: #1a2744;
+  color: #ffffff;
 }
+.hero-text {
+  align-self: center;
+  padding: 4.5rem 2rem 4.5rem max(1.5rem, calc((100vw - 1200px) / 2 + 1.5rem));
+}
+.hero-photo { position: relative; min-height: 28rem; }
 @media (max-width: 800px) {
-  .hero-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
-  .hero-photo { width: 100%; max-width: 280px; height: 300px; }
+  .hero { grid-template-columns: 1fr; min-height: 0; }
+  .hero-text { padding: 3rem 1.5rem 2.5rem; }
+  .hero-photo { min-height: 0; height: 24rem; }
+}
+
+/* Home: how we work */
+.how-grid { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 3rem; align-items: center; }
+.statement { font-size: var(--text-h2); line-height: 1.15; margin: 0 0 1rem; }
+.how-portrait { position: relative; aspect-ratio: 4 / 5; max-width: 26rem; width: 100%; justify-self: end; border-radius: 4px; overflow: hidden; border-bottom: 4px solid #1d9e75; }
+.how-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #d3d1c7; }
+@media (max-width: 800px) {
+  .how-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .how-portrait { justify-self: stretch; max-width: none; aspect-ratio: 4 / 3; }
+  .how-pair { grid-template-columns: 1fr; gap: 1.5rem; }
+}
+
+/* Home: what Dr Myhill treats */
+.treat-grid { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 1.5rem; }
+.treat-feature { grid-row: span 2; background: #1a2744; color: #ffffff; border-radius: 4px; padding: 2.25rem; border-top: 4px solid #1d9e75; }
+.treat-card { background: #ffffff; border: 1px solid #d3d1c7; border-radius: 4px; padding: 1.75rem; }
+.treat-links { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.35rem; font-size: 15px; }
+.treat-feature .treat-links { grid-template-columns: 1fr 1fr; }
+@media (max-width: 800px) {
+  .treat-grid { grid-template-columns: 1fr; }
+  .treat-feature { grid-row: auto; padding: 1.75rem; }
+  .treat-feature .treat-links { grid-template-columns: 1fr; }
+}
+
+/* Home: locations by region */
+.region-line { display: grid; grid-template-columns: 7rem minmax(0, 1fr); gap: 1rem; padding: 1rem 0; margin: 0; border-bottom: 1px solid #d3d1c7; }
+.region-line strong { color: #1a2744; font-weight: 500; }
+@media (max-width: 800px) {
+  .region-line { grid-template-columns: 1fr; gap: 0.25rem; }
 }
 
 /* Sticky Call | Book bar, shown at the hamburger breakpoint and below */
@@ -148,4 +184,38 @@ main:focus {
 }
 @media (max-width: 700px) {
   .topbar-email { display: none; }
+}
+
+/* Referrer panel */
+.referrer-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 2.5rem;
+  align-items: start;
+}
+.referrer-panel.on-navy a:hover { color: #34b889 !important; }
+.referrer-contacts { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem 1.5rem; margin: 0; }
+.referrer-contacts dt { font-size: 13px; margin: 0; }
+.referrer-contacts dd { margin: 0.1rem 0 0; font-size: 1.05rem; font-weight: 500; overflow-wrap: anywhere; }
+.referrer-includes { list-style: disc; margin: 0 0 0 1.1rem; padding: 0; font-size: 15px; line-height: 1.6; }
+.referrer-includes li { margin-bottom: 0.25rem; }
+@media (max-width: 800px) {
+  .referrer-panel { grid-template-columns: 1fr; gap: 1.75rem; }
+}
+
+/* About */
+.about-head { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 3rem; align-items: start; margin-bottom: 2.5rem; }
+.about-portrait { grid-column: 2; grid-row: 1; position: relative; aspect-ratio: 3 / 4; border-radius: 4px; overflow: hidden; border-bottom: 4px solid #1d9e75; }
+.cred-strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr)); gap: 1px; background: #d3d1c7; border: 1px solid #d3d1c7; border-radius: 4px; overflow: hidden; margin: 0 0 1rem; }
+.cred-strip > div { background: #f8f8f6; padding: 1rem 1.1rem; }
+.cred-strip dt { font-family: "EB Garamond", Georgia, serif; font-size: var(--text-h3); color: #1a2744; }
+.cred-strip dd { margin: 0.2rem 0 0; font-size: 13px; line-height: 1.45; color: #5f5e5a; }
+.timeline { list-style: none; margin: 1rem 0 0 !important; padding: 0 0 0 1.5rem; border-left: 2px solid #1d9e75; }
+.timeline li { position: relative; margin: 0 0 1.5rem !important; }
+.timeline li::before { content: ""; position: absolute; left: calc(-1.5rem - 6px); top: 0.55rem; width: 10px; height: 10px; border-radius: 50%; background: #1d9e75; }
+.timeline h3 { margin: 0 0 0.2rem !important; }
+.timeline p { margin: 0 !important; }
+@media (max-width: 800px) {
+  .about-head { grid-template-columns: 1fr; gap: 1.5rem; }
+  .about-portrait { grid-column: 1; grid-row: 1; aspect-ratio: 4 / 3; }
 }
