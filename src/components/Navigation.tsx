@@ -1,11 +1,13 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { NAV_ITEMS, DOCTOR } from "@/lib/data";
 
 export default function Navigation() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const hoverOpened = useRef(false);
+  const triggerRefs = useRef<Record<string, HTMLButtonElement | null>>({});
 
   return (
     <header style={{ background: "#ffffff", borderBottom: "1px solid #d3d1c7" }}>
@@ -37,46 +39,91 @@ export default function Navigation() {
 
         {/* Desktop nav */}
         <div style={{ display: "flex", alignItems: "center", gap: "0", fontSize: "14px" }} className="hidden-mobile">
-          {NAV_ITEMS.filter(i => i.label !== "Appointments").map((item) => (
-            <div
-              key={item.href}
-              style={{ position: "relative" }}
-              onMouseEnter={() => item.children && setOpenDropdown(item.label)}
-              onMouseLeave={() => setOpenDropdown(null)}
-            >
-              <Link
-                href={item.href}
-                style={{
-                  padding: "0 0.75rem",
-                  height: "72px",
-                  display: "flex",
-                  alignItems: "center",
-                  color: "#1a2744",
-                  fontWeight: 400,
-                  textDecoration: "none",
-                  whiteSpace: "nowrap",
-                  fontSize: "13.5px",
+          {NAV_ITEMS.filter(i => i.label !== "Appointments").map((item) => {
+            const topStyle: React.CSSProperties = {
+              padding: "0 0.75rem",
+              height: "72px",
+              display: "flex",
+              alignItems: "center",
+              color: "#1a2744",
+              fontWeight: 400,
+              textDecoration: "none",
+              whiteSpace: "nowrap",
+              fontSize: "13.5px",
+            };
+            if (!item.children) {
+              return (
+                <Link key={item.href} href={item.href} style={topStyle}>
+                  {item.label}
+                </Link>
+              );
+            }
+            const menuId = `nav-menu-${item.href.replace(/\//g, "")}`;
+            const isOpen = openDropdown === item.label;
+            return (
+              <div
+                key={item.href}
+                style={{ position: "relative" }}
+                onMouseEnter={() => {
+                  hoverOpened.current = true;
+                  setOpenDropdown(item.label);
+                }}
+                onMouseLeave={() => {
+                  hoverOpened.current = false;
+                  setOpenDropdown(null);
+                }}
+                onBlur={(e) => {
+                  if (hoverOpened.current) return; // pointer is still over the menu
+                  if (!e.currentTarget.contains(e.relatedTarget as Node | null)) setOpenDropdown(null);
+                }}
+                onKeyDown={(e) => {
+                  if (e.key === "Escape" && isOpen) {
+                    setOpenDropdown(null);
+                    triggerRefs.current[item.label]?.focus();
+                  }
                 }}
               >
-                {item.label}
-                {item.children && <span style={{ marginLeft: "4px", fontSize: "12px" }}>▾</span>}
-              </Link>
-              {item.children && openDropdown === item.label && (
-                <div style={{
-                  position: "absolute",
-                  top: "72px",
-                  left: 0,
-                  background: "#ffffff",
-                  border: "1px solid #d3d1c7",
-                  borderTop: "3px solid #1d9e75",
-                  minWidth: "220px",
-                  zIndex: 50,
-                  boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
-                }}>
-                  {item.children.map((child) => (
+                <button
+                  type="button"
+                  ref={(el) => {
+                    triggerRefs.current[item.label] = el;
+                  }}
+                  aria-expanded={isOpen}
+                  aria-controls={menuId}
+                  onClick={() => {
+                    // A mouse click on a menu the hover just opened keeps it open
+                    if (hoverOpened.current) {
+                      hoverOpened.current = false;
+                      setOpenDropdown(item.label);
+                      return;
+                    }
+                    setOpenDropdown(isOpen ? null : item.label);
+                  }}
+                  style={{ ...topStyle, background: "none", border: "none", cursor: "pointer", fontFamily: "inherit" }}
+                >
+                  {item.label}
+                  <span aria-hidden="true" style={{ marginLeft: "4px", fontSize: "12px" }}>▾</span>
+                </button>
+                <div
+                  id={menuId}
+                  hidden={!isOpen}
+                  style={{
+                    position: "absolute",
+                    top: "72px",
+                    left: 0,
+                    background: "#ffffff",
+                    border: "1px solid #d3d1c7",
+                    borderTop: "3px solid #1d9e75",
+                    minWidth: "220px",
+                    zIndex: 50,
+                    boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
+                  }}
+                >
+                  {[{ label: `${item.label} overview`, href: item.href }, ...item.children].map((child) => (
                     <Link
                       key={child.href}
                       href={child.href}
+                      onClick={() => setOpenDropdown(null)}
                       style={{
                         display: "block",
                         padding: "0.6rem 1rem",
@@ -90,9 +137,9 @@ export default function Navigation() {
                     </Link>
                   ))}
                 </div>
-              )}
-            </div>
-          ))}
+              </div>
+            );
+          })}
           <Link
             href="/appointments"
             style={{
