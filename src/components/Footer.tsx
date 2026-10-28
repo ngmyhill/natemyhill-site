@@ -1,9 +1,9 @@
 import Link from "next/link";
-import { DOCTOR, LOCATIONS } from "@/lib/data";
+import { DOCTOR, LOCATIONS, hasRealValue } from "@/lib/data";
 
 export default function Footer() {
   return (
-    <footer className="on-navy" style={{ background: "#1a2744", color: "#d3d1c7", marginTop: "auto" }}>
+    <footer className="on-navy site-footer" style={{ background: "#1a2744", color: "#d3d1c7", marginTop: "auto" }}>
       <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "3rem 1.5rem 2rem", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "2rem" }}>
         {/* Brand */}
         <div>
@@ -26,6 +26,7 @@ export default function Footer() {
             <div style={{ marginTop: "0.5rem" }}>
               <a href={`tel:${DOCTOR.phoneTel}`} style={{ color: "#d3d1c7" }}>{DOCTOR.phone}</a>
             </div>
+            {hasRealValue(DOCTOR.fax) && <div>Fax {DOCTOR.fax}</div>}
             <div>
               <a href={`mailto:${DOCTOR.email}`} style={{ color: "#d3d1c7" }}>{DOCTOR.email}</a>
             </div>

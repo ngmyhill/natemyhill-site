@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useRef, useState } from "react";
 import { NAV_ITEMS, DOCTOR } from "@/lib/data";
+import PhoneIcon from "./PhoneIcon";
 
 export default function Navigation() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -14,8 +15,15 @@ export default function Navigation() {
       {/* Top bar */}
       <div className="on-navy" style={{ background: "#1a2744", color: "#ffffff", fontSize: "13px", padding: "6px 0" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-          <span>{DOCTOR.phone}</span>
-          <Link href="/for-referrers" style={{ color: "#34b889", fontWeight: 500 }}>For Referrers</Link>
+          <a
+            href={`tel:${DOCTOR.phoneTel}`}
+            aria-label={`Call the practice on ${DOCTOR.phone}`}
+            style={{ color: "#ffffff", fontSize: "15px", fontWeight: 600, display: "inline-flex", alignItems: "center", gap: "0.4rem", textDecoration: "none", padding: "2px 0" }}
+          >
+            <PhoneIcon size={16} />
+            {DOCTOR.phone}
+          </a>
+          <a href={`mailto:${DOCTOR.email}`} className="topbar-email" style={{ color: "#d3d1c7" }}>{DOCTOR.email}</a>
         </div>
       </div>
 
@@ -39,7 +47,7 @@ export default function Navigation() {
 
         {/* Desktop nav */}
         <div style={{ display: "flex", alignItems: "center", gap: "0", fontSize: "14px" }} className="hidden-mobile">
-          {NAV_ITEMS.filter(i => i.label !== "Appointments").map((item) => {
+          {NAV_ITEMS.filter(i => i.label !== "Appointments" && i.label !== "For Referrers").map((item) => {
             const topStyle: React.CSSProperties = {
               padding: "0 0.75rem",
               height: "72px",
@@ -141,9 +149,25 @@ export default function Navigation() {
             );
           })}
           <Link
+            href="/for-referrers/how-to-refer"
+            style={{
+              marginLeft: "0.5rem",
+              border: "1px solid #0f7a59",
+              color: "#0f7a59",
+              padding: "0.45rem 1rem",
+              borderRadius: "4px",
+              fontSize: "13.5px",
+              fontWeight: 500,
+              textDecoration: "none",
+              whiteSpace: "nowrap",
+            }}
+          >
+            GP Referral
+          </Link>
+          <Link
             href="/appointments"
             style={{
-              marginLeft: "0.75rem",
+              marginLeft: "0.5rem",
               background: "#0f7a59",
               color: "#ffffff",
               padding: "0.5rem 1.25rem",

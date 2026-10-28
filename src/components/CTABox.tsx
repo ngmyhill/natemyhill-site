@@ -27,7 +27,7 @@ export default function CTABox({ referrer = false }: { referrer?: boolean }) {
           </p>
           <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
             <Link href="/appointments" style={{ background: "#0f7a59", color: "#ffffff", padding: "0.6rem 1.25rem", borderRadius: "4px", fontWeight: 500, fontSize: "14px", textDecoration: "none" }}>
-              Book online →
+              How to book →
             </Link>
             <a href={`tel:${DOCTOR.phoneTel}`} style={{ border: "1px solid #1a2744", color: "#1a2744", padding: "0.6rem 1.25rem", borderRadius: "4px", fontWeight: 500, fontSize: "14px", textDecoration: "none" }}>
               Call {DOCTOR.phone}

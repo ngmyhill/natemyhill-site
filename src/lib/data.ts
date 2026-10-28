@@ -2,10 +2,11 @@ export const DOCTOR = {
   name: "Dr Nate Myhill",
   credentials: "MBBS · FRACS(Ortho) · MPH · BSc",
   specialty: "Orthopaedic Surgeon",
-  phone: "0401 720 680", // display form
-  phoneTel: "+61401720680", // for tel: links
-  phoneSchema: "+61 401 720 680", // for JSON-LD
-  fax: "[fax number]", // hidden until a real number is added
+  phone: "(03) 9416 1466", // display form
+  phoneTel: "+61394161466", // for tel: links
+  phoneSchema: "+61 3 9416 1466", // for JSON-LD
+  fax: "(03) 9419 3847",
+  faxSchema: "+61 3 9419 3847", // for JSON-LD
   email: "admin@drnatemyhill.com.au",
   healthlinkId: "[HealthLink Provider ID]",
   medicalObjectsId: "[Medical Objects ID]",

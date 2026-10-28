@@ -1,8 +1,9 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { EB_Garamond, Inter } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import MobileActionBar from "@/components/MobileActionBar";
 import { DOCTOR, SITE_URL } from "@/lib/data";
 import { OG_IMAGE } from "@/lib/seo";
 
@@ -17,6 +18,9 @@ const inter = Inter({
   display: "swap",
   variable: "--font-inter",
 });
+
+// viewport-fit=cover lets the sticky mobile bar respect the iOS safe-area inset
+export const viewport: Viewport = { viewportFit: "cover" };
 
 export const metadata: Metadata = {
   title: {
@@ -46,6 +50,7 @@ const physicianSchema = {
   description: "Specialist orthopaedic surgeon practising in Melbourne and Albury, with a focus in shoulder and upper limb surgery, hip and knee reconstruction, and trauma.",
   url: SITE_URL,
   telephone: DOCTOR.phoneSchema,
+  faxNumber: DOCTOR.faxSchema,
   medicalSpecialty: "Orthopedic Surgery",
   hasCredential: [
     { "@type": "EducationalOccupationalCredential", credentialCategory: "degree", name: "MBBS" },
@@ -79,6 +84,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {children}
         </main>
         <Footer />
+        <MobileActionBar />
       </body>
     </html>
   );

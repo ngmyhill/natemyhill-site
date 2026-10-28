@@ -20,15 +20,33 @@ export default function AppointmentsPage() {
         Dr Myhill accepts both privately referred and self-referred patients. A GP or specialist referral is required to claim Medicare rebates; patients without a referral are seen as private (self-funded) patients.
       </p>
 
-      <h2>Call the practice</h2>
+      <h2>How to make an appointment</h2>
       <p>
-        The easiest way to make an appointment is to call the practice or send an email. Please have your referral details and health fund information (if applicable) ready.
+        The easiest way is to call the practice. Please have your referral details and health fund information (if applicable) ready.
+      </p>
+      <p>
+        <a
+          href={`tel:${DOCTOR.phoneTel}`}
+          style={{ background: "#0f7a59", color: "#ffffff", padding: "0.75rem 1.75rem", borderRadius: "4px", fontWeight: 500, textDecoration: "none", fontSize: "16px", display: "inline-block" }}
+        >
+          Call {DOCTOR.phone}
+        </a>
+      </p>
+      <p>
+        Or email <a href={`mailto:${DOCTOR.email}?subject=Appointment%20request`}>{DOCTOR.email}</a> and include:
       </p>
       <ul>
-        <li><strong>Phone:</strong> <a href={`tel:${DOCTOR.phoneTel}`}>{DOCTOR.phone}</a></li>
-        <li><strong>Email:</strong> <a href={`mailto:${DOCTOR.email}`}>{DOCTOR.email}</a></li>
-        {hasRealValue(DOCTOR.fax) && <li><strong>Fax:</strong> {DOCTOR.fax}</li>}
+        <li>Your name</li>
+        <li>Your date of birth</li>
+        <li>Your phone number</li>
+        <li>Your preferred location</li>
+        <li>Whether you have a GP or specialist referral</li>
       </ul>
+      <p>Please don&apos;t send detailed medical information by email.</p>
+      <p>
+        We&apos;ll reply within one business day. For anything urgent, call or go to your nearest emergency department.
+      </p>
+      {hasRealValue(DOCTOR.fax) && <p><strong>Fax:</strong> {DOCTOR.fax}</p>}
 
       {hasRealValue(DOCTOR.bookingUrl) && (
         <>
