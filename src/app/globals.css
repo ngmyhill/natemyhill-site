@@ -233,9 +233,13 @@ main:focus {
 .glance dd { margin: 0.1rem 0 0; color: #1a2744; font-size: 15px; line-height: 1.5; }
 .glance p { margin: 1.1rem 0 0; font-size: 13px; color: #5f5e5a; }
 .two-col { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0 2.5rem; }
+/* The inline copy sits under the intro and only shows once the rail stacks */
+.glance-inline { display: none; }
 @media (max-width: 900px) {
   .page-grid.has-glance { grid-template-columns: minmax(0, 1fr); }
   .glance { position: static; }
+  .glance-rail { display: none; }
+  .glance-inline { display: block; margin: 1.75rem 0 0.5rem; }
   .two-col { grid-template-columns: minmax(0, 1fr); }
 }
 
