@@ -44,7 +44,7 @@ export default function FirstAppointmentPage() {
         To make an appointment, please contact the practice:
       </p>
       <ul>
-        <li><strong>Phone:</strong> <a href={`tel:${DOCTOR.phone}`}>{DOCTOR.phone}</a></li>
+        <li><strong>Phone:</strong> <a href={`tel:${DOCTOR.phoneTel}`}>{DOCTOR.phone}</a></li>
         <li><strong>Email:</strong> <a href={`mailto:${DOCTOR.email}`}>{DOCTOR.email}</a></li>
         {hasRealValue(DOCTOR.bookingUrl) && (
           <li><strong>Online:</strong> <a href={DOCTOR.bookingUrl} target="_blank" rel="noopener noreferrer">Book online →</a></li>

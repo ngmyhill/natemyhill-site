@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import { notFound } from "next/navigation";
 import PageLayout from "@/components/PageLayout";
-import { LOCATIONS } from "@/lib/data";
+import { DOCTOR, LOCATIONS, hasRealValue } from "@/lib/data";
 
 export function generateStaticParams() {
   return LOCATIONS.map((loc) => ({ slug: loc.slug }));
@@ -30,8 +30,12 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
       <h1>{loc.name}</h1>
       <p style={{ color: "#5f5e5a", marginTop: "0.25rem" }}>{loc.suburb}, {loc.state}</p>
 
-      <h2>Address</h2>
-      <p>{loc.address}</p>
+      {hasRealValue(loc.address) && (
+        <>
+          <h2>Address</h2>
+          <p>{loc.address}</p>
+        </>
+      )}
       <p>
         <a href={loc.mapUrl} target="_blank" rel="noopener noreferrer">View on Google Maps →</a>
       </p>
@@ -45,11 +49,16 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
 
       <h2>Appointments</h2>
       <p>
-        To book a consultation at {loc.name}, please use the online booking portal or contact the practice directly.
+        To book a consultation at {loc.name}, please contact the practice.
       </p>
       <p>
-        <strong>Phone:</strong> <a href="tel:[phone number]">[phone number]</a><br />
-        <strong>Fax:</strong> [fax number]
+        <strong>Phone:</strong> <a href={`tel:${DOCTOR.phoneTel}`}>{DOCTOR.phone}</a>
+        {hasRealValue(DOCTOR.fax) && (
+          <>
+            <br />
+            <strong>Fax:</strong> {DOCTOR.fax}
+          </>
+        )}
       </p>
     </PageLayout>
   );

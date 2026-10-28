@@ -29,7 +29,7 @@ export default function CTABox({ referrer = false }: { referrer?: boolean }) {
             <Link href="/appointments" style={{ background: "#0f7a59", color: "#ffffff", padding: "0.6rem 1.25rem", borderRadius: "4px", fontWeight: 500, fontSize: "14px", textDecoration: "none" }}>
               Book online →
             </Link>
-            <a href={`tel:${DOCTOR.phone}`} style={{ border: "1px solid #1a2744", color: "#1a2744", padding: "0.6rem 1.25rem", borderRadius: "4px", fontWeight: 500, fontSize: "14px", textDecoration: "none" }}>
+            <a href={`tel:${DOCTOR.phoneTel}`} style={{ border: "1px solid #1a2744", color: "#1a2744", padding: "0.6rem 1.25rem", borderRadius: "4px", fontWeight: 500, fontSize: "14px", textDecoration: "none" }}>
               Call {DOCTOR.phone}
             </a>
           </div>

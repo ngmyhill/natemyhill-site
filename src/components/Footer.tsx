@@ -24,7 +24,7 @@ export default function Footer() {
           <div style={{ fontSize: "13px", lineHeight: 1.7 }}>
             <div>{DOCTOR.credentials}</div>
             <div style={{ marginTop: "0.5rem" }}>
-              <a href={`tel:${DOCTOR.phone}`} style={{ color: "#d3d1c7" }}>{DOCTOR.phone}</a>
+              <a href={`tel:${DOCTOR.phoneTel}`} style={{ color: "#d3d1c7" }}>{DOCTOR.phone}</a>
             </div>
             <div>
               <a href={`mailto:${DOCTOR.email}`} style={{ color: "#d3d1c7" }}>{DOCTOR.email}</a>

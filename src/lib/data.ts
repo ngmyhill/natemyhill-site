@@ -2,19 +2,21 @@ export const DOCTOR = {
   name: "Dr Nate Myhill",
   credentials: "MBBS · FRACS(Ortho) · MPH · BSc",
   specialty: "Orthopaedic Surgeon",
-  phone: "[phone number]",
-  fax: "[fax number]",
-  email: "[practice email]",
+  phone: "0401 720 680", // display form
+  phoneTel: "+61401720680", // for tel: links
+  phoneSchema: "+61 401 720 680", // for JSON-LD
+  fax: "[fax number]", // hidden until a real number is added
+  email: "admin@drnatemyhill.com.au",
   healthlinkId: "[HealthLink Provider ID]",
   medicalObjectsId: "[Medical Objects ID]",
   bookingUrl: "[online booking URL]", // leave as a [placeholder] until online booking exists; the site then shows phone and email only
   domain: "drnatemyhill.com.au",
 };
 
-// True when a DOCTOR field holds a real value rather than a "[placeholder]".
+// True when a field holds a real value rather than a "[placeholder]" (anywhere in the text).
 export function hasRealValue(value: string): boolean {
   const v = value.trim();
-  return v !== "" && !/^\[.*\]$/.test(v);
+  return v !== "" && !/\[[^\]]*\]/.test(v);
 }
 
 // Single source of truth for the public site address. Derived from DOCTOR.domain.

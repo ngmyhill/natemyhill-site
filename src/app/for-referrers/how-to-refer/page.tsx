@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import PageLayout from "@/components/PageLayout";
-import { DOCTOR } from "@/lib/data";
+import { DOCTOR, hasRealValue } from "@/lib/data";
 
 export const metadata: Metadata = pageMetadata({
   title: "How to Refer a Patient for Surgery",
@@ -19,26 +19,40 @@ export default function HowToReferPage() {
 
       <h2>Contact details</h2>
       <ul>
-        <li><strong>Phone:</strong> <a href={`tel:${DOCTOR.phone}`}>{DOCTOR.phone}</a></li>
-        <li><strong>Fax:</strong> {DOCTOR.fax}</li>
+        <li><strong>Phone:</strong> <a href={`tel:${DOCTOR.phoneTel}`}>{DOCTOR.phone}</a></li>
+        {hasRealValue(DOCTOR.fax) && <li><strong>Fax:</strong> {DOCTOR.fax}</li>}
         <li><strong>Email:</strong> <a href={`mailto:${DOCTOR.email}`}>{DOCTOR.email}</a></li>
-        <li><strong>HealthLink Provider ID:</strong> {DOCTOR.healthlinkId}</li>
-        <li><strong>Medical Objects ID:</strong> {DOCTOR.medicalObjectsId}</li>
+        {hasRealValue(DOCTOR.healthlinkId) && <li><strong>HealthLink Provider ID:</strong> {DOCTOR.healthlinkId}</li>}
+        {hasRealValue(DOCTOR.medicalObjectsId) && <li><strong>Medical Objects ID:</strong> {DOCTOR.medicalObjectsId}</li>}
       </ul>
 
       <h2>eReferral (preferred)</h2>
       <p>
-        Referrals can be sent securely by <strong>HealthLink</strong> or <strong>Medical Objects</strong>, which is the preferred method. Search for Dr Nate Myhill using HealthLink Provider ID <strong>{DOCTOR.healthlinkId}</strong> or Medical Objects ID <strong>{DOCTOR.medicalObjectsId}</strong>.
+        Referrals can be sent securely by <strong>HealthLink</strong> or <strong>Medical Objects</strong>, which is the preferred method.
+        {hasRealValue(DOCTOR.healthlinkId) && <> Search for Dr Nate Myhill using HealthLink Provider ID <strong>{DOCTOR.healthlinkId}</strong>.</>}
+        {hasRealValue(DOCTOR.medicalObjectsId) && <> Medical Objects ID: <strong>{DOCTOR.medicalObjectsId}</strong>.</>}
+        {!hasRealValue(DOCTOR.healthlinkId) && !hasRealValue(DOCTOR.medicalObjectsId) && <> Please contact the practice for the details you need to send a referral.</>}
       </p>
 
-      <h2>Fax referrals</h2>
-      <p>
-        Referrals may also be faxed to <strong>{DOCTOR.fax}</strong>. A downloadable referral template is available on the <a href="/for-referrers/referral-resources">resources page</a>.
-      </p>
+      {hasRealValue(DOCTOR.fax) ? (
+        <>
+          <h2>Fax referrals</h2>
+          <p>
+            Referrals may also be faxed to <strong>{DOCTOR.fax}</strong>. A downloadable referral template is available on the <a href="/for-referrers/referral-resources">resources page</a>.
+          </p>
+        </>
+      ) : (
+        <>
+          <h2>Referral template</h2>
+          <p>
+            A downloadable referral template is available on the <a href="/for-referrers/referral-resources">resources page</a>.
+          </p>
+        </>
+      )}
 
       <h2>Urgent referrals</h2>
       <p>
-        For urgent or semi-urgent referrals — including trauma, acute fractures or time-sensitive orthopaedic presentations — please phone the practice directly: <a href={`tel:${DOCTOR.phone}`}>{DOCTOR.phone}</a>.
+        For urgent or semi-urgent referrals — including trauma, acute fractures or time-sensitive orthopaedic presentations — please phone the practice directly: <a href={`tel:${DOCTOR.phoneTel}`}>{DOCTOR.phone}</a>.
       </p>
       <p>
         Emergency departments may also contact Dr Myhill's rooms directly for advice on acute orthopaedic presentations.

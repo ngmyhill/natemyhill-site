@@ -25,9 +25,9 @@ export default function AppointmentsPage() {
         The easiest way to make an appointment is to call the practice or send an email. Please have your referral details and health fund information (if applicable) ready.
       </p>
       <ul>
-        <li><strong>Phone:</strong> <a href={`tel:${DOCTOR.phone}`}>{DOCTOR.phone}</a></li>
+        <li><strong>Phone:</strong> <a href={`tel:${DOCTOR.phoneTel}`}>{DOCTOR.phone}</a></li>
         <li><strong>Email:</strong> <a href={`mailto:${DOCTOR.email}`}>{DOCTOR.email}</a></li>
-        <li><strong>Fax:</strong> {DOCTOR.fax}</li>
+        {hasRealValue(DOCTOR.fax) && <li><strong>Fax:</strong> {DOCTOR.fax}</li>}
       </ul>
 
       {hasRealValue(DOCTOR.bookingUrl) && (

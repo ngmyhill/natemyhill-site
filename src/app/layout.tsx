@@ -3,7 +3,7 @@ import { EB_Garamond, Inter } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { SITE_URL } from "@/lib/data";
+import { DOCTOR, SITE_URL } from "@/lib/data";
 import { OG_IMAGE } from "@/lib/seo";
 
 const ebGaramond = EB_Garamond({
@@ -45,7 +45,7 @@ const physicianSchema = {
   name: "Dr Nate Myhill",
   description: "Specialist orthopaedic surgeon practising in Melbourne and Albury, with a focus in shoulder and upper limb surgery, hip and knee reconstruction, and trauma.",
   url: SITE_URL,
-  telephone: "[phone number]",
+  telephone: DOCTOR.phoneSchema,
   medicalSpecialty: "Orthopedic Surgery",
   hasCredential: [
     { "@type": "EducationalOccupationalCredential", credentialCategory: "degree", name: "MBBS" },

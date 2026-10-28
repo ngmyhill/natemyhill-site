@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import PageLayout from "@/components/PageLayout";
-import { LOCATIONS } from "@/lib/data";
+import { LOCATIONS, hasRealValue } from "@/lib/data";
 
 export const metadata: Metadata = pageMetadata({
   title: "Locations in Melbourne and Albury",
@@ -25,7 +25,7 @@ export default function LocationsPage() {
             <h3 style={{ marginTop: 0, marginBottom: "0.25rem" }}>
               <Link href={`/locations/${loc.slug}`}>{loc.name}</Link>
             </h3>
-            <p style={{ fontSize: "14px", color: "#5f5e5a", margin: "0 0 0.75rem" }}>{loc.suburb}, {loc.state} · {loc.address}</p>
+            <p style={{ fontSize: "14px", color: "#5f5e5a", margin: "0 0 0.75rem" }}>{loc.suburb}, {loc.state}{hasRealValue(loc.address) && ` · ${loc.address}`}</p>
             <div style={{ fontSize: "13px", display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
               {loc.services.map((s) => (
                 <span key={s} style={{ background: "#ffffff", border: "1px solid #d3d1c7", borderRadius: "2px", padding: "0.2rem 0.5rem" }}>{s}</span>

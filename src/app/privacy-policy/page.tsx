@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import PageLayout from "@/components/PageLayout";
-import { DOCTOR } from "@/lib/data";
+import { DOCTOR, hasRealValue } from "@/lib/data";
 
 export const metadata: Metadata = pageMetadata({
   title: "Privacy Policy and Your Information",
@@ -104,9 +104,9 @@ export default function PrivacyPolicyPage() {
         For privacy-related enquiries, please contact the practice:
       </p>
       <ul>
-        <li><strong>Phone:</strong> <a href={`tel:${DOCTOR.phone}`}>{DOCTOR.phone}</a></li>
+        <li><strong>Phone:</strong> <a href={`tel:${DOCTOR.phoneTel}`}>{DOCTOR.phone}</a></li>
         <li><strong>Email:</strong> <a href={`mailto:${DOCTOR.email}`}>{DOCTOR.email}</a></li>
-        <li><strong>Fax:</strong> {DOCTOR.fax}</li>
+        {hasRealValue(DOCTOR.fax) && <li><strong>Fax:</strong> {DOCTOR.fax}</li>}
       </ul>
     </PageLayout>
   );
