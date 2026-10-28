@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import PageLayout from "@/components/PageLayout";
+import { DOWNLOADS_DIR, available, exerciseSheets } from "@/lib/downloads";
 
 export const metadata: Metadata = pageMetadata({
   title: "Post-operative Care Information",
@@ -9,6 +10,7 @@ export const metadata: Metadata = pageMetadata({
 });
 
 export default function PostOperativePage() {
+  const exercises = available(exerciseSheets);
   return (
     <PageLayout crumbs={[{ label: "Home", href: "/" }, { label: "For Patients", href: "/for-patients" }, { label: "Post-operative Information" }]}>
       <h1>Post-operative information</h1>
@@ -38,7 +40,7 @@ export default function PostOperativePage() {
 
       <h2>Mobility and precautions</h2>
       <p>
-        Specific mobility guidelines depend on your procedure. Procedure-specific instruction sheets are available from the practice. See below.
+        Specific mobility guidelines depend on your procedure. Procedure-specific instruction sheets are available from the practice.
       </p>
       <ul>
         <li>Use any prescribed aids (crutches, sling, brace) as directed</li>
@@ -46,13 +48,21 @@ export default function PostOperativePage() {
         <li>Avoid long-haul air travel until your risk of deep vein thrombosis (DVT) has been discussed with Dr Myhill</li>
       </ul>
 
-      <h2>Exercise sheets</h2>
-      <p>
-        Procedure-specific post-operative exercise sheets on Dr Myhill's letterhead are available to download. These are provided for guidance only and should be used in conjunction with your physiotherapist's advice.
-      </p>
-      <p>
-        <strong>[Downloadable exercise sheets will be linked here — available at launch]</strong>
-      </p>
+      {exercises.length > 0 && (
+        <>
+          <h2>Exercise sheets</h2>
+          <p>
+            Procedure-specific post-operative exercise sheets on Dr Myhill&apos;s letterhead are available to download. These are provided for guidance only and should be used in conjunction with your physiotherapist&apos;s advice.
+          </p>
+          <ul>
+            {exercises.map((item) => (
+              <li key={item.file}>
+                <a href={`/${DOWNLOADS_DIR}/${item.file}`}>{item.label}</a>
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
 
       <h2>Follow-up appointments</h2>
       <p>
