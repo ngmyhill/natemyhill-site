@@ -1,9 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { EB_Garamond, Inter } from "next/font/google";
 import "./globals.css";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
-import MobileActionBar from "@/components/MobileActionBar";
+import Link from "next/link";
 import { DOCTOR, SITE_URL } from "@/lib/data";
 import { OG_IMAGE } from "@/lib/seo";
 
@@ -27,7 +25,7 @@ export const metadata: Metadata = {
     default: "Dr Nate Myhill, Orthopaedic Surgeon Melbourne",
     template: "%s | Dr Nate Myhill",
   },
-  description: "Melbourne orthopaedic surgeon with a special interest in shoulder, upper limb and sports surgery, and general orthopaedics.",
+  description: `Dr Nate Myhill, Orthopaedic Surgeon. Phone ${DOCTOR.phone} or email ${DOCTOR.email}.`,
   metadataBase: new URL(SITE_URL),
   icons: {
     icon: "/favicon.svg",
@@ -47,10 +45,10 @@ const physicianSchema = {
   "@context": "https://schema.org",
   "@type": "Physician",
   name: "Dr Nate Myhill",
-  description: "Specialist orthopaedic surgeon practising in Melbourne and Albury, with a focus in shoulder and upper limb surgery, hip and knee reconstruction, and trauma.",
   url: SITE_URL,
   telephone: DOCTOR.phoneSchema,
   faxNumber: DOCTOR.faxSchema,
+  email: DOCTOR.email,
   medicalSpecialty: "Orthopedic Surgery",
   hasCredential: [
     { "@type": "EducationalOccupationalCredential", credentialCategory: "degree", name: "MBBS" },
@@ -79,12 +77,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <a href="#main-content" className="skip-link">
           Skip to main content
         </a>
-        <Navigation />
         <main id="main-content" tabIndex={-1} style={{ flex: 1 }}>
           {children}
         </main>
-        <Footer />
-        <MobileActionBar />
+        <footer className="holding-footer">
+          <span>&copy; {new Date().getFullYear()} Dr Nate Myhill</span>
+          <Link href="/privacy-policy">Privacy policy</Link>
+        </footer>
       </body>
     </html>
   );

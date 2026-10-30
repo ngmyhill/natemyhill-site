@@ -2,6 +2,8 @@
 
 Read this file first. It is the operating contract for Claude and any other AI assistant. Nate Myhill is a surgeon, not a developer. He will ask for changes in plain words. Do the work safely, show him a preview, and only merge when he says so.
 
+> **Temporary single-page site (from 30 Oct 2026).** The site is cut back to one page: photo, name, "Orthopaedic Surgeon", phone, email and fax, plus the privacy policy. Old page addresses redirect to the home page (temporary 307 redirects in `next.config.ts`). The full site is saved on the `full-site-backup` branch and the `full-site-2026-10-30` tag. To bring it back, branch from `full-site-backup`, merge in anything new from `main` that should stay, preview it, and merge on Nate's say-so.
+
 ## What this is
 
 Dr Nate Myhill's orthopaedic practice website. Next.js 16 (App Router), React 19, Tailwind CSS 4, TypeScript. Live at https://drnatemyhill.com.au.

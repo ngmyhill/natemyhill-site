@@ -15,6 +15,19 @@ const nextConfig: NextConfig = {
         destination: `https://${DOCTOR.domain}/:path*`,
         permanent: true,
       },
+      // Temporary single-page site: old page addresses go to the home page.
+      // Not permanent, so search engines keep them for when the full site
+      // comes back. Remove this block when restoring from `full-site-backup`.
+      ...[
+        "/about",
+        "/appointments",
+        "/locations/:path*",
+        "/shoulder-upper-limb/:path*",
+        "/hip-knee/:path*",
+        "/trauma/:path*",
+        "/for-patients/:path*",
+        "/for-referrers/:path*",
+      ].map((source) => ({ source, destination: "/", permanent: false })),
     ];
   },
   async headers() {

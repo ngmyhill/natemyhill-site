@@ -8,6 +8,8 @@ The top half of this file is for Nate and needs no technical knowledge. The bott
 
 ---
 
+> **Temporary single-page site (from 30 Oct 2026).** The site is cut back to one page: photo, name, "Orthopaedic Surgeon", phone, email and fax, plus the privacy policy. Old page addresses redirect to the home page (temporary 307 redirects in `next.config.ts`). The full site is saved on the `full-site-backup` branch and the `full-site-2026-10-30` tag. To bring it back, branch from `full-site-backup`, merge in anything new from `main` that should stay, preview it, and merge on Nate's say-so.
+
 ## The five things to know
 
 1. The site is live. Anything merged into the `main` branch goes live on its own, about a minute later.
